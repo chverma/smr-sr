@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1. Arquitectura de red TCP/IP | 1. Interconnexió de xarxes </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning  - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-73"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<header id="header" ><div id="headerContent">1. Interconnexió de xarxes</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">1. Interconnexión de redes</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="criterios_de_evaluacin.html" class="no-ch">Criterios de evaluación</a></li>
+   <li><a href="contenidos.html" class="no-ch">Contenidos</a></li>
+   <li id="active"><a href="1_arquitectura_de_red_tcpip.html" class="active no-ch">1. Arquitectura de red TCP/IP</a></li>
+   <li><a href="2_el_protocol_ip.html" class="no-ch">2. El protocol IP</a></li>
+   <li><a href="3_el_protocol_tcp.html" class="no-ch">3. El protocol TCP</a></li>
+   <li><a href="4_els_serveis_de_xarxa.html" class="no-ch">4. Els serveis de xarxa</a></li>
+   <li><a href="5_commandaments.html" class="no-ch">5. Commandaments</a></li>
+   <li><a href="6_elements_dinterconnexi.html" class="no-ch">6. Elements d'interconnexió</a></li>
+   <li><a href="7_interconnexi_de_xarxes.html" class="daddy">7. Interconnexió de xarxes</a>
+   <ul class="other-section">
+      <li><a href="71_encaminament.html" class="no-ch">7.1. Encaminament</a></li>
+      <li><a href="72_tallafocs_firewall.html" class="daddy">7.2. Tallafocs (firewall)</a>
+      <ul class="other-section">
+         <li><a href="prctica_2_installaci_i_configuraci_dun_tallafocs_restrictiu.html" class="no-ch">Pràctica 2: Instal·lació i configuració d'un tallafocs restrictiu</a></li>
+      </ul>
+      </li>
+      <li><a href="73_traducci_dadreces_de_xarxa_nat.html" class="daddy">7.3. Traducció d'adreces de xarxa (NAT)</a>
+      <ul class="other-section">
+         <li><a href="prctica_3.html" class="no-ch">Pràctica 3:</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="bibliografia.html" class="no-ch">Bibliografia</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="contenidos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="2_el_protocol_ip.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1. Arquitectura de red TCP/IP</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id160">
+<div class="iDevice emphasis0">
+<div id="ta160_154" class="block iDevice_content">
+<p>Internet es una red pública y global de ordenadores que están interconectados mediante el protocolo de Internet (<i> Internet Protocol )</i> y se que comunican mediante la conmutación de paquetes. Internet es la unión de millones de subredes domésticas, académicas, comerciales y gubernamentales; es por eso que a veces se le llama «la red de redes».</p>
+<p>A pesar de que hay una gran diversidad de arquitecturas de red, la familia de protocolos TCP / IP se utiliza en la mayoría de redes que conforman Internet, así como las intranet de empresas, centros educativos, zonas WIFI, oficinas y hogares.</p>
+<p>La denominación TCP / IP hace referencia a sus dos protocolos más importantes: el Protocolo de Internet (IP) y el Protocolo de Transferencia de Datos (TCP).</p>
+<h2>1.1. Modelo de capas</h2>
+<div class="exe-figure exe-image position-center license-copyright" style="width: 651px;">
+<div class="figcaption header"><strong>Model TCP/IP vs OSI<br /></strong></div>
+<img src="TCP-IP-model-vs-OSI-model.png" alt="Modelo ISO vs TCP/IP" width="597" height="341" />
+<div class="figcaption"><a href="http://fiberbit.com.tw/tcpip-model-vs-osi-model/" target="_blank" class="author" rel="noopener noreferrer">Fiberbit</a>. <a href="Model OSI vs TCP/IP" target="_blank" class="title" rel="noopener noreferrer"><em>Modelo OSI vs TCP/IP</em></a> <span class="license"><span class="sep">(</span><span>Todos los derechos reservados</span><span class="sep">)</span></span></div>
+</div>
+<h3>Capa de aplicación</h3>
+<p>La capa de aplicación TCP / IP se corresponde con las capas de aplicación, presentación y sesión del modelo OSI.</p>
+<p>La capa de aplicación es la capa que los programas utilizan para comunicarse a través de la red con otros programas.</p>
+<p>Algunos programas que proporcionan servicios que trabajan directamente con las aplicaciones de usuario y sus correspondientes protocolos de la capa de aplicación son, por ejemplo, HTTP (<i> Hyper Text Transfer Protocol),</i> FTP <i>(file transfer protocol), </i>SMTP <i>(<i> simple mail transfer protocol), </i></i>SSH <i><i>(<i> secure shell), entre otros.<br /></i></i></i></p>
+<h3>Capa de transporte</h3>
+<p>La capa de transporte TCP / IP se corresponde con la capa de transporte del modelo OSI.</p>
+<p>Los protocolos de la capa de transporte solucionan problemas como la fiabilidad y la seguridad de que los datos llegan al destino y lo hacen en el orden correcto. Hay dos protocolos básicos en la capa de transporte:</p>
+<ul>
+<li><strong> TCP. </strong>Es un protocolo fiable orientado a la conexión, que hace que un flujo de bytes de la aplicación de la máquina origen sea entregado sin errores en la aplicación de cualquier máquina destino de red. Este protocolo fragmenta el flujo procedente de la capa de aplicación en mensajes más pequeños y después de encapsularse los transmite a la <strong>capa de red</strong>. En la máquina destino, el proceso que los recibe los reconstruye para obtener el flujo original que envía hacia la capa de aplicación.<strong> <br /></strong></li>
+<li><strong><strong> UDP. </strong></strong>Es un protocolo no fiable, sin conexión, para aplicaciones que no necesitan ni la asignación de una secuencia ni el control de flujo de TCP, o que quieren utilizar sus medios de control propios. Este protocolo es muy utilizado en consultas de petición y respuesta de una sola vez y en aplicaciones en las que la rapidez de la entrega es más importante que la exactitud de los datos, como por ejemplo en las transmisiones de voz o de vídeo.
+<h3>Capa de red</h3>
+<p>La capa de Internet del modelo TCP / IP es equivalente a la capa de red del modelo OSI.</p>
+<p>La misión fundamental de esta capa es hacer que <strong> los nodos implicados en la comunicación envían los paquetes para cualquier red y los hagan viajar independientemente hacia su destino</strong>. Los paquetes incluso podrían llegar a su destino cada uno por un camino diferente, e incluso en diferente orden de cómo salieron del emisor. En cualquier caso, su reorganización corresponde a la capa de transporte.</p>
+<p>Para realizar dicha función debe proporcionar también un <strong> mecanismo de direccionamiento<br /></strong></p>
+<h3>Capa de acceso a la red</h3>
+<p>La capa de acceso a la red del modelo TCP / IP es equivalente a las capas de enlace y física del modelo OSI.</p>
+<p>En el modelo TCP / IP sólo indica que el nodo debe conectarse a la red haciendo uso de los protocolos que hay en la red física en cuestión, de manera que se puedan enviar paquetes IP. Estos protocolos varían según sean las tecnologías de transmisión y los medios de red que utilicen.</p>
+<h3>Capa física</h3>
+<p>El propósito de la capa física es transportar una corriente de bits en bruto de una máquina a otra.</p>
+<p>La capa física es la capa más baja de la jerarquía de comunicaciones. En la capa física hay definidos las señales y los medios utilizados para transmitir estas señales.</p>
+<p>Hay diferentes tipos de medios físicos para hacer este transporte, cada uno en su ambiente propio en términos de ancho de banda, retraso, coste, facilidad de instalación o mantenimiento.</p>
+<div class="exe-figure exe-image position-center" style="width: 600px;">
+<div class="figcaption header"><strong>Cuadro resumen modelo TCP/IP</strong></div>
+<img src="capas-tcp-ip.png" alt="Quadre resum model TCP/IP" width="600" height="201" />
+<div class="figcaption"><a href="Quadre resum model TCP/IP" target="_blank" class="title" rel="noopener noreferrer"><em>Cuadro resume modelo TCP/IP</em></a></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id161">
+<div class="iDevice emphasis_debesconocerfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">¿Qué es un protocolo?</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta161_129" class="block iDevice_content">
+<p>Un protocolo es un conjunto de normas perfectamente organizadas y mutuamente acordadas entre los participantes en una comunicación. Su misión es regular algún aspecto de la comunicación.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextIdevice" id="id162">
+<div class="iDevice emphasis0">
+<div id="ta162_85" class="block iDevice_content">
+<h2>1.1.2. ¿Qué es un servicio de capa?</h2>
+<p>En el modelo TCP / IP, los protocolos de las capas inferiores ofrecen un servicio al protocolo de la capa inmediatamente superior mediante una interfaz que comunica ambas capas. Además ofrece un servicio al usuario final, es decir, facilita a las aplicaciones de usuario el uso de Internet y otras redes.</p>
+<h3>Encapsulamiento</h3>
+<p>Para conseguir los objetivos descritos anteriormente cada protocolo añade una información de control en la unidad de datos entregada por la capa superior.</p>
+<div class="exe-figure exe-image position-center license-CC-BY-NC-SA" style="width: 596px;">
+<div class="figcaption header"><strong>Ejemplo de encapsulamiento</strong></div>
+<img src="ic10m7u1_11.png" alt="Exemple d'encapsulament de dades." width="596" height="400" />
+<div class="figcaption"><a href="https://ioc.xtec.cat/materials/FP/Materials/2251_ASIX/ASIX_2251_M07/web/html/WebContent/u1/a2/continguts.html" target="_blank" class="author" rel="noopener">IOC</a>. <span class="title"><em>Ejemplo de encapsulamiento</em></span> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=ca-ES" rel="license nofollow noopener" target="_blank" title="Creative Commons BY-NC-SA">CC BY-NC-SA</a><span class="sep">)</span></span></div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id163">
+<div class="iDevice emphasis_debesconocerfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Debes conocer</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta163_129" class="block iDevice_content">
+<p><strong> Unidades de información<br /></strong></p>
+<p>El conjunto de información compuesta por el encabezamiento más los datos recibe nombres diferentes según el nivel donde está situada:</p>
+<ul>
+<li>En la capa de transporte se denomina <em> segmento<br /></em></li>
+<li>En el nivel de capa de red se denomina <em> paquete</em></li>
+<li>En el nivel de capa de enlace, <i> trama</i></li>
+<li>En el nivel de capa física, <i> bit</i></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id164">
+<div class="iDevice emphasis0">
+<div id="ta164_154" class="block iDevice_content">
+<h2>1.1.3. Estructura de red</h2>
+<p>Cuando la gente intenta acceder a información en sus dispositivos, ya sean un ordenador personal o portátil, una tableta digital, un teléfono o cualquier otro dispositivo conectado a la red, los datos pueden estar o no almacenadas físicamente a sus dispositivos, en caso de no estar habrá acceder a ellos de forma remota en uso de redes cliente-servidor o redes de igual a igual (P2P).</p>
+<h3>Modelo cliente / servidor</h3>
+<p>Una red cliente-servidor es aquella donde todos los clientes están conectados a un servidor donde se centralizan los diferentes recursos. Estos recursos están a disposición de los clientes cada vez que los solicitan. Esto hace que todas las gestiones que se realizan se concentran en el servidor, que dispone de los requerimientos de los clientes con prioridad, los archivos que son de uso público y los restringidos, los archivos de sólo lectura, los que pueden ser modificados, etc.</p>
+<div class="exe-figure exe-image position-center license-CC-BY-NC-SA" style="width: 400px;"><img src="ic10m5u1_22.png" alt="" width="400" height="297" />
+<div class="figcaption"><a href="http://ioc.xtec.cat/materials/FP/Materials/2201_SMX/SMX_2201_M05/web/html/WebContent/u1/a1/continguts.html" target="_blank" class="author" rel="noopener">ioc</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=ca-ES" rel="license nofollow noopener" target="_blank" title="Creative Commons BY-NC-SA">CC BY-NC-SA</a> <span class="sep"> ) </span> </span></div>
+</div>
+<p></p>
+<p>En el modelo cliente / servidor, el dispositivo que solicita información se denomina cliente y el dispositivo que responde la solicitud se denomina servidor. Los procesos de cliente y servidor se consideran una parte de la capa de aplicación. El cliente comienza el intercambio solicitante los datos al servidor, que responde enviando uno o más bloques de datos al cliente. Los protocolos de capa de aplicación describen el formato de las solicitudes y respuestas entre clientes y servidor. Además de la transferencia real de datos, este intercambio puede requerir información adicional, como la autentificación del usuario y la identificación de un archivo de datos para transferir.</p>
+<p>Un ejemplo de una red cliente / servidor es un entorno corporativo en el que los empleados utilizan un servidor de correo electrónico de la empresa para enviar, recibir y almacenar correo. El cliente de correo electrónico en el ordenador de un empleado emite una solicitud al servidor de correo por un mensaje no leído. El servidor responde enviando el correo solicitado al cliente.</p>
+<p>Aunque los datos generalmente se describen como un flujo del servidor al cliente, algunos datos siempre fluyen del cliente al servidor. El flujo de datos puede ser el mismo en las dos direcciones o incluso ser mayor en la dirección que el cliente al servidor. Por ejemplo, un cliente puede transferir un archivo al servidor con fines de almacenamiento. La transferencia de datos de un cliente a un servidor se conoce como subida y la de los datos de un servidor a un cliente, bajada.</p>
+<h3>Redes de igual a igual (punto a punto)</h3>
+<p>En una red entre iguales, dos o más ordenadores están conectados por medio de una red y pueden compartir recursos (por ejemplo, impresora y archivos) sin tener un servidor dedicado. Cada dispositivo final conectado (conocido como punto) puede funcionar como un servidor o como un cliente. Un ordenador puede asumir el papel de servidor para una transacción mientras funciona de manera simultánea como cliente para otra transacción. Los papeles del cliente y del servidor se configuran según las solicitudes.</p>
+<p>Un ejemplo de una red entre iguales es una simple red doméstica con dos ordenadores conectados que comparten una impresora. Cada persona puede configurar su ordenador para compartir archivos, habilitar juegos en red o compartir una conexión de Internet. Otro ejemplo sobre la funcionalidad de la red punto a punto son dos ordenadores conectados a una gran red que utilizan aplicaciones de software para compartir recursos a través de la Red.</p>
+<p>A diferencia del modelo cliente / servidor, que utiliza servidores dedicados, las redes punto a punto descentralizan los recursos en una red como se detalla en la figura siguiente. En lugar de ubicar información para compartir en los servidores dedicados, la información se puede colocar en cualquier parte de un dispositivo conectado. La mayoría de los sistemas operativos actuales admiten compartir archivos e impresoras sin requerir software adicional del servidor. Ya que las redes punto a punto generalmente no utilizan cuentas de usuarios centralizados, permisos ni monitores, es difícil implementar las políticas de acceso y seguridad en las redes que contienen más cantidad de ordenadores. Hay que establecer cuentas de usuario y derechos de acceso de forma individual para cada dispositivo.</p>
+<p></p>
+<div class="exe-figure exe-image position-center license-CC-BY-NC-SA" style="width: 401px;">
+<div class="figcaption header"><strong>Modelo Cliente-servidor</strong></div>
+<img src="ic10m5u1_24.png" alt="Model Client-servidor" width="401" height="255" />
+<div class="figcaption"><a href="Model Client-servidor" target="_blank" class="author" rel="noopener">IOC</a>. <span class="title"><em>Model Client-servidor</em></span> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=ca-ES" rel="license nofollow noopener" target="_blank" title="Creative Commons BY-NC-SA">CC BY-NC-SA</a> <span class="sep"> ) </span> </span></div>
+</div>
+<p></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper activityIdevice em_iDevice" id="id165">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Cuestionario</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta165_105_2" class="block iDevice_content">
+<ol>
+<li>¿Cuáles son las capas que forman el modelo OSI? Haz una gráfica indicando las capas OSI y la relación que tienen en las capas de la familía TCP / IP. Indica también el nombre de las PDU (unidades de datos) y su sistema direccionamiento. Pone también ejemplos de protocolos de cada capa.</li>
+<li>¿Qué es la encapsulación? </li>
+<li>¿Qué dos tipos de estructura de redes hay? Explica las diferencias.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="contenidos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="2_el_protocol_ip.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>
