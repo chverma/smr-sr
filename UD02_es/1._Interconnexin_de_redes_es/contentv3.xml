@@ -1524,7 +1524,7 @@ that may help or hinder the learner in the performance of the task."></unicode>
       <instance class="exe.engine.node.Node" reference="35">
        <dictionary>
         <string role="key" value="_title"></string>
-        <unicode value="2. El protocol IP"></unicode>
+        <unicode value="2. El protocolo IP"></unicode>
         <string role="key" value="idevices"></string>
         <list>
          <instance class="exe.engine.freetextidevice.FreeTextIdevice" reference="33">
@@ -1580,18 +1580,21 @@ text through the text editing buttons associated with the field."></unicode>
 &lt;/div&gt;
 &lt;p&gt;Tot i que per enviar dades entre dos ordinadors amfitrions ja n’hi ha prou amb el protocol IP, no ofereix cap mena de garantia que s’enviïn correctament les dades o, ni tan sols, que arribin a la destinació. De fet, no ens garanteix que les dades, si arriben a la destinació, estiguin intactes, ja que el control d’errors només es fa sobre les capçaleres, no sobre les dades que transmet. Així doncs, tot i que es pot fer servir IP directament, per a aplicacions que requereixen fiabilitat fan servir al protocol de la capa de transport TCP.&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;La versió més usada actualment del protocol IP és la IPv4, definida en l’RFC 791 del 1981. Actualment ja disposa d’un successor, la IPv6, l’ús de la qual es va estenent progressivament.&lt;br /&gt;&lt;br /&gt;Totes les versions del protocol IP permeten l’enviament de paquets entre equips sense establir cap mena de connexió. Això vol dir que l’ordinador amfitrió origen envia dades al destinatari sense esperar cap mena de notificació que les dades s’han rebut correctament.&lt;br /&gt;&lt;br /&gt;Tot i que per enviar dades entre dos ordinadors amfitrions ja n’hi ha prou amb el protocol IP, no ofereix cap mena de garantia que s’enviïn correctament les dades o, ni tan sols, que arribin a la destinació. De fet, no ens garanteix que les dades, si arriben a la destinació, estiguen intactes, ja que el control d’errors només es fa sobre les capçaleres, no sobre les dades que transmet. Així doncs, tot i que es pot fer servir IP directament, per a aplicacions que requereixen fiabilitat fan servir al protocol de la capa de transport TCP.&lt;/p&gt;
-&lt;h3&gt;2.1. Configuració d'un node IP&lt;/h3&gt;
-&lt;p&gt;En primer lloc, caldrà configurar els protocols TCP/IP locals que solen incloure en el nucli de qualsevol sistema operatiu modern.&lt;/p&gt;
-&lt;p&gt;A l'hora de configurar l'equip, caldrà disposaran er de la següent informació:&lt;/p&gt;
+&lt;p&gt;La versión más usada actualmente del protocolo IP es la IPv4, definida en el RFC 791 de 1981. Actualmente ya dispone de un sucesor, la IPv6, el uso de la que se va extendiendo progresivamente.&lt;/p&gt;
+&lt;p&gt;Todas las versiones del protocolo IP permiten el envío de paquetes entre equipos sin establecer ningún tipo de conexión. Esto significa que el equipo host origen envía datos al destinatario sin esperar ningún tipo de notificación que los datos se han recibido correctamente.&lt;/p&gt;
+&lt;p&gt;Aunque para enviar datos entre dos ordenadores anfitriones ya basta con el protocolo IP, no ofrece ningún tipo de garantía que se envíen correctamente los datos o, ni siquiera, que lleguen al destino. De hecho, no nos garantiza que los datos, si llegan al destino, estén intactos, ya que el control de errores sólo se hace sobre las cabeceras, no sobre los datos que transmite. Así pues, aunque se puede usar IP directamente, para aplicaciones que requieren fiabilidad utilizan el protocolo de la capa de transporte TCP&lt;/p&gt;
+&lt;h3&gt;2.1. Configuración de un nodo IP&lt;/h3&gt;
+&lt;p&gt;En primer lugar, habrá que configurar los protocolos TCP / IP locales que suelen incluir en el núcleo de cualquier sistema operativo moderno.&lt;/p&gt;
+&lt;p&gt;A la hora de configurar el equipo, habrá que dispondrán er de la siguiente información:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;L'&lt;strong&gt;adreça IP&lt;/strong&gt;, ja sigui de la versió 4 o de la nova versió 6.&lt;/li&gt;
-&lt;li&gt;La &lt;strong&gt;màscara de subxarxa&lt;/strong&gt;, que serveix per identificar la xarxa o subxarxa.&lt;/li&gt;
+&lt;li&gt;El &lt;strong&gt; dirección IP, ya sea de la versión 4 o de la nueva versión 6.&lt;br /&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;La &lt;strong&gt;&lt;strong&gt; máscara de subred, que sirve para identificar la red o subred.&lt;br /&gt;&lt;/strong&gt;&lt;/strong&gt;
+&lt;p&gt;Si la comunicación se establece con equipos de otras subredes o con Internet, se necesitará además:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;La dirección IP de la &lt;strong&gt; puerta de enlace &lt;/strong&gt;(&lt;i&gt;gateway ) o pasarela por omisión que corresponde al router y con el que se redirige el tráfico en Internet o a otras subredes&lt;/i&gt;&lt;strong&gt;&lt;i&gt;.&lt;br /&gt;&lt;/i&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Las direcciones IP de los &lt;strong&gt;servidores DNS.&lt;br /&gt;&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Si la comunicació s'estableix amb equips d'altres subxarxes o amb Internet, es necessitarà a més:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;L'adreça IP de la &lt;strong&gt;porta d'enllaç (&lt;em&gt;gateway&lt;/em&gt;)&lt;/strong&gt; o passarel·la per omissió que correspon al router i amb el qual es redirigeix el tràfic a Internet o a altres subxarxes.&lt;/li&gt;
-&lt;li&gt;Les adreces IP dels s&lt;strong&gt;ervidors DNS.&lt;/strong&gt;&lt;/li&gt;
+&lt;/li&gt;
 &lt;/ul&gt;"></unicode>
              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
              <int value="4"></int>
@@ -1676,16 +1679,16 @@ text through the text editing buttons associated with the field."></unicode>
              <string role="key" value="anchors_linked_from_fields"></string>
              <dictionary></dictionary>
              <string role="key" value="content_w_resourcePaths"></string>
-             <unicode content="true" value="&lt;p&gt;El protocol IP té les següents funcions:&lt;/p&gt;
+             <unicode content="true" value="&lt;p&gt;El protocolo IP tiene las siguientes funciones: &amp;lt;/ p&amp;gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Triar el camí més adequat per a enviar els paquets.&lt;/li&gt;
-&lt;li&gt;Implementa un servei d'enviament amb les característiques següents:
+&lt;li&gt;Elegir el camino más adecuado para enviar los paquetes.&lt;/li&gt;
+&lt;li&gt;Implementa un servicio de envío con las características siguientes:
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;No orientat a la connexió&lt;/strong&gt;. Cada paquet pot seguir un camí distint. Per la qual cosa poden arribar desordenats.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;No fiable&lt;/strong&gt;. Els paquets poden perdre's, danyar-se o arribar amb retard.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt; No orientado a la conexión. &lt;/strong&gt;Cada paquete puede seguir un camino distinto. Por lo que pueden llegar desordenados.&lt;strong&gt;&lt;br /&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt; No fiable. &lt;/strong&gt;Los paquetes pueden perderse, dañarse o llegar con retraso.&lt;strong&gt;&lt;br /&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Proporciona un mecanismo de direccionamiento lógico (direcciones IP).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Proporciona un mecanisme d'adreçament lògic (adreces IP).&lt;/li&gt;
 &lt;/ul&gt;"></unicode>
              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
              <int value="4"></int>
@@ -1773,14 +1776,14 @@ text through the text editing buttons associated with the field."></unicode>
              <string role="key" value="anchors_linked_from_fields"></string>
              <dictionary></dictionary>
              <string role="key" value="content_w_resourcePaths"></string>
-             <unicode content="true" value="&lt;h3&gt;Adreçament IP&lt;/h3&gt;
-&lt;p&gt;L’adreça IP és un nombre de 32 bits que identifica cada una de les màquines que estan connectades a Internet o a qualsevol xarxa, i també la xarxa a la qual estan connectades. Una part de l’adreça IP, segons la seua màscara de xarxa, serveix per identificar la xarxa, sent el tros restant de la direcció IP la que identifica la màquina.&lt;/p&gt;
+             <unicode content="true" value="&lt;h3&gt;Direccionamiento IP&lt;/h3&gt;
+&lt;p&gt;La dirección IP es un número de 32 bits que identifica cada una de las máquinas que están conectadas a Internet o en cualquier red, así como la red a la que están conectadas. Una parte de la dirección IP, a su máscara de red, sirve para identificar la red, siendo el trozo restante de la dirección IP la que identifica la máquina.&lt;/p&gt;
 &lt;div class=&quot;exe-figure exe-image position-center license-CC-BY-NC-SA&quot; style=&quot;width: 449px;&quot;&gt;
-&lt;div class=&quot;figcaption header&quot;&gt;&lt;strong&gt;IP dividida en xarxa i ordinador &lt;/strong&gt;&lt;/div&gt;
+&lt;div class=&quot;figcaption header&quot;&gt;&lt;strong&gt;IP dividida en red y ordenador &lt;/strong&gt;&lt;/div&gt;
 &lt;img src=&quot;resources/ic10m5u3_26.png&quot; alt=&quot;IP dividida en xarxa i ordinador &quot; width=&quot;449&quot; height=&quot;112&quot; /&gt;
-&lt;div class=&quot;figcaption&quot;&gt;&lt;a href=&quot;http://ioc.xtec.cat/&quot; target=&quot;_blank&quot; class=&quot;author&quot;&gt;IOC&lt;/a&gt;. &lt;a href=&quot;http://ioc.xtec.cat/materials/FP/Materials/2201_SMX/SMX_2201_M05/web/html/WebContent/u3/a4/continguts.html&quot; target=&quot;_blank&quot; class=&quot;title&quot;&gt;&lt;em&gt;IP dividida en xarxa i ordinador &lt;/em&gt;&lt;/a&gt; &lt;span class=&quot;license&quot;&gt;&lt;span class=&quot;sep&quot;&gt;(&lt;/span&gt;&lt;a href=&quot;http://creativecommons.org/licenses/?lang=ca-ES&quot; rel=&quot;license nofollow&quot; target=&quot;_blank&quot; title=&quot;Creative Commons BY-NC-SA&quot;&gt;CC BY-NC-SA&lt;/a&gt;&lt;span class=&quot;sep&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;figcaption&quot;&gt;&lt;a href=&quot;http://ioc.xtec.cat/&quot; target=&quot;_blank&quot; class=&quot;author&quot; rel=&quot;noopener&quot;&gt;IOC&lt;/a&gt;. &lt;a href=&quot;http://ioc.xtec.cat/materials/FP/Materials/2201_SMX/SMX_2201_M05/web/html/WebContent/u3/a4/continguts.html&quot; target=&quot;_blank&quot; class=&quot;title&quot; rel=&quot;noopener&quot;&gt;&lt;em&gt;IP dividida en red y ordenador &lt;/em&gt;&lt;/a&gt; &lt;span class=&quot;license&quot;&gt;&lt;span class=&quot;sep&quot;&gt;(&lt;/span&gt;&lt;a href=&quot;http://creativecommons.org/licenses/?lang=ca-ES&quot; rel=&quot;license nofollow noopener&quot; target=&quot;_blank&quot; title=&quot;Creative Commons BY-NC-SA&quot;&gt;CC BY-NC-SA&lt;/a&gt;&lt;span class=&quot;sep&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;Per poder separar el camp que identifica la xarxa del camp que identifica la màquina, s’ha d’aplicar &lt;strong&gt;una màscara de xarxa&lt;/strong&gt;. És a dir, al aplicar la operació lògica AND entre la màscara de xarxa i l’adreça IP s’obté la xarxa.&lt;/p&gt;"></unicode>
+&lt;p&gt;&lt;span class=&quot;tlid-translation translation&quot; lang=&quot;es&quot;&gt;&lt;span title=&quot;&quot;&gt;Para poder&lt;/span&gt; &lt;span title=&quot;&quot;&gt;separar&lt;/span&gt; &lt;span title=&quot;&quot;&gt;el campo&lt;/span&gt; &lt;span title=&quot;&quot;&gt;que identifica&lt;/span&gt; &lt;span title=&quot;&quot;&gt;la red&lt;/span&gt; &lt;span title=&quot;&quot;&gt;del campo&lt;/span&gt; &lt;span title=&quot;&quot;&gt;que identifica&lt;/span&gt; &lt;span title=&quot;&quot;&gt;la máquina,&lt;/span&gt; &lt;span title=&quot;&quot;&gt;se debe aplicar&lt;/span&gt; &lt;span title=&quot;&quot;&gt;una&lt;/span&gt; &lt;span title=&quot;&quot;&gt;máscara&lt;/span&gt; &lt;span title=&quot;&quot;&gt;de red.&lt;/span&gt; &lt;span title=&quot;&quot;&gt;Es decir,&lt;/span&gt; &lt;span title=&quot;&quot;&gt;al&lt;/span&gt; &lt;span title=&quot;&quot;&gt;aplicar la&lt;/span&gt; &lt;span title=&quot;&quot;&gt;operación&lt;/span&gt; &lt;span title=&quot;&quot;&gt;lógica&lt;/span&gt; &lt;span title=&quot;&quot;&gt;AND&lt;/span&gt; &lt;span title=&quot;&quot;&gt;entre la&lt;/span&gt; &lt;span title=&quot;&quot;&gt;máscara de&lt;/span&gt; &lt;span title=&quot;&quot;&gt;red y&lt;/span&gt; &lt;span title=&quot;&quot;&gt;la dirección IP&lt;/span&gt; &lt;span title=&quot;&quot;&gt;se obtiene&lt;/span&gt; &lt;span title=&quot;&quot; class=&quot;&quot;&gt;la red.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;"></unicode>
              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
              <int value="4"></int>
              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
@@ -1924,27 +1927,25 @@ text through the text editing buttons associated with the field."></unicode>
              <string role="key" value="anchors_linked_from_fields"></string>
              <dictionary></dictionary>
              <string role="key" value="content_w_resourcePaths"></string>
-             <unicode content="true" value="&lt;h3&gt;Classes d'adreça IPv4&lt;/h3&gt;
-&lt;p&gt;Hi ha tres classes principals d’adreces IP:&lt;/p&gt;
+             <unicode content="true" value="&lt;h3&gt;Clases de dirección IPv4&lt;/h3&gt;
+&lt;p&gt;Hay tres clases principales de direcciones IP:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Adreça de classe A: el primer octet identifica la xarxa.&lt;/li&gt;
-&lt;li&gt;Adreça de classe B: els dos primers octets identifiquen la xarxa.&lt;/li&gt;
-&lt;li&gt;Adreça de classe C: els tres primers octets identifiquen la xarxa.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;A més de dues classes addicionals que es tracten per separat:&lt;/p&gt;
+&lt;li&gt;Dirección de clase A: el primer octeto identifica la red.&lt;/li&gt;
+&lt;li&gt;Dirección de clase B: los dos primeros octetos identifican la red.&lt;/li&gt;
+&lt;li&gt;Dirección de clase C: los tres primeros octetos identifican la red.&lt;br /&gt;
+&lt;p&gt;Además de dos clases adicionales que se tratan por separado:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Adreça de classe D: Es tracta d’un conjunt d’adreces reservades per multidifusió.&lt;/li&gt;
-&lt;li&gt;Adreça de classe E: Es tracta d’una classe reservada.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;Dirección de clase D: Se trata de un conjunto de direcciones reservadas para multidifusión.&lt;/li&gt;
+&lt;li&gt;Dirección de clase E: Se trata de una clase reservada. &lt;br /&gt;
 &lt;table class=&quot;exe-table&quot; style=&quot;width: 100%;&quot;&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;Classe&lt;/th&gt;
-&lt;th&gt;Interval d'adreces&lt;/th&gt;
-&lt;th&gt;Núm. màxim de xarxes&lt;/th&gt;
-&lt;th&gt;Núm. màxim de nodes&lt;/th&gt;
-&lt;th&gt;Màscara estàndard&lt;/th&gt;
-&lt;th&gt;Adreça de difusió&lt;/th&gt;
+&lt;th&gt;Clase&lt;/th&gt;
+&lt;th&gt;Intervalo de direcciones&lt;/th&gt;
+&lt;th&gt;Núm. máximo de redes&lt;/th&gt;
+&lt;th&gt;Núm. máximo de nodos&lt;/th&gt;
+&lt;th&gt;Máscara estándar&lt;/th&gt;
+&lt;th&gt;Dirección de difusión&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -2000,7 +2001,11 @@ text through the text editing buttons associated with the field."></unicode>
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;/p&gt;"></unicode>
+&lt;p&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;"></unicode>
              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
              <int value="4"></int>
              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
@@ -2089,10 +2094,11 @@ text through the text editing buttons associated with the field."></unicode>
              <string role="key" value="anchors_linked_from_fields"></string>
              <dictionary></dictionary>
              <string role="key" value="content_w_resourcePaths"></string>
-             <unicode content="true" value="&lt;h3&gt;Adreçament sense classe (CIDR)&lt;/h3&gt;
-&lt;p&gt;Amb la ràpida expansió d’Internet va quedar clar que l'adreçament basat en classes no era suficient, és per això que l’any 1993 es va proposar la CIDR (&lt;em&gt;classless inter-domain routing&lt;/em&gt;) que vol dir encaminament entre dominis sense classe. Gràcies a aquest sistema es millora el mètode amb el que s’interpreten les adreces IP a més de com s’encaminen els paquets.&lt;/p&gt;
-&lt;p&gt;En lloc de parlar de classes es fa servir el nombre de bits a 1 de la màscara de xarxa per tal d’indicar la xarxa. Les classes A, B i C tindrien una màscara de xarxa amb 8, 16 i 24 bits a 1 respectivament. Per exemple, per tal de definir la xarxa que va del 192.168.0.0 a la 192.168.255.255 (seria una classe B) indiquem la IP i amb un barra els 16 bits a 1 de la màscara de xarxa. Per tant la notació seria: 192.168.0.0/16&lt;/p&gt;
-&lt;p&gt;Per poder fer ús de CIDR, els encaminadors de la xarxa han de ser capaços d’interpretar adreces IP que no pertanyen a cap de les classes convencionals (A, B o C).&lt;/p&gt;"></unicode>
+             <unicode content="true" value="&lt;h3&gt;Direccionamiento sin clase (CIDR)&lt;/h3&gt;
+&lt;p&gt;Con la rápida expansión de Internet quedó claro que el direccionamiento basado en clases no era suficiente, por lo que en 1993 se propuso la CIDR (classless inter-domain routing) que significa encaminamiento entre dominios sin clase. Gracias a este sistema se mejora el método con el que se interpretan las direcciones IP además de cómo se encaminan los paquetes.&lt;/p&gt;
+&lt;p&gt;En lugar de hablar de clases se utiliza el número de bits a 1 de la máscara de red para indicar la red. Las clases A, B y C tendrían una máscara de red con 8, 16 y 24 bits a 1 respectivamente. Por ejemplo, para definir la red que va del 192.168.0.0 a la 192168255255 (sería una clase B) indicamos la IP y con un barra los 16 bits a 1 de la máscara de red. Por lo tanto la notación sería: 192.168.0.0/16&lt;/p&gt;
+&lt;p&gt;Para poder hacer uso de CIDR, los routers de la red deben ser capaces de interpretar direcciones IP que no pertenecen a ninguna de las clases convencionales (A, B o C).&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;"></unicode>
              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
              <int value="4"></int>
              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
@@ -2181,7 +2187,7 @@ text through the text editing buttons associated with the field."></unicode>
              <string role="key" value="anchors_linked_from_fields"></string>
              <dictionary></dictionary>
              <string role="key" value="content_w_resourcePaths"></string>
-             <unicode content="true" value="&lt;h3&gt;Adreces reservades i/o especials&lt;/h3&gt;
+             <unicode content="true" value="&lt;h3&gt;Direcciones reservadas y/o especiales&lt;/h3&gt;
 &lt;div style=&quot;overflow: hidden; position: absolute; top: -5000px; height: 1px;&quot;&gt;
 &lt;ul&gt;
 &lt;li class=&quot;level1&quot;&gt;
@@ -2213,16 +2219,16 @@ text through the text editing buttons associated with the field."></unicode>
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;ul&gt;
-&lt;li&gt;Quan l’identificador d’equip és 0, es fa referència a la xarxa a la qual està connectat. Per exemple: 10.0.0.0/8&lt;/li&gt;
-&lt;li&gt;Quan l’identificador d’equip són tot 1 vol dir totes les màquines; això seria una adreça de difusió (&lt;em&gt;broadcast)&lt;/em&gt;. Per exemple: 10.255.255.255/8&lt;/li&gt;
-&lt;li&gt;Quan tota l’adreça són 0 indica totes les IPs de la màquina. Per exemple: 0.0.0.0/0&lt;/li&gt;
-&lt;li&gt;Adreça de &lt;em&gt;loopback&lt;/em&gt;. La xarxa 127.0.0.0/8 indica que el paquet es que a la mateixa màquina i retorna internament, es refereix sempre al equip local.&lt;/li&gt;
-&lt;li&gt;Adreces d'enllaç local: L'objectiu de la xarxa 169.254.0.0/16 és proveir d'una adreça IP als nodes sense necessitat de tenir disponible un servidor DCHP. Aquestes adreces no són encaminables.&lt;/li&gt;
-&lt;li&gt;Adreces privades. Són adreces que només es poden utilitzar dins d’una organització privada no encaminables. Els blocs d’adreces privades són els següents:
+&lt;li&gt;Cuando el identificador de equipo es 0, se hace referencia a la red a la que está conectado. Por ejemplo: 10.0.0.0/8&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;tlid-translation translation&quot; lang=&quot;es&quot;&gt;&lt;span title=&quot;&quot;&gt;Cuando&lt;/span&gt; &lt;span title=&quot;&quot;&gt;el identificador&lt;/span&gt; &lt;span title=&quot;&quot;&gt;de equipo&lt;/span&gt; &lt;span title=&quot;&quot;&gt;son&lt;/span&gt; &lt;span title=&quot;&quot;&gt;todo&lt;/span&gt; &lt;span title=&quot;&quot;&gt;1&lt;/span&gt; &lt;span title=&quot;&quot;&gt;significa&lt;/span&gt; &lt;span title=&quot;&quot;&gt;todas&lt;/span&gt; &lt;span title=&quot;&quot;&gt;las máquinas&lt;/span&gt;&lt;span title=&quot;&quot;&gt;;&lt;/span&gt; &lt;span title=&quot;&quot;&gt;esto sería&lt;/span&gt; &lt;span title=&quot;&quot;&gt;una dirección de&lt;/span&gt; &lt;span title=&quot;&quot;&gt;difusión&lt;/span&gt; &lt;span title=&quot;&quot;&gt;(&lt;/span&gt;&lt;span title=&quot;&quot;&gt;broadcast)&lt;/span&gt;&lt;span title=&quot;&quot;&gt;.&lt;/span&gt; &lt;span title=&quot;&quot;&gt;Por ejemplo&lt;/span&gt;&lt;span title=&quot;&quot;&gt;:&lt;/span&gt; &lt;span title=&quot;&quot; class=&quot;&quot;&gt;10.255.255.255/8&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;tlid-translation translation&quot; lang=&quot;es&quot;&gt;&lt;span title=&quot;&quot;&gt;Cuando&lt;/span&gt; &lt;span title=&quot;&quot;&gt;toda la dirección&lt;/span&gt; &lt;span title=&quot;&quot;&gt;son&lt;/span&gt; &lt;span title=&quot;&quot;&gt;0&lt;/span&gt; &lt;span title=&quot;&quot;&gt;indica&lt;/span&gt; &lt;span title=&quot;&quot;&gt;todas&lt;/span&gt; &lt;span title=&quot;&quot;&gt;las IPs&lt;/span&gt; &lt;span title=&quot;&quot;&gt;de la máquina.&lt;/span&gt; &lt;span title=&quot;&quot;&gt;Por ejemplo&lt;/span&gt;&lt;span title=&quot;&quot;&gt;:&lt;/span&gt; &lt;span title=&quot;&quot; class=&quot;&quot;&gt;0.0.0.0/0&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;tlid-translation translation&quot; lang=&quot;es&quot;&gt;&lt;span title=&quot;&quot;&gt;Dirección&lt;/span&gt; &lt;span title=&quot;&quot;&gt;de loopback&lt;/span&gt;&lt;span title=&quot;&quot;&gt;.&lt;/span&gt; &lt;span title=&quot;&quot;&gt;La red&lt;/span&gt; &lt;span title=&quot;&quot;&gt;127.0.0.0/8&lt;/span&gt; &lt;span title=&quot;&quot;&gt;indica que&lt;/span&gt; &lt;span title=&quot;&quot;&gt;el paquete&lt;/span&gt; &lt;span title=&quot;&quot;&gt;es que&lt;/span&gt; &lt;span title=&quot;&quot;&gt;en la misma&lt;/span&gt; &lt;span title=&quot;&quot;&gt;máquina&lt;/span&gt; &lt;span title=&quot;&quot;&gt;y&lt;/span&gt; &lt;span title=&quot;&quot;&gt;devuelve&lt;/span&gt; &lt;span title=&quot;&quot;&gt;internamente&lt;/span&gt;&lt;span title=&quot;&quot;&gt;,&lt;/span&gt; &lt;span title=&quot;&quot;&gt;se refiere&lt;/span&gt; &lt;span title=&quot;&quot;&gt;siempre al&lt;/span&gt; &lt;span title=&quot;&quot; class=&quot;&quot;&gt;equipo&lt;/span&gt; &lt;span title=&quot;&quot; class=&quot;&quot;&gt;local&lt;/span&gt;&lt;span title=&quot;&quot; class=&quot;&quot;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;tlid-translation translation&quot; lang=&quot;es&quot;&gt;&lt;span title=&quot;&quot; class=&quot;&quot;&gt;Direcciones&lt;/span&gt; &lt;span title=&quot;&quot;&gt;de enlace&lt;/span&gt; &lt;span title=&quot;&quot;&gt;local:&lt;/span&gt; &lt;span title=&quot;&quot;&gt;El objetivo&lt;/span&gt; &lt;span title=&quot;&quot;&gt;de la red&lt;/span&gt; &lt;span title=&quot;&quot;&gt;169.254.0.0/16&lt;/span&gt; &lt;span title=&quot;&quot;&gt;es proveer&lt;/span&gt; &lt;span title=&quot;&quot; class=&quot;&quot;&gt;de una dirección&lt;/span&gt; &lt;span title=&quot;&quot;&gt;IP&lt;/span&gt; &lt;span title=&quot;&quot;&gt;a los nodos&lt;/span&gt; &lt;span title=&quot;&quot;&gt;sin&lt;/span&gt; &lt;span title=&quot;&quot;&gt;necesidad de tener&lt;/span&gt; &lt;span title=&quot;&quot;&gt;disponible&lt;/span&gt; &lt;span title=&quot;&quot; class=&quot;&quot;&gt;un servidor&lt;/span&gt; &lt;span title=&quot;&quot;&gt;DCHP&lt;/span&gt;&lt;span title=&quot;&quot;&gt;.&lt;/span&gt; &lt;span title=&quot;&quot;&gt;Estas&lt;/span&gt; &lt;span title=&quot;&quot;&gt;direcciones&lt;/span&gt; &lt;span title=&quot;&quot;&gt;no son&lt;/span&gt; &lt;span title=&quot;&quot;&gt;encaminables&lt;/span&gt;&lt;span title=&quot;&quot;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;tlid-translation translation&quot; lang=&quot;es&quot;&gt;&lt;span title=&quot;&quot; class=&quot;&quot;&gt;Direcciones&lt;/span&gt; &lt;span title=&quot;&quot;&gt;privadas.&lt;/span&gt; &lt;span title=&quot;&quot;&gt;Son&lt;/span&gt; &lt;span title=&quot;&quot;&gt;direcciones que&lt;/span&gt; &lt;span title=&quot;&quot;&gt;sólo se pueden utilizar&lt;/span&gt; &lt;span title=&quot;&quot; class=&quot;&quot;&gt;dentro de una organización&lt;/span&gt; &lt;span title=&quot;&quot;&gt;privada&lt;/span&gt; &lt;span title=&quot;&quot;&gt;no&lt;/span&gt; &lt;span title=&quot;&quot;&gt;encaminables&lt;/span&gt;&lt;span title=&quot;&quot;&gt;.&lt;/span&gt; &lt;span title=&quot;&quot;&gt;Los&lt;/span&gt; &lt;span title=&quot;&quot;&gt;bloques de direcciones&lt;/span&gt; &lt;span title=&quot;&quot; class=&quot;&quot;&gt;privadas&lt;/span&gt; &lt;span title=&quot;&quot; class=&quot;&quot;&gt;son los siguientes:&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;
 &lt;ul&gt;
-&lt;li&gt;10.0.0.0/8: és una classe A que permet 2&lt;sup&gt;24&lt;/sup&gt; hosts a la xarxa. Per la grandària que té se sol dividir en subxarxes.&lt;/li&gt;
-&lt;li&gt;172.16.0.0/12: és una xarxa que admet fins a 2&lt;sup&gt;20&lt;/sup&gt; equips connectats a la xarxa&lt;/li&gt;
-&lt;li&gt;192.168.0.0/16: és una classe C que permet fins a 254 equips. Encara que sigui la més menuda de les tres és la més comuna.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;tlid-translation translation&quot; lang=&quot;es&quot;&gt;&lt;span title=&quot;&quot;&gt;10.0.0.0/8&lt;/span&gt;&lt;span title=&quot;&quot;&gt;:&lt;/span&gt; &lt;span title=&quot;&quot;&gt;es&lt;/span&gt; &lt;span title=&quot;&quot;&gt;una clase&lt;/span&gt; &lt;span title=&quot;&quot;&gt;A&lt;/span&gt; &lt;span title=&quot;&quot;&gt;que permite&lt;/span&gt; &lt;/span&gt;2&lt;sup&gt;24 &lt;/sup&gt;&lt;span class=&quot;tlid-translation translation&quot; lang=&quot;es&quot;&gt;&lt;span title=&quot;&quot;&gt;224&lt;/span&gt; &lt;span title=&quot;&quot;&gt;hosts&lt;/span&gt; &lt;span title=&quot;&quot;&gt;en la red.&lt;/span&gt; &lt;span title=&quot;&quot;&gt;Por&lt;/span&gt; &lt;span title=&quot;&quot;&gt;el tamaño que tiene&lt;/span&gt; &lt;span title=&quot;&quot;&gt;se suele&lt;/span&gt; &lt;span title=&quot;&quot;&gt;dividir en&lt;/span&gt; &lt;span title=&quot;&quot; class=&quot;&quot;&gt;subredes&lt;/span&gt;&lt;span title=&quot;&quot;&gt;.&lt;/span&gt;&lt;/span&gt; &lt;/li&gt;
+&lt;li&gt;172.16.0.0/12: es una red que admite hasta 2&lt;sup&gt;20&lt;/sup&gt; equipos connectados a la red.&lt;/li&gt;
+&lt;li&gt;192.168.0.0/16: es una clase C que permite hasta 254 equips. &lt;span class=&quot;tlid-translation translation&quot; lang=&quot;es&quot;&gt;&lt;span title=&quot;&quot;&gt;Aunque sea&lt;/span&gt; &lt;span title=&quot;&quot;&gt;la más&lt;/span&gt; &lt;span title=&quot;&quot;&gt;pequeña&lt;/span&gt; &lt;span title=&quot;&quot;&gt;de las tres&lt;/span&gt; &lt;span title=&quot;&quot;&gt;es la más&lt;/span&gt; &lt;span title=&quot;&quot; class=&quot;&quot;&gt;común&lt;/span&gt;&lt;span title=&quot;&quot;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;"></unicode>
@@ -2314,12 +2320,12 @@ text through the text editing buttons associated with the field."></unicode>
              <string role="key" value="anchors_linked_from_fields"></string>
              <dictionary></dictionary>
              <string role="key" value="content_w_resourcePaths"></string>
-             <unicode content="true" value="&lt;h4&gt;Mètodes de transmissió&lt;/h4&gt;
-&lt;p&gt;Les mètodes de transmissió poden ser els següents.&lt;/p&gt;
+             <unicode content="true" value="&lt;h4&gt;Métodos de transmisión&lt;/h4&gt;
+&lt;p&gt;Las métodos de transmisión pueden ser los siguientes.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Unidifusió (&lt;em&gt;Unicast&lt;/em&gt;). El destinatari és un dispostiu.&lt;/li&gt;
-&lt;li&gt;Multidifusió (&lt;em&gt;Multicast&lt;/em&gt;). Els destinataris són un grup de dipositius.&lt;/li&gt;
-&lt;li&gt;Difusió (&lt;em&gt;Broadcast&lt;/em&gt;). Els destinataris són tots els dispositus de la xarxa.&lt;/li&gt;
+&lt;li&gt;Unidifusión (&lt;i&gt; Unicast ). El destinatario es un dispuesta.&lt;br /&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Multidifusión (&lt;i&gt; Multicast ). Los destinatarios son un grupo de dipositivos.&lt;br /&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Difusión (&lt;i&gt; Broadcast). Los destinatarios son todos los dispositivos de la red.&lt;br /&gt;&lt;/i&gt;&lt;/li&gt;
 &lt;/ul&gt;"></unicode>
              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
              <int value="4"></int>
@@ -2404,31 +2410,31 @@ text through the text editing buttons associated with the field."></unicode>
              <string role="key" value="anchors_linked_from_fields"></string>
              <dictionary></dictionary>
              <string role="key" value="content_w_resourcePaths"></string>
-             <unicode content="true" value="&lt;p&gt;&lt;strong&gt;1. Identificar la interfície de xarxa&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;En els sistemes basats en Linux les interfícies de xarxa (NIC) tenen un nom lògic. Històricament s'empra la nomenclatura eth0, eth1 o wlan01, etc. Actualment els nous sistemes identifiquen les interfícies segons la posició que ocupen al bus del sistema (&lt;em&gt;Predictable Interface Names&lt;/em&gt;). Així és més senzill identificar-les. &lt;/p&gt;
-&lt;p&gt;Usarem &lt;code&gt;ifconfig -a&lt;/code&gt; per llistar totes les interfícies de xarxa.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;2. Configurar la interfície amb assignació de direcció dinàmica IP (Cliente DHCP)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Per a configurar una interfície cal editar l'arxiu &lt;code&gt;/etc/network/interfaces&lt;/code&gt; amb un editor de texts com &lt;code&gt;nano&lt;/code&gt;. En l'exemple assumim que volem configurar l'interfície &lt;code&gt;enp2s0&lt;/code&gt;.&lt;/p&gt;
+             <unicode content="true" value="&lt;p&gt;&lt;strong&gt; 1. Identificar la interfaz de red&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;En los sistemas basados ​​en Linux las interfaces de red (NIC) tienen un nombre lógico. Históricamente se emplea la nomenclatura eth0, eth1 o wlan01, etc. Actualmente los nuevos sistemas identifican las interfaces según la posición que ocupan en el bus del sistema (&lt;i&gt; Predictable Interface Names ). Así es más sencillo identificarlas. &lt;br /&gt;&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;Usaremos &lt;code&gt; ifconfig -a &lt;/code&gt; para listar todas las interfaces de red.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; 2. Configurar la interfaz con asignación de dirección dinámica IP (Cliente DHCP)&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Para configurar una interfaz debe editar el archivo &lt;code&gt; /etc/network/interfaces&lt;/code&gt; con un editor de textos como &lt;code&gt; nano&lt;/code&gt;.En el ejemplo asumimos que queremos configurar la interfaz &lt;code&gt; enp2s0.&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&quot;highlighted-code language-markup&quot;&gt;
 &lt;div&gt;
-&lt;pre&gt;&lt;code&gt;auto enp2s0
-iface enp2s0 inet dhcp&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt; auto enp2s0
+iface enp2s0 inet dhcp 
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;Afegint la configuració com es mostra més amunt pots activar manualment mitjançant l'ordre &lt;code&gt;ifup&lt;/code&gt; que inicialitza el procés DHCP.&lt;/p&gt;
+&lt;p&gt;Añadiendo la configuración como se muestra más arriba puedes activar manualmente mediante el comando &lt;code&gt; ifup que inicializa el proceso DHCP.&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&quot;highlighted-code language-markup&quot;&gt;
 &lt;div&gt;
-&lt;pre&gt;&lt;code&gt;sudo ifup enp2s0&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt; sudo ifup enp2s0 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;Per a desactivar la interfície, pots usar l'ordre &lt;code&gt;ifdown&lt;/code&gt;, això iniciarà la desactivació del procés DHCP i apagarà la interfície.&lt;/p&gt;
+&lt;p&gt;Para desactivar la interfaz, puedes usar la orden &lt;code&gt; ifdown &amp;lt;/ code&amp;gt;, esto iniciará la desactivación del proceso DHCP y apagará la interfaz.&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&quot;highlighted-code language-markup&quot;&gt;
 &lt;div&gt;
-&lt;pre&gt;&lt;code&gt;sudo ifdown en2s0&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt; sudo ifdown en2s0 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;Més informació en &lt;a href=&quot;https://help.ubuntu.com/16.04/serverguide/network-configuration.html#ip-addressing&quot;&gt;Configuració de xarxa&lt;/a&gt;, de Ubuntu Server Guide&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;"></unicode>
+&lt;p&gt;Más información en &lt;a href=&quot;https://help.ubuntu.com/16.04/serverguide/network-configuration.html#ip-addressing&quot;&gt; Configuración de red &lt;/a&gt;, de Ubuntu Server Guide &amp;lt;/ p&amp;gt;&lt;/p&gt;"></unicode>
              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
              <int value="4"></int>
              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
@@ -2585,7 +2591,7 @@ that may help or hinder the learner in the performance of the task."></unicode>
         <string role="key" value="exportType"></string>
         <string value="website"></string>
         <string role="key" value="last_full_node_path"></string>
-        <string value="exe-node:1.%20Interconnexi%C3%B3n%20de%20redes:2.%20El%20protocol%20IP"></string>
+        <string value="exe-node:1.%20Interconnexi%C3%B3n%20de%20redes:2.%20El%20protocolo%20IP"></string>
         <string role="key" value="parent"></string>
         <reference key="4"></reference>
         <string role="key" value="top_anchors_linked_from_fields"></string>
@@ -9158,7 +9164,7 @@ text through the text editing buttons associated with the field."></unicode>
   <string role="key" value="backgroundImgTile"></string>
   <bool value="0"></bool>
   <string role="key" value="currentNode"></string>
-  <reference key="17"></reference>
+  <reference key="35"></reference>
   <string role="key" value="dublinCore"></string>
   <instance class="exe.engine.package.DublinCore">
    <dictionary>
