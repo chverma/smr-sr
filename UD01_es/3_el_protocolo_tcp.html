@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3. El protocolo TCP | 1. Interconnexión de redes </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="https://github.com/corriol/sxe Traducido por https://github.com/chverma/sxe" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-75"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">1. Interconnexión de redes</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">1. Interconexión de redes</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="criterios_de_evaluacin.html" class="no-ch">Criterios de evaluación</a></li>
+   <li><a href="contenidos.html" class="no-ch">Contenidos</a></li>
+   <li><a href="1_arquitectura_de_red_tcp__ip.html" class="no-ch">1. Arquitectura de red TCP / IP</a></li>
+   <li><a href="2_el_protocolo_ip.html" class="no-ch">2. El protocolo IP</a></li>
+   <li id="active"><a href="3_el_protocolo_tcp.html" class="active no-ch">3. El protocolo TCP</a></li>
+   <li><a href="4_los_servicios_de_red.html" class="no-ch">4. Los servicios de red</a></li>
+   <li><a href="5_comandos_en_shell.html" class="no-ch">5. Comandos en shell</a></li>
+   <li><a href="6_elementos_de_interconexin.html" class="no-ch">6. Elementos de interconexión</a></li>
+   <li><a href="7_interconexin_de_redes.html" class="daddy">7. Interconexión de redes</a>
+   <ul class="other-section">
+      <li><a href="71_encaminamiento.html" class="no-ch">7.1. Encaminamiento</a></li>
+      <li><a href="72_cortafuegos_firewall.html" class="daddy">7.2. Cortafuegos (firewall)</a>
+      <ul class="other-section">
+         <li><a href="prctica_2_instalacin_y_configuracin_de_un_cortafuegos_restrictivo.html" class="no-ch">Práctica 2: Instalación y configuración de un cortafuegos restrictivo</a></li>
+      </ul>
+      </li>
+      <li><a href="73_traduccin_de_direcciones_de_red_nat.html" class="daddy">7.3. Traducción de direcciones de red (NAT)</a>
+      <ul class="other-section">
+         <li><a href="prctica_3.html" class="no-ch">Práctica 3:</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="2_el_protocolo_ip.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4_los_servicios_de_red.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3. El protocolo TCP</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id175">
+<div class="iDevice emphasis0">
+<div id="ta175_86" class="block iDevice_content">
+<p>El protocolo TCP (Transmission Control Protocol o protocolo de control de transmisión) fue diseñado para funcionar en redes poco fiables. Es un protocolo de la capa de transporte (nivel 4) y el objetivo principal es aportar fiabilidad a las transmisiones basadas en TCP / IP.</p>
+<p>La fiabilidad que aporta TCP lo hace ideal para comunicaciones donde queremos asegurar que los datos llegan correctamente, sin pérdidas ni errores. La parte negativa de este fiabilidad es la carga adicional de tráfico que supone en las comunicaciones.</p>
+<p>El protocolo TCP proporciona un punto de acceso a las aplicaciones mediante los puertos, números enteros que permiten identificar unívocamente las aplicaciones que están comunicándose.</p>
+<p>Los puertos se clasifican de la siguiente manera:</p>
+<ul>
+<li><strong>Puertos bien conocidos.</strong>Los puertos inferiores al 1024 son puertos reservados para el sistema operativo y por protocolos bien conocidos, como HTTP (servidor Web), POP3 / SMTP (servidor de e-mail).</li>
+<li><strong>Puertos registrados: </strong>Los comprendidos entre 1024 y 49151 son denominados "registrados y pueden ser utilizados por cualquier aplicación. Existe una lista pública en la web del IANA donde puede verse qué protocolo usa cada uno de ellos.</li>
+<li><strong>Puertos dinámicos, privados o efímeros. </strong>Los comprendidos entre los números 49152 y 65535. Se asignan de forma dinámica a las aplicaciones clientes al iniciar la conexión.</li>
+</ul>
+<figure><img alt="Connexions actuals amb TCP (netstat -t)" src="connexions-actuals.png" width="645" height="242" />
+<figcaption>Conexiones establecidas actualmente con TCP.</figcaption>
+</figure>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id176">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta176_128" class="block iDevice_content">
+<p>En el siguiente recurso podrás acceder a un listados de puertos de red bien conocidos y reservados:</p>
+<p><a href="https://es.wikipedia.org/wiki/Anexo:N%C3%BAmeros_de_puertos_de_red">Número de puertos de red</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id177">
+<div class="iDevice emphasis_debesconocerfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Socket de internet</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta177_129" class="block iDevice_content">
+<p><em><strong>Socket</strong></em> <span class="tlid-translation translation" lang="es"><span title="" class="">designa</span> <span title="">un concepto</span> <span title="">abstracto</span> <span title="">por el cual dos</span> <span title="">programas</span> <span title="" class="">(posiblemente</span> <span title="" class="">situados en</span> <span title="" class="">ordenadores</span> <span title="">diferentes</span><span title="">) pueden</span> <span title="">intercambiar</span> <span title="">cualquier</span> <span title="">flujo</span> <span title="" class="">de datos</span><span title="">, generalmente de</span> <span title="">manera</span> <span title="">fiable y</span> <span title="">ordenada</span><span title="">.</span> <span title="">Todo</span> <em><span title="">socket</span></em> <span title="">está</span> <span title="" class="">definido por</span> <span title="">una dirección de</span> <span title=""><em>socket</em>.</span> <span title="">La dirección</span> <span title="">de <em>socket</em></span> <span title="" class="">es una combinación</span> <span title="">de tres</span> <span title="">elementos</span><span title="">:</span> <span title="">una dirección IP</span><span title="">,</span> <span title="">un</span> <span title="">protocolo</span> <span title="" class="">de transporte y</span> <span title="">un número de puerto</span> <span title="">(por ejemplo</span><span title="">:</span> <span title="">84.88.125.15</span><span title="">,</span> <span title="">TCP</span><span title="" class="">, 2300</span><span title="">)</span><span title="">.</span></span></p>
+<p>Más información en <a href="https://es.wikipedia.org/wiki/Socket_de_Internet">Socket de Internet</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id178">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejemplos de conexiones</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta178_128" class="block iDevice_content">
+<p><img alt="Connexió UDP" height="263" src="connexio-udp.png" width="350"/><img alt="Connexió TCP" height="263" src="connexio-tcp-2.png" width="350"/><img alt="Connexió TCP 2" height="263" src="connexio-tcp-2.png" width="350"/></p> 
+ <p></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper activityIdevice em_iDevice" id="id179">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Cuestionario</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta179_107_2" class="block iDevice_content">
+<ol>
+<li>¿Cuál es la función principal del protocolo TCP? ¿En qué se diferencia de UDP?</li>
+<li>¿Qué es un socket?</li>
+<li>Dibuja un esquema donde se muestre la comunicación entre un cliente y un servidor DNS. Indicando claramente el flujo de datos y los sockets implicados.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="2_el_protocolo_ip.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4_los_servicios_de_red.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>7.2. Cortafuegos (firewall) | 1. Interconnexión de redes </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="https://github.com/corriol/sxe Traducido por https://github.com/chverma/sxe" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-81"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">1. Interconnexión de redes</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">1. Interconexión de redes</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="criterios_de_evaluacin.html" class="no-ch">Criterios de evaluación</a></li>
+   <li><a href="contenidos.html" class="no-ch">Contenidos</a></li>
+   <li><a href="1_arquitectura_de_red_tcp__ip.html" class="no-ch">1. Arquitectura de red TCP / IP</a></li>
+   <li><a href="2_el_protocolo_ip.html" class="no-ch">2. El protocolo IP</a></li>
+   <li><a href="3_el_protocolo_tcp.html" class="no-ch">3. El protocolo TCP</a></li>
+   <li><a href="4_los_servicios_de_red.html" class="no-ch">4. Los servicios de red</a></li>
+   <li><a href="5_comandos_en_shell.html" class="no-ch">5. Comandos en shell</a></li>
+   <li><a href="6_elementos_de_interconexin.html" class="no-ch">6. Elementos de interconexión</a></li>
+   <li class="current-page-parent"><a href="7_interconexin_de_redes.html" class="current-page-parent daddy">7. Interconexión de redes</a>
+   <ul>
+      <li><a href="71_encaminamiento.html" class="no-ch">7.1. Encaminamiento</a></li>
+      <li id="active"><a href="72_cortafuegos_firewall.html" class="active daddy">7.2. Cortafuegos (firewall)</a>
+      <ul>
+         <li><a href="prctica_2_instalacin_y_configuracin_de_un_cortafuegos_restrictivo.html" class="no-ch">Práctica 2: Instalación y configuración de un cortafuegos restrictivo</a></li>
+      </ul>
+      </li>
+      <li><a href="73_traduccin_de_direcciones_de_red_nat.html" class="daddy">7.3. Traducción de direcciones de red (NAT)</a>
+      <ul class="other-section">
+         <li><a href="prctica_3.html" class="no-ch">Práctica 3:</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="71_encaminamiento.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="prctica_2_instalacin_y_configuracin_de_un_cortafuegos_restrictivo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">7.2. Cortafuegos (firewall)</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id197">
+<div class="iDevice emphasis0">
+<div id="ta197_86" class="block iDevice_content">
+<p>El cortafuegos (firewall) es un mecanismo, ya sea de software o hardware, para la protección de redes. Un cortafuegos actúa como una barrera o muro de protección entre dos redes, normalmente un privada y otra pública e insegura como puede ser internet.</p>
+<p><span>La ubicación habitual de un cortafuegos es el punto de conexión de la red interna de la organización con la red exterior que, normalmente, es Internet. Cabe decir que, tal como muestra la imagen inferior</span><span>, Es frecuente conectar al cortafuegos una tercera red, llamada</span><em>zona desmilitarizada</em><span><span> (DMZ,</span><span> </span></span><em>zona desmilitarizada</em><span>), En la que se ubican los servidores de la organización que deben permanecer accesibles desde la red exterior.</span></p>
+<p>Por norma general un cortafuegos contiene los siguientes elementos:</p>
+<ul>
+<li><strong>Filtros: </strong>Elementos de hardware o software que se encargan de analizar los paquetes y decidir si aceptarlos o rechazarlos.</li>
+<li><strong>Nodo bastión:</strong> El dispositivo intermediario situado entre las dos redes y que es lo que está expuesto a ataques desde el exterior.</li>
+</ul>
+<p>Los objetivos del servicio de cortafuegos son:</p>
+<ul>
+<li>Garantizar que no se podrá acceder a los recursos internos desde el exterior sin permiso (archivos compartidos, impresoras de red, etc.)</li>
+<li>Filtrar los paquetes de entrada y salida, permitiendo o denegando el acceso según el origen o el destino, tanto en lo que respecta a las direcciones IP como en los puertos.</li>
+<li>Utilizar herramientas de software para llevar un control sobre el tráfico de red.</li>
+</ul>
+<div class="exe-figure exe-image position-center license-CC-BY-SA" style="width: 535px;"><img alt="Xarxa desmilitaritzada" src="xarxa-desmilitaritzada.png" width="535" height="239" />
+<div class="figcaption"><span class="title"><em>red desmilitarizada</em></span> <span class="license"><span>(</span><a>CC BY-SA</a><span>)</span></span></div>
+</div>
+<p>Un cortafuegos dispone de tres tipos direcciones: IN, OUT y FORWARD</p>
+<div class="exe-figure exe-image position-center license-CC-BY-SA" style="width: 305px;">
+<div class="figcaption header"><strong>Firewall: direcciones</strong></div>
+<img alt="Firewall: accions" src="diagrama-firewall.png" width="305" height="241" />
+<div class="figcaption"><span class="license"><span>licencia:</span><a>CC BY-SA</a></span></div>
+</div>
+<p>Un cortafuegos se puede configurar de dos formas: permisivo o restrictivo.</p>
+<p>En caso de ser permisivo deja entrar, salir y pasar todo el tráfico. Y el administrador se encargará de restringir lo que estime oportuno mediante una lista negra (blacklist). El cortafuegos restrictivo, en cambio, no deja entrar, salir ni pasó nada y es el administrador quien permitirá (abrirá) lo que crea conveniente (whitelist).</p>
+<p>Sin embargo, también se puede optar por soluciones mixtas donde algunas direcciones estén restringidas y otras permitidas.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id198">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Situación: configurar un cortafuegos restrictivo</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta198_148" class="block iDevice_content">
+<p>El núcleo Linux incluye el subsistema Netfilter, que es usado para manipular o decidir el destino del tráfico de red entre o mediante su red. Todas las soluciones cortafuegos Linux modernas utilizan este sistema para el filtrado de paquetes.</p>
+<p>La herramienta de configuración predeterminada del cortafuegos para Ubuntu es ufw. Desarrollado para facilitar la configuración de cortafuegos de iptables, ufw proporciona una forma fácil de usar para crear un firewall basado en host IPv4 o IPv6.</p>
+<p>Por defecto el cortafuegos está desactivado, hay activarlo con el comando:</p>
+<blockquote>
+<pre>$ sudo ufw enable</pre>
+</blockquote>
+<p>Para establecer la configuración predeterminada es necesario usar:</p>
+<blockquote>
+<pre>$ sudo ufw default [deny|allow] [incoming|outgoing|routed]</pre>
+</blockquote>
+<p>Para abrir un puerto concreto, por ejemplo el 22.</p>
+<blockquote>
+<pre>$ sudo ufw allow 22</pre>
+</blockquote>
+<p>Para abrir un puerto concreto en un protocolo determinado:</p>
+<blockquote>
+<pre>$ sudo ufw allow 22/tcp</pre>
+</blockquote>
+<p>Para abrir un puerto en un protocolo determinado y una dirección concreta out hacia el exterior.</p>
+<blockquote>
+<pre>$ sudo ufw allow out 22</pre>
+</blockquote>
+<p>Más información en <a href="https://help.ubuntu.com/lts/serverguide/firewall.html#firewall-ufw">Cortafuegos</a> en Ubuntu Server Guide y <a href="https://help.ubuntu.com/community/UFW">UFW</a> ayuda de la comunidad Ubuntu.</p>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="71_encaminamiento.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="prctica_2_instalacin_y_configuracin_de_un_cortafuegos_restrictivo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>7.3. Traducción de direcciones de red (NAT) | 1. Interconnexión de redes </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="https://github.com/corriol/sxe Traducido por https://github.com/chverma/sxe" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-83"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">1. Interconnexión de redes</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">1. Interconexión de redes</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="criterios_de_evaluacin.html" class="no-ch">Criterios de evaluación</a></li>
+   <li><a href="contenidos.html" class="no-ch">Contenidos</a></li>
+   <li><a href="1_arquitectura_de_red_tcp__ip.html" class="no-ch">1. Arquitectura de red TCP / IP</a></li>
+   <li><a href="2_el_protocolo_ip.html" class="no-ch">2. El protocolo IP</a></li>
+   <li><a href="3_el_protocolo_tcp.html" class="no-ch">3. El protocolo TCP</a></li>
+   <li><a href="4_los_servicios_de_red.html" class="no-ch">4. Los servicios de red</a></li>
+   <li><a href="5_comandos_en_shell.html" class="no-ch">5. Comandos en shell</a></li>
+   <li><a href="6_elementos_de_interconexin.html" class="no-ch">6. Elementos de interconexión</a></li>
+   <li class="current-page-parent"><a href="7_interconexin_de_redes.html" class="current-page-parent daddy">7. Interconexión de redes</a>
+   <ul>
+      <li><a href="71_encaminamiento.html" class="no-ch">7.1. Encaminamiento</a></li>
+      <li><a href="72_cortafuegos_firewall.html" class="daddy">7.2. Cortafuegos (firewall)</a>
+      <ul class="other-section">
+         <li><a href="prctica_2_instalacin_y_configuracin_de_un_cortafuegos_restrictivo.html" class="no-ch">Práctica 2: Instalación y configuración de un cortafuegos restrictivo</a></li>
+      </ul>
+      </li>
+      <li id="active"><a href="73_traduccin_de_direcciones_de_red_nat.html" class="active daddy">7.3. Traducción de direcciones de red (NAT)</a>
+      <ul>
+         <li><a href="prctica_3.html" class="no-ch">Práctica 3:</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="prctica_2_instalacin_y_configuracin_de_un_cortafuegos_restrictivo.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="prctica_3.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">7.3. Traducción de direcciones de red (NAT)</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id202">
+<div class="iDevice emphasis0">
+<div id="ta202_85" class="block iDevice_content">
+<p>La traducción de direcciones de red (Network Address Translation, NAT) es el proceso por el que se modifican la información sobre direcciones en el encabezado del paquete IPv4 mientras está en tránsito por un dispositivo de encaminamiento.</p> <p>El uso de NAT es muy habitual en escenarios donde dispositivos con una dirección IP privada (de una LAN por ejemplo) quieren acceder a una red en direcciones IP públicas, como Internet. Para evitar la ambigüedad en la gestión de los paquetes de vuelta, un NAT de una-muchos debe modificar información de más alto nivel como los puertos TCP / UDP a las comunicaciones saliente, y debe mantener una tabla de traducción para los paquetes de vuelta puedan traducirse correctamente. La RFC 2663 utiliza el término NAPT (network address and puerto translation, traducción de dirección de red y de puerto) para este tipo de NAT. Otras veces también se denomina PAT (puerto address translation), IP masquerading, NAT Overload y many-to-one NAT. Como este es el tipo de NAT más corriente, también se suele llamar simplemente NAT.</p> <p>Como se ha dicho, este método permite la comunicación a través del router sólo cuando la conversación se origina dentro de la red&quot;astuto&quot;, Porque esto inicializa las tablas de traducción. Por ejemplo, un navegador web dentro de la red disimulada puede navegar por una web que esté fuera, pero un navegador de fuera no puede navegar por una web que esté en la red disimulada. Sin embargo, la mayoría de los dispositivos NAT actuales permiten al administrador de red que preconfigure la mesa con algunas traducciones permanentes. Esta funcionalidad se conoce normalmente como&quot;NAT estático&quot;o port forwarding y permite que el tráfico originado en la red&quot;exterior&quot;llegue a ordenadores concretos dentro de la red disimulada.</p> <p>Desde mediados de los años 1990, el NAT ha sido una herramienta muy popular para aliviar los problemas provocados por el agotamiento del espacio de direcciones IPv4. Se ha convertido en una función estándar e indispensable en todos los routers para conexiones domésticas y de oficina pequeña. La mayoría de los sistemas que utilizan NAT lo hacen para permitir que múltiples ordenadores de una red privada accedan a la Internet con una sola dirección IP pública.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper OrientacionesalumnadofpdIdevice em_iDevice" id="id203">
+<div class="iDevice emphasis_orientacionesfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Enmascaramiento IP en Ubuntu Server 16.04</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta203_152" class="block iDevice_content">
+<p>El enmascaramiento IP es el tipo de NAT más popular y es sencillo de configurar usando reglas del ufw.</p>
+<p>Para hacerlo hay que editar alguno de los archivos que se encuentran en la carpeta /etc/ufw/*.rules.</p>
+<p>Las reglas se dividen en dos archivos diferentes, reglas que deben ejecutarse antes de las reglas de línea de comandos ufw, y las reglas que se ejecutan después de las reglas de la línea de comandos ufw.</p>
+<p>En primer lugar, el reenvío de paquetes debe estar habilitado.</p>
+<p>Ahora agregue reglas al archivo <code>/etc/ufw/before.rules</code>. Las reglas predeterminadas sólo configuran la tabla <code>filter</code>, y para permitir que la configuración de la tabla <code>nat</code> deba configurar. Añada el siguiente texto en la parte superior del archivo justo después del encabezamiento:</p>
+<blockquote>
+<div class="highlighted-code language-python">
+<div>
+<pre><code># nat table rules 
+*nat :POSTROUTING ACCEPT [0:0] 
+
+# Forward traffic from eth1 through eth0. 
+-A POSTROUTING -s 192.168.0.0/24 -o eth0 -j MASQUERADE 
+
+# don't delete the 'COMMIT' line or these nat table rules won't be processed 
+COMMIT</code></pre>
+</div>
+</div>
+</blockquote>
+<p>Los comentarios no son estrictamente necesarios, pero se considera buena práctica documentar su configuración. Además, al modificar alguno de los ficheros de reglas en / etc / ufw, asegúrese de que estas líneas sean la última línea de cada tabla modificada:</p>
+<blockquote>
+<pre># don't delete the 'COMMIT' line or these nat table rules won't be processed<br />COMMIT</pre>
+</blockquote>
+<p>Para cada tabla se requiere una declaración COMMIT correspondiente. En estos ejemplos sólo se muestran las tablas nat y filter.</p>
+<p>En el ejemplo anterior sustituya eth0, eth1 y 192.168.0.0/24 con las interfaces apropiadas y el rango de IP para la red.</p>
+<p>Finalmente, desactiva y vuelve a habilitar ufw para aplicar los cambios:</p>
+<blockquote>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>sudo ufw disable &amp;&amp; sudo ufw enable</code></pre>
+</div>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id204">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Caso práctico: tablas de enrutamiento y NAT</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta204_147" class="block iDevice_content">
+<p>Como se puede observar en el esquema disponemos de un dispositivo que puede realizar NAT (R2). Crea las tablas de rutas de R1 y R2 y las reglas NAT que creas convenientes para que los equipos de la red 192.168.2.0/24 puedan acceder a internet sin problemas.</p> <p style="text-align: center;"><img alt="Xarxa " height="155" src="xarxa-nat-enrutament.png" width="599"/></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper OrientacionesalumnadofpdIdevice em_iDevice" id="id205">
+<div class="iDevice emphasis_orientacionesfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Redirección de puertos en Ubuntu 16.04</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta205_152" class="block iDevice_content">
+<p>La redirección de puertos (port forwarding) es la acción de redirigir un puerto de red de un nodo de red a otro. Esta técnica puede permitir que un usuario externo tenga acceso a un puerto en una dirección IP privada (dentro de una LAN) desde el exterior vía un router con NAT activado.</p>
+<p>La redirección de puertos permite que ordenadores remotos (por ejemplo, máquinas públicas en Internet) se conectan a un ordenador en concreto dentro de una LAN privada.</p>
+<p>Por ejemplo, la redirección del puerto 3389 en el router a la máquina de otro usuario permite el acceso remoto.</p>
+<p>Las máquinas con Linux modernos consiguen esto añadiendo reglas de iptables en la tabla nato: con el destino DNAT (destino NAT) en la cadena de PREROUTING o con destino SNAT (source NAT) en la cadena de POSTROUTING.</p>
+<p>Suponiendo que disponemos de un servicio web en la red privada interna, concretamente al equipo 192.168.0.2 y que queremos que sea accesible desde el exterior mediante NAT y la dirección pública del router es 214.15.11.12.</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code></code></pre>
+<pre class="  language-clike"><code class="  language-clike"># nat table rules
+
+<span class="token operator">*</span>nat
+<span class="token punctuation">:</span>PREROUTING ACCEPT <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">]</span>
+
+# Forward traffic from eth0 port <span class="token number">80</span> to <span class="token number">192.168</span><span class="token punctuation">.</span><span class="token number">0.2</span><span class="token punctuation">.</span>
+<span class="token operator">-</span>A PREROUTING <span class="token operator">-</span>i eth0 <span class="token operator">-</span>p tcp <span class="token operator">--</span>dport <span class="token number">80</span> <span class="token operator">-</span>j DNAT <span class="token operator">--</span>to<span class="token operator">-</span>destination <span class="token number">192.168</span><span class="token punctuation">.</span><span class="token number">0.2</span><span class="token punctuation">:</span><span class="token number">80</span>
+
+# don<span class="token string">'t delete the '</span>COMMIT<span class="token string">' line or these nat table rules won'</span>t be processed
+COMMIT</code></pre>
+<pre><code></code></pre>
+</div>
+</div>
+<p>Con la regla anterior las peticiones al router el puerto TCP / 80 serán dirigidas a la dirección IP 192.168.0.2 en el mismo puerto.</p>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="prctica_2_instalacin_y_configuracin_de_un_cortafuegos_restrictivo.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="prctica_3.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6. Elementos de interconexión | 1. Interconnexión de redes </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="https://github.com/corriol/sxe Traducido por https://github.com/chverma/sxe" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-78"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">1. Interconnexión de redes</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">1. Interconexión de redes</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="criterios_de_evaluacin.html" class="no-ch">Criterios de evaluación</a></li>
+   <li><a href="contenidos.html" class="no-ch">Contenidos</a></li>
+   <li><a href="1_arquitectura_de_red_tcp__ip.html" class="no-ch">1. Arquitectura de red TCP / IP</a></li>
+   <li><a href="2_el_protocolo_ip.html" class="no-ch">2. El protocolo IP</a></li>
+   <li><a href="3_el_protocolo_tcp.html" class="no-ch">3. El protocolo TCP</a></li>
+   <li><a href="4_los_servicios_de_red.html" class="no-ch">4. Los servicios de red</a></li>
+   <li><a href="5_comandos_en_shell.html" class="no-ch">5. Comandos en shell</a></li>
+   <li id="active"><a href="6_elementos_de_interconexin.html" class="active no-ch">6. Elementos de interconexión</a></li>
+   <li><a href="7_interconexin_de_redes.html" class="daddy">7. Interconexión de redes</a>
+   <ul class="other-section">
+      <li><a href="71_encaminamiento.html" class="no-ch">7.1. Encaminamiento</a></li>
+      <li><a href="72_cortafuegos_firewall.html" class="daddy">7.2. Cortafuegos (firewall)</a>
+      <ul class="other-section">
+         <li><a href="prctica_2_instalacin_y_configuracin_de_un_cortafuegos_restrictivo.html" class="no-ch">Práctica 2: Instalación y configuración de un cortafuegos restrictivo</a></li>
+      </ul>
+      </li>
+      <li><a href="73_traduccin_de_direcciones_de_red_nat.html" class="daddy">7.3. Traducción de direcciones de red (NAT)</a>
+      <ul class="other-section">
+         <li><a href="prctica_3.html" class="no-ch">Práctica 3:</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="5_comandos_en_shell.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="7_interconexin_de_redes.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6. Elementos de interconexión</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id187">
+<div class="iDevice emphasis0">
+<div id="ta187_86" class="block iDevice_content">
+<p>Los dispositivos de interconexión permiten conectar los diferentes dispositivos con varios objetivos.</p>
+<h2>Repetidor</h2>
+<p>Un repetidor (en inglés repeater) es un dispositivo electrónico que recibe una señal débil o de bajo nivel y la retransmite a un nivel más alto y / o además potencia, de modo que la señal pueda cubrir distancias más largas sin degradación.</p>
+<h2>Concentrador</h2>
+<p>Los concentradores (en inglés hub) permiten interconectar los diferentes nodos existentes en una red de área local, funcionan de una forma muy sencilla, reenvían por todos los puertos la información que les llega. Sin embargo, el problema principal de los concentradores es que el uso de la red no es el óptimo.</p>
+<h2>Punto</h2>
+<p>Un puente de red (o bridge) es un dispositivo de interconexión de redes de ordenadores que opera con la capa 2 (nivel de enlace de datos) del modelo OSI. Este interconecta dos segmentos de red (o divide una red en segmentos) haciendo el traslado de datos de una red a la otra con base de la dirección física de destino de cada paquete. Un bridge conecta dos segmentos de red como una sola red usando el mismo protocolo de nivel de red.</p>
+<h2>Conmutador</h2>
+<p>Un conmutador (en inglés switch) es un aparato de redes que permite agrupar un conjunto de ordenadores y hacer que pasen por el mismo cable. A diferencia de los concentradores, por cada paquete que llega, el conmutador lo envía sólo a su destino.</p>
+<p>El conmutador debe saber, para cada cable que tiene conectado, a qué dirección MAC corresponde cada uno. Para ello, internamente guarda una tabla de correspondencias, que va actualizando a medida que le llegan paquetes de nuevos ordenadores.</p>
+<p>Cuando no sabe una dirección, utiliza una dirección de difusión (broadcast) para preguntar a todo el mundo.</p>
+<h2>Enrutador</h2>
+<p>Un enrutador (en inglés: router) es un dispositivo de red que reenvía paquetes de datos entre redes de computadores. El enrutador pertenece al de nivel 3 del modelo OSI. Como el router está conectado a dos o más líneas de diferentes redes, cuando un paquete de datos viene de una de las líneas, el router lee la información de dirección en el paquete y así determina su destino final. Después usando una política de enrutamiento dirige los paquetes en función de ciertos parámetros (origen, destino, congestión, seguridad ...) a la siguiente red, este paquete va pasando de una red a otra hasta llegar a su destino. Estas políticas de enrutamiento pueden ser estáticas (introducidas manualmente) o dinámicas (RIP, BGP ...). De esta manera los routers "dirigen el tráfico" en internet.</p>
+<div class="exe-figure exe-image position-center license-CC-BY-SA" style="width: 320px;"><img alt="Linksys wireless-G router, model WRT54GS" src="Linksys-Wireless-G-Router.jpg" width="320" height="274" />
+<div class="figcaption"><a href="https://es.m.wikipedia.org/wiki/Archivo:Linksys-Wireless-G-Router.jpg">Colaboradores de Wikipedia</a><a>.</a><span class="title"><em>Enrutador inalámbrico G Linksys, modelo WRT54GS</em></span> <span class="license"><span>(</span><a href="http://creativecommons.org/licenses/?lang=ca-ES">CC BY-SA</a><span>)</span></span></div>
+</div>
+<p>Los routers más comunes son los de las casas y los de las pequeñas oficinas que simplemente pasan los paquetes de una red a otra. Un ejemplo sería el DLS router que se conecta a través de un ISP. También hay enrutadores más sofisticados, como routers empresariales que conectan grandes redes o ISP hasta los routers centrales que reenvían datos a alta velocidad a lo largo de las fibras ópticas. Normalmente los routers se dedican a dispositivos hardware, pero cada vez es más común encontrar routers routers basados ​​en software.</p>
+<h2>Pasarela</h2>
+<p>Una pasarela (en inglés gateway) es un dispositivo que permite interconectar redes que utilizan arquitecturas o protocolos diferentes, es una puerta de enlace en una red. Las pasarelas actúan en el nivel 4 (capa de transporte) y superiores del modelo OSI. La mayoría de las pasarelas se implementan por software.</p>
+<p>Las pasarelas también se llaman convertidores de protocolo y son más complejas que los routers o los conmutadores de red.</p>
+<p>Las pasarelas son una parte muy importante en la mayoría de routers, ya que interconectan redes Ethernet con redes Wi-Fi.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id188">
+<div class="iDevice emphasis_debesconocerfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Es necesario que conozcas</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta188_129" class="block iDevice_content">
+<ul>
+<li><strong>Segmento de red: </strong>En el ámbito lógico, forma un único segmento toda sección de una red Ethernet que comparte un mismo dominio de colisión, de manera que los diferentes segmentos se unen entre sí mediante enrutadores o conmutadores; en este sentido, dos o más secciones de la red unidas por un concentrador se consideran partes de un mismo segmento de red.</li>
+<li><strong>Dominio de colisión:</strong> Segmento físico de una red de ordenadores donde es posible que las tramas puedan colisionar con otros.</li>
+<li><strong>Dominio de difusión:</strong> Conjunto de todos los dispositivos que reciben tramas de difusión (<em>transmitir) Que se originan en cualquier dispositivo del conjunto. Los routers dividen los dominios de difusión, ya que no envían tramas de difusión.</em></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper activityIdevice em_iDevice" id="id189">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Actividad: mapa de red</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta189_107_2" class="block iDevice_content">
+<p>Realiza en la aplicación DIA un plano de la red de clase tanto de nivel físico como lógico.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper SortIdeviceInc em_iDevice" id="id190">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Dispositivos por niveles</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+
+<div id="ta190_4" class="block iDevice_content">
+<p><span class="tlid-translation translation" lang="es"><span title="">Ordenar</span> <span title="" class="">de arriba</span> <span title="">hacia abajo</span> <span title="">los siguientes</span> <span title="">dispositivos</span> <span title="" class="">por el nivel</span> <span title="">en que</span> <span title="" class="">trabajan</span></span></p>
+</div>
+
+
+
+<script src="jquery-ui-1.10.3.custom.min.js" type='text/javascript'> </script>
+<script type="text/javascript">
+	// Before in common.js
+	function playAndReset(e) {
+		if (e && e.paused == true && e.currentTime == 0) {
+			try {
+				e.play()
+			} catch (t) {}
+		} else {
+			try {
+				e.pause();
+				e.addEventListener("seeked", function() {
+					e.play()
+				}, true);
+				e.currentTime = 0
+			} catch (n) {}
+		}
+	}
+
+	function playPositiveFeedbackDefault() {
+		var e = Math.floor(Math.random() * 3);
+		var t = document.getElementById("exesfx_good" + e);
+		playAndReset(t)
+	}
+
+	function playNegativeFeedbackDefault() {
+		var e = document.getElementById("exesfx_wrong");
+		playAndReset(e)
+	}
+	var exe_isTouchScreenDev = false;
+	var touchScreenDetectDone = false;
+	function doTouchScreenDetect() {
+		if (touchScreenDetectDone == true) {
+			return
+		}
+		var e = navigator.userAgent;
+		if (e.indexOf("Android") != -1) {
+			exe_isTouchScreenDev = true
+		}
+	}
+	doTouchScreenDetect();
+	// / Before in common.js
+
+	var sortmeItemIds190 = new Array();
+
+	//correct
+	var sortMeEffect190 = "bounce";
+
+	//wrong
+	var sortMeEffectWrong190 = "transfer";
+	
+	var sortMeStyle190 = "background-color: green; color: white; margin: 10px; padding: 5px;";
+</script>
+<script src="sortItems.js" type='text/javascript'> </script>
+
+<div id="sortmecorrectoverlay190" style="position: absolute; z-index: 3;">
+	<div id="ta190_9" class="block iDevice_content">
+<p style="text-align: center;"><span style="font-size: 24pt;"><strong>Correcto</strong></span></p>
+</div>
+
+</div>
+<div id="sortmewrongoverlay190" style="position: absolute; z-index: 3">
+	<div id="ta190_10" class="block iDevice_content">
+<p>Incorrecto</p>
+</div>
+
+</div>
+
+<!-- home of contents before being sorted  will be randomized first -->
+<div id="sortmeitemcontainer190" class='sortitemcontainer' style='display: none; z-index: 1'>
+
+<div id='sortmeitem190_14'><div id="ta190_14" class="block iDevice_content">
+<p>Pasarela</p>
+</div>
+</div><div id='sortmeitem190_992'><div id="ta190_992" class="block iDevice_content">
+<p>Enrutador</p>
+</div>
+</div><div id='sortmeitem190_993'><div id="ta190_993" class="block iDevice_content">
+<p>Commutador</p>
+</div>
+</div><div id='sortmeitem190_994'><div id="ta190_994" class="block iDevice_content">
+<p>Concentrador</p>
+</div>
+</div></div>
+<script type='text/javascript'>sortmeItemIds190[sortmeItemIds190.length] = "sortmeitem190_14";
+sortmeItemIds190[sortmeItemIds190.length] = "sortmeitem190_992";
+sortmeItemIds190[sortmeItemIds190.length] = "sortmeitem190_993";
+sortmeItemIds190[sortmeItemIds190.length] = "sortmeitem190_994";
+</script><ul class='sortableitemulcontainer' id='sortme190' style="list-style-type: none; margin: 0; padding: 0; ">
+
+</ul>
+
+<input type='button' value="Comprueba" style="color: white; background-color: green;" onclick='checkOrder("190")'/><br/><br/>
+<script type='text/javascript'>initSortActivity('190');</script>
+
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="5_comandos_en_shell.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="7_interconexin_de_redes.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

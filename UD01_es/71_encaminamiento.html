@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>7.1. Encaminamiento | 1. Interconnexión de redes </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="https://github.com/corriol/sxe Traducido por https://github.com/chverma/sxe" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-80"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">1. Interconnexión de redes</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">1. Interconexión de redes</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="criterios_de_evaluacin.html" class="no-ch">Criterios de evaluación</a></li>
+   <li><a href="contenidos.html" class="no-ch">Contenidos</a></li>
+   <li><a href="1_arquitectura_de_red_tcp__ip.html" class="no-ch">1. Arquitectura de red TCP / IP</a></li>
+   <li><a href="2_el_protocolo_ip.html" class="no-ch">2. El protocolo IP</a></li>
+   <li><a href="3_el_protocolo_tcp.html" class="no-ch">3. El protocolo TCP</a></li>
+   <li><a href="4_los_servicios_de_red.html" class="no-ch">4. Los servicios de red</a></li>
+   <li><a href="5_comandos_en_shell.html" class="no-ch">5. Comandos en shell</a></li>
+   <li><a href="6_elementos_de_interconexin.html" class="no-ch">6. Elementos de interconexión</a></li>
+   <li class="current-page-parent"><a href="7_interconexin_de_redes.html" class="current-page-parent daddy">7. Interconexión de redes</a>
+   <ul>
+      <li id="active"><a href="71_encaminamiento.html" class="active no-ch">7.1. Encaminamiento</a></li>
+      <li><a href="72_cortafuegos_firewall.html" class="daddy">7.2. Cortafuegos (firewall)</a>
+      <ul class="other-section">
+         <li><a href="prctica_2_instalacin_y_configuracin_de_un_cortafuegos_restrictivo.html" class="no-ch">Práctica 2: Instalación y configuración de un cortafuegos restrictivo</a></li>
+      </ul>
+      </li>
+      <li><a href="73_traduccin_de_direcciones_de_red_nat.html" class="daddy">7.3. Traducción de direcciones de red (NAT)</a>
+      <ul class="other-section">
+         <li><a href="prctica_3.html" class="no-ch">Práctica 3:</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="7_interconexin_de_redes.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="72_cortafuegos_firewall.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">7.1. Encaminamiento</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id192">
+<div class="iDevice emphasis0">
+<div id="ta192_85" class="block iDevice_content">
+<h2>1. Encaminamiento</h2>
+<p>El direccionamiento IP es una de las funciones fundamentales que los dispositivos enrutadores deben hacer. Consiste fundamentalmente a determinar cuál es la ruta que debe seguir un paquete de datos de un nodo de origen hasta un host de destino basándose en factores como pueden ser los siguientes:</p>
+<ul>
+<li>Número de saltos del origen al destino</li>
+<li>Ancho de banda de la línea</li>
+<li>Número de usuarios conectados</li>
+<li>prioridades</li>
+</ul>
+<p>Este tipo de direccionamiento lógico proporciona una gran flexibilidad ya que los paquetes pueden viajar por diferentes rutas dependen del estado de la red en un momento determinado.</p>
+<p>El direccionamiento se puede hacer de dos maneras, con rutas estáticas o dinámicas.</p>
+<h3>1.1. Direccionamiento IP para rutas estáticas</h3>
+<p>Las rutas estáticas son aquellas que el administrador introduce en los enrutadores manualmente, esto conlleva que deba tener un profundo conocimiento de la red que estamos configurando, además es un sistema que no varía con el tiempo y no se actualizan las tablas de encaminamiento de una manera automática cuando hay modificaciones en la red.</p>
+<h4>Rutas por defecto</h4>
+<p>Las rutas por defecto permiten sustituir todas las rutas estáticas que tienen una misma puerta de enlace, esto implica una tarea administrativa inferior que si tenemos que especificar cada una de las rutas.</p>
+<p>Para configurar una ruta estática utilizamos la orden ip route con el identificador de red a 0 y la máscara a 0, estos valores indican cualquier destino con cualquier máscara.</p>
+<h3>1.2. Rutas dinámicas</h3>
+<p>Las rutas se generan automáticamente cuando se configura un protocolo dinámico en varios routers. Estos comparten las tablas en intervalos determinados de tiempo periódicamente.</p>
+<h4>Direccionamiento IP por rutas dinámicas</h4>
+<p>Las rutas dinámicas se generan automáticamente en los routers cuando activamos los protocolos de enrutamiento para las diferentes redes, a diferencia de las rutas estáticas las tablas de encaminamiento se configuran automáticamente ante cualquier cambio en la red, esto nos permite una mayor escalabilidad y fiabilidad para la gestión y resolución de rutes.</p>
+<p>Se ha tener en cuenta que se pueden presentar problemas de redundancia de rutas y se pueden generar bucles de encaminamiento.</p>
+<p>Cuando todos los routers han generado sus tablas y han actualizado los dispositivos vecinos se dice que han convergido.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id193">
+<div class="iDevice emphasis_debesconocerfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Encaminamiento en un nodo</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta193_129" class="block iDevice_content">
+<p>Cuando un host debe enviar un paquete:</p> <ol>
+<li>Extrae del paquete la dirección de destino.</li><li>Extrae de la dirección de destino la parte de la red.</li><li>Compara la parte de la red de destino con su propia dirección de red.</li><li>Si ambos coinciden entonces el destino está en su misma LAN y envía el paquete directamente al destinatario.</li><li>Si no coinciden envía el paquete a su router por defecto, el cual se encarga de enviar el paquete hacia su destino.</li></ol> 
+ <p>El router por defecto siempre está en la misma LAN que el host.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper OrientacionesalumnadofpdIdevice em_iDevice" id="id194">
+<div class="iDevice emphasis_orientacionesfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Convertir Ubuntu Server en un encaminador</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta194_153" class="block iDevice_content">
+<h2>1. Activar encaminamiento</h2>
+<p>El primer paso es activar IPv4 packet forwarding editando el archivo /etc/sysctl.conf y Descomentar la siguiente línea:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>net.ipv4.ip_forward = 1</code></pre>
+</div>
+</div>
+<p>Si desea habilitar IPv6 forwarding Descomentar también:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>net.ipv6.conf.default.forwarding = 1</code></pre>
+</div>
+</div>
+<p>Después para ejecuta el comando sysctl para activar la nueva configuración del archivo:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>sudo sysctl -p</code></pre>
+</div>
+</div>
+<h2>2. Añadir rutas estáticas</h2>
+<p>El comando route permite añadir rutas estáticas a los servidores Ubuntu. Y tiene la siguiente sintaxis:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>route add -net red / máscara gw gateway dev if</code></pre>
+</div>
+</div>
+<p>Ejemplo:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code></code></pre>
+<pre><code>route add -net 192.168.40.0/24 gw 192.168.30.1 dev enp2s0</code></pre>
+<pre><code> </code></pre>
+</div>
+</div>
+<h3>Rutas persistentes</h3>
+<p>Para crear rutas persistentes debe editar el archivo / etc / network / interfaces y añadir al final el mando up seguido del comando route deseado:</p>
+<div class="highlighted-code language-markup">
+<pre><code>up route add -net 192.168.40.0/24 gw 192.168.30.1 dev enp2s0</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper activityIdevice em_iDevice" id="id195">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Actividad: Enrutamiento entre redes</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta195_105_2" class="block iDevice_content">
+<p>Configurar las tablas de encaminamiento del servidor Ubuntu de forma que los equipos de la red interna puedan comunicarse con los equipos de la red interna de un compañero.</p> <p><strong>Entregable</strong></p> 
+ <ol>
+<li>Plano de las redes.</li><li>Captura de un ping entre dos equipos de las redes internas.</li><li>Captura de la tabla de rutas de tu Ubuntu Server.</li><li>Captura de un traceroute entre los dos equipos de las redes internas.</li></ol> 
+ <p></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id196">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Encaminamiento en un nodo: caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta196_147" class="block iDevice_content">
+<p>Dado el siguiente esquema de red:</p>
+<p><img alt="Xarxa d'exemple" src="xarxa-a-b.png" width="466" height="259" /></p>
+<h2>Supuesto 1: ping del nodo A a 10.0.2.2.</h2>
+<ol>
+<li>Extrae del paquete la dirección de destino: 10.0.2.2</li>
+<li>Extrae de la dirección de destino la parte de la red: 10.0.2.0</li>
+<li>Compara la parte de la red de destino con su propia dirección de red: 10.0.2.0 - 10.0.2.0</li>
+<li>Posibilidades
+<ol>
+<li>Si ambos coinciden entonces el destino está en su misma LAN y envía el paquete directamente al destinatario.</li>
+<li>Si no coinciden envía el paquete a su router por defecto, el cual se encarga de enviar el paquete hacia su destino.</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="7_interconexin_de_redes.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="72_cortafuegos_firewall.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>
