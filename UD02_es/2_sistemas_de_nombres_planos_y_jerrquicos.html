@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2. Sistemas de nombres planos y jerárquicos | Unitat 2. Servei DNS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-41"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">Unitat 2. Servei DNS</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">2. Servicio DNS</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="contenidos.html" class="no-ch">Contenidos</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1. Introducción</a></li>
+   <li id="active"><a href="2_sistemas_de_nombres_planos_y_jerrquicos.html" class="active no-ch">2. Sistemas de nombres planos y jerárquicos</a></li>
+   <li><a href="3_zonas_primarias_y_secundarias_transferencias_de_zona.html" class="daddy">3. Zonas primarias y secundarias. Transferencias de zona.</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_instalacin_y_configuracin_de_un_servidor_dns_de_reenvo.html" class="no-ch">Práctica 1: Instalación y configuración de un servidor DNS de reenvío</a></li>
+   </ul>
+   </li>
+   <li><a href="4_resolucin_de_nombres.html" class="daddy">4. Resolución de nombres</a>
+   <ul class="other-section">
+      <li><a href="41_consultas_recursivas.html" class="no-ch">4.1. Consultas recursivas</a></li>
+      <li><a href="42_consultas_iterativas.html" class="no-ch">4.2. Consultas iterativas</a></li>
+      <li><a href="43_resolucin_inversa.html" class="no-ch">4.3. Resolución inversa</a></li>
+      <li><a href="44_servidores_raz.html" class="no-ch">4.4. Servidores raíz</a></li>
+      <li><a href="45_el_protocol_dns.html" class="no-ch">4.5. El protocol DNS</a></li>
+   </ul>
+   </li>
+   <li><a href="5_tipos_de_registros.html" class="daddy">5. Tipos de registros</a>
+   <ul class="other-section">
+      <li><a href="51_registros_de_recurso.html" class="no-ch">5.1. Registros de recurso</a></li>
+      <li><a href="52_registrar_soa.html" class="no-ch">5.2. Registrar SOA</a></li>
+      <li><a href="53_registro_ns.html" class="no-ch">5.3. Registro NS</a></li>
+      <li><a href="54_registre_a_o_aaaa.html" class="no-ch">5.4. Registre A o AAAA</a></li>
+      <li><a href="55_registre_cname.html" class="no-ch">5.5. Registre CNAME</a></li>
+      <li><a href="56_otros_registros.html" class="no-ch">5.6. Otros registros</a></li>
+      <li><a href="57_ejemplo_de_zona_directa_e_inversa.html" class="no-ch">5.7. Ejemplo de zona directa e inversa</a></li>
+      <li><a href="prctica_2_dominio_local.html" class="no-ch">Práctica 2: Dominio local</a></li>
+      <li><a href="prctica_3_implementacin_de_un_dominio_local.html" class="no-ch">Práctica 3: Implementación de un dominio local</a></li>
+      <li><a href="prctica_4_zona_de_resolucin_inversa.html" class="no-ch">Práctica 4: Zona de resolución inversa</a></li>
+      <li><a href="prctica_5_configuracin_de_un_servidor_secundario.html" class="no-ch">Práctica 5: Configuración de un servidor secundario</a></li>
+   </ul>
+   </li>
+   <li><a href="6_evolucin_del_protocolo_y_seguridad.html" class="no-ch">6. Evolución del protocolo y seguridad</a></li>
+   <li><a href="actividades.html" class="no-ch">Actividades</a></li>
+   <li><a href="mapa_conceptual.html" class="no-ch">Mapa conceptual</a></li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="1_introduccin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_zonas_primarias_y_secundarias_transferencias_de_zona.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">2. Sistemas de nombres planos y jerárquicos</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id77">
+<div class="iDevice emphasis0">
+<div id="ta77_154" class="block iDevice_content">
+<p>El problema de identificar los equipos se produce desde el principio de la existencia de las redes de ordenadores y no es específico de las redes TCP / IP. Hay un mecanismo en"lenguaje humano"para identificar los equipos de la red. En especial los que proporcionan servicios a los demás equipos y usuarios. En la red inicial ARPANET, los equipos ya recibían un nombre. Estos nombres se hacían públicos por medio de un archivo centralizado que contenía los nombres de todos los equipos de la red y su identificación. Este archivo era el archivo hosts.txt (en sistemas GNU / Linux, conocida como / etc / hosts).</p>
+<p>Ejemplo de archivo de nombres plan para describir los alias de una red local en el hogar:</p>
+<div class="highlighted-code language-clike line-numbers hightlight--">
+<div>
+<pre><code></code></pre>
+<pre class="line-numbers  language-clike" data-line="-"><code class="  language-clike"><span class="token punctuation">[</span>root@portatil <span class="token operator">~</span><span class="token punctuation">]</span># cat <span class="token operator">/</span>etc<span class="token operator">/</span>hosts
+# Do not remove the following line<span class="token punctuation">,</span> or various programs
+# that require network functionality will fail<span class="token punctuation">.</span>
+<span class="token number">127.0</span><span class="token punctuation">.</span><span class="token number">0.1</span> localhost<span class="token punctuation">.</span>localdomain localhost localhost
+<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token number">1</span> localhost6<span class="token punctuation">.</span>localdomain6 localhost6
+<span class="token number">192.168</span><span class="token punctuation">.</span><span class="token number">1.1</span> router routerWF
+<span class="token number">192.168</span><span class="token punctuation">.</span><span class="token number">1.31</span> server1 escritorio padre
+<span class="token number">192.168</span><span class="token punctuation">.</span><span class="token number">1.32</span> estacion1 dormitorio madre
+<span class="token number">192.168</span><span class="token punctuation">.</span><span class="token number">1.33</span> estacion2 nino juegos supercrack</code></pre>
+<pre><code></code></pre>
+</div>
+</div>
+<div class="destacado">
+<p><strong>Poner nombres a los ordenadores de casa:</strong></p>
+<p>El archivo anterior pertenece al PC llamado portátil y pone nombres"caseros"los otros ordenadores de la familia. Así por ejemplo el equipo 192.168.1.33 se puede llamar de las cuatro maneras diferentes que se indican.</p>
+</div>
+<p>En una red pequeña se puede generar un archivo con el nombre e identificador IP de todos los hosts, centralizado en un servidor, y encargarse de distribuir copias de este archivo a todos los equipos de la red. Pero este modelo de conocimiento no es escalable. Si la red crece es imposible de mantener. Utilizar este modelo significaría que hay un equipo que centraliza los nombres de todos los hosts de Internet en un solo archivo! Por otra parte, también significaría que este archivo se repartirá entre todos los equipos de Internet para que sepan cómo se llaman los otros equipos cada vez que hay una actualización. Evidentemente hay otra solución.</p>
+<div class="reflexiona">
+<p><strong>Problemas de actualización de una red</strong></p>
+<p>Imagínese los problemas que se presentan en querer hacer llegar un mismo archivo a todos los hosts. Habrá inconsistencias con equipos que han recibido la actualización y otras que no. El tráfico de copiar el archivo en cada equipo. Un nuevo equipo en Internet significa escribir de nuevo el archivo y volverlo enviar a todo el mundo!</p>
+</div>
+<p>En 1983 surge el Domain Name System (DNS) para aportar una solución escalable y práctica. El DNS se basa en una base de datos de nombres de dominio jerárquica y distribuida:</p>
+<ul>
+<li><strong>Jerárquica </strong>porque cada nodo depende de un elemento padre (dominio superior), excepto el nodo raíz. Es decir se organiza en una estructura de dominios que se pueden componer de subdominios que también se pueden dividir en subdominios y así hasta 127 niveles (originariamente). Estos dominios son gestionados por servidores DNS responsables de cadazona.</li>
+<li><strong>Distribuida </strong>porque la información no está toda junta en un solo repositorio central, sino que la información se encuentra repartida por partes en los servidores DNS de Internet. Cada servidor DNS autoritario contiene la base de datos de suzona.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper OrientacionesalumnadofpdIdevice em_iDevice" id="id78">
+<div class="iDevice emphasis_orientacionesfpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Reflexiona</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta78_152" class="block iDevice_content">
+<p><strong>Árboles de los sistemas DNS y de ficheros</strong></p>
+<p>El sistema de nombres de dominio tiene una estructura similar al árbol que se utiliza para representar un sistema de ficheros. La diferencia radica en el hecho de que las rutas de los sistemas de archivos indican desde la raíz hasta el nodo (por ejemplo, /etc/bind/bind.conf), y en cambio en el DNS las rutas indican del nodo inferior a la raíz (ns1.serviciosenred.org).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id79">
+<div class="iDevice emphasis0">
+<div id="ta79_155" class="block iDevice_content">
+<h2>2.1. Elementos del espacio de nombres de dominio</h2>
+<p>El servicio DNS permite identificar cualquier equipo en la red y asegurarse de que no hay colisiones, es decir, nombres duplicados. Se basa en una estructura jerárquica de nombres en forma de árbol donde la raíz es el nodo o dominio raíz (.) Del que derivan todos los demás nodos. Este se divide en otros dominios como, por ejemplo, .com, .edu, .org, .es, etc. A su vez, cada dominio se puede dividir en otros subdominios y así sucesivamente. Las rutas indican empezando por subdominio más abajo en la del árbol hacia el nodo raíz (www.serviciosenred.org).</p>
+<p>Los nodos se identifican por un texto (el nombre de dominio) que no se puede repetir en el mismo nivel, pero sí en otros lugares del árbol del espacio de nombres. Lo mismo ocurre con los archivos: no puede haber dos archivos con el mismo nombre en el mismo directorio, pero sí en ubicaciones diferentes. Un dominio es el nodo indicado y todo lo demás del árbol que cuelga de este nodo (piénsese en el ejemplo de un directorio: si se quiere copiar un directorio, se entiende que está formado por el mismo directorio y todos los subdirectorios que contiene). Se entiende por espacio de nombres el conjunto de todos los dominios que forman el árbol DNS.</p>
+<div class="exe-block-info">
+<p><strong>Dominios de alto nivel</strong></p>
+<p>Los siguientes son ejemplos de dominios de alto nivel de algunos países:</p>
+<ul>
+<li>FR: Francia.</li>
+<li>AD: Andorra.</li>
+<li>AQ: Antártida.</li>
+<li>GB: Gran Bretaña.</li>
+<li>UK: Reino Unido.</li>
+<li>DE: Alemania.</li>
+<li>NL: Países Bajos.</li>
+<li>AR: Argentina.</li>
+<li>US: Estados Unidos.</li>
+</ul>
+</div>
+<p>La estructura en árbol (jerárquica) del espacio de nombres proporciona un mecanismo de identificación único de un dominio. No puede existir ningún dominio que tenga exactamente el mismo nombre absoluto FQDN (Full Qualified Domain Name o nombre de dominio completo). Los dominios se leen desde el nodo a la raíz. Así un dominio que corresponda al departamento de administración de la organización example.org dentro del dominio org identifica, por ejemplo, como admin.example.org. Si nos fijamos en el dominio anterior, veremos que termina en punto, es una manera de indicar el dominio raíz. El dominio raíz se define como un dominio sin etiqueta, o mejor con la cadena vacía como etiqueta. Esto provoca que los dominios que se indiquen de manera absoluta terminen con el carácter punto.</p>
+<figure class="exe-figure exe-image position-center license-copyright" style="width: 408px;">
+<div class="figcaption header"><strong>Ejemplo de espacio de nombres de dominio</strong></div>
+<img alt="Exemple de espai de noms de domini" src="1.png" title="Exemple de espai de noms de domini" width="408" height="299" />
+<figcaption class="figcaption"><a class="title" href="Exemple de espai de noms de domini" rel="noopener noreferrer" target="_blank"><em>Ejemplo de espacio de nombres de dominio</em></a> <span class="license"><span>(</span><span>Todos los derechos reservados</span><span>)</span></span></figcaption>
+</figure>
+<p></p>
+<div class="exe-block-info">
+<p><strong>El punto final en los nombres de dominio</strong></p>
+<p>La mayoría de veces escribimos los dominios como si fueran absolutos, pero son relativos al nodo raíz para que no pongamos el punto final. De nuevo se puede hacer la analogía con las rutas relativas y las rutas absolutas del sistema de archivos.</p>
+<p></p>
+</div>
+<p>Un dominio absoluto o FQDN es lo que incluye todos los nodos desde el dominio hasta la raíz (incluida en forma de punto final). Un dominio relativo no incluye la raíz y puede ser relativo al dominio actual. Por ejemplo, dentro del dominio serviciosenred.org del dominio moodle (del aula virtual) es un nombre relativo que hace referencia al nombre absoluto moodle.serviciosenred.org.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id81">
+<div class="iDevice emphasis_debesconocerfpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Hay que recordar</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta81_129" class="block iDevice_content">
+<p>El sistema de nombres de dominio de Internet DNS utiliza los elementos siguientes:</p>
+<ul>
+<li><strong>Espacio de nombres. </strong>El conjunto de todos los dominios que forman el árbol de dominios.</li>
+<li><strong>Nombre de dominio. </strong>Texto identificativo de un dominio.</li>
+<li><strong>De absoluto (FQDN). </strong>Nombre de dominio absoluto empezando por el nodo y terminando en la raíz (.).</li>
+<li><strong>Dominio relativo. </strong>Nombre de dominio sin calificar.</li>
+<li><strong>Dominio raíz. </strong>Dominio del que derivan todos los demás. Se indica con un punto o con la cadena vacía.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id80">
+<div class="iDevice emphasis0">
+<div id="ta80_155" class="block iDevice_content">
+<h3>Los nombres de dominio de Internet</h3> <p>En Internet los nombres de dominios siguen una estructura basada en sus inicios, pero que ha ido evolucionando. El nodo raíz se dividió en un conjunto de subdominios denominados TLD (top level domains o dominios de alto nivel). Estos dominios eran como, edu, gov, mil, org, limpio y int. Posteriormente se añadieron otros como cat, name, biz, info, pro, aero, coop y museum. Se querían organizar los dominios para funcionalidad poniendo las empresas en los .com, las organizaciones en los .org, etc. Se vio, sin embargo, la necesidad de poder agrupar los dominios de manera geográfica (ccTLD, country code top level domains) y surgido los famosos identificadores de país. Para cada país se generó un TLD de dos caracteres utilizando el ya existente estándar internacional ISO 3166 (los famosos .es, .fr, etc.).</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id82">
+<div class="iDevice emphasis_debesconocerfpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Es necesario que conozcas</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta82_129" class="block iDevice_content">
+<p><strong>Caracteres en los nombres de dominio</strong></p> 
+ <p>El estándar DNS indica que los nombres de dominio deben ser de sesenta y cuatro caracteres como máximo, y sólo pueden incluir caracteres latinos, dígitos del 0 al 9 y el guión. Las mayúsculas y minúsculas son indiferentes. Hay mecanismos como el IDNA (año Internationalized domain name o nombres de dominio internacionalizados) para permitir utilizar otros alfabetos en los nombres de dominio.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id83">
+<div class="iDevice emphasis_parasabermasfpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta83_128" class="block iDevice_content">
+<p><strong>Origen de los nombres de dominio</strong></p> 
+ <p>Si nos fijamos en los primeros dominios de alto nivel, estaban basados ​​en una visión estadounidense del mundo (de hecho la red ARPANET base de la actual Internet era suya). En extender Internet globalmente y aparecer dominios de alto nivel geográficos, muchas organizaciones se registraron en más de un dominio (por ejemplo, empresa.com y empresa.cat).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper activityIdevice em_iDevice" id="id3">
+<div class="iDevice emphasis1" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">cuestionario</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta3_101_2" class="block iDevice_content">
+<ol>
+<li>¿Qué ventajas tiene DNS respecto al uso del archivo hosts?</li>
+<li>Recuerda el formato de las URLs. Indica todas las partes que forman la URL. Pon varios ejemplos con diferentes protocolos.</li>
+<li>¿Qué son los TLDs?</li>
+<li>Elabora una tabla resumen sobre los TLDs diferenciando los regionales y genéricos e incluyendo ejemplos aclaratorios.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id4">
+<div class="iDevice emphasis_casopracticofpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Caso práctico: archivo hosts</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta4_148" class="block iDevice_content">
+<p>El archivo hosts es un archivo informático que utiliza un sistema operativo para mapear nombres de ordenadores hacia direcciones IP. Este método es uno de los sistemas para dirigirse por nombre a los ordenadores que hay en una red informática. En algunos sistemas operativos, el archivo de host se utiliza antes de que los otros métodos, tal como el servicio de Domain Name System (DNS). Al contrario que las DNS, el archivo de host es editable por el administrador del ordenador. El archivo hosts es un archivo de texto plano y normalmente se llama hosts.</p>
+<p>Donde se encuentra el archivo hosts en Ubuntu y en Windows?</p>
+<p>Modifica el archivo hosts en las máquinas virtuales de la siguiente forma:</p>
+<ul>
+<li><code>UbuntuServer - ##</code><span>-&gt;dirección IP</span></li>
+<li><code>WindowsServer</code><span>-&gt;dirección IP</span></li>
+</ul>
+<p>De forma que al hacer ping <code>UbuntuServer</code> responda el servidor Linux, WindowsServer el Windows.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="1_introduccin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_zonas_primarias_y_secundarias_transferencias_de_zona.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

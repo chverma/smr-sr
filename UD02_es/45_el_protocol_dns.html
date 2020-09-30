@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.5. El protocol DNS | Unitat 2. Servei DNS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-57"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">Unitat 2. Servei DNS</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">2. Servicio DNS</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="contenidos.html" class="no-ch">Contenidos</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1. Introducción</a></li>
+   <li><a href="2_sistemas_de_nombres_planos_y_jerrquicos.html" class="no-ch">2. Sistemas de nombres planos y jerárquicos</a></li>
+   <li><a href="3_zonas_primarias_y_secundarias_transferencias_de_zona.html" class="daddy">3. Zonas primarias y secundarias. Transferencias de zona.</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_instalacin_y_configuracin_de_un_servidor_dns_de_reenvo.html" class="no-ch">Práctica 1: Instalación y configuración de un servidor DNS de reenvío</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_resolucin_de_nombres.html" class="current-page-parent daddy">4. Resolución de nombres</a>
+   <ul>
+      <li><a href="41_consultas_recursivas.html" class="no-ch">4.1. Consultas recursivas</a></li>
+      <li><a href="42_consultas_iterativas.html" class="no-ch">4.2. Consultas iterativas</a></li>
+      <li><a href="43_resolucin_inversa.html" class="no-ch">4.3. Resolución inversa</a></li>
+      <li><a href="44_servidores_raz.html" class="no-ch">4.4. Servidores raíz</a></li>
+      <li id="active"><a href="45_el_protocol_dns.html" class="active no-ch">4.5. El protocol DNS</a></li>
+   </ul>
+   </li>
+   <li><a href="5_tipos_de_registros.html" class="daddy">5. Tipos de registros</a>
+   <ul class="other-section">
+      <li><a href="51_registros_de_recurso.html" class="no-ch">5.1. Registros de recurso</a></li>
+      <li><a href="52_registrar_soa.html" class="no-ch">5.2. Registrar SOA</a></li>
+      <li><a href="53_registro_ns.html" class="no-ch">5.3. Registro NS</a></li>
+      <li><a href="54_registre_a_o_aaaa.html" class="no-ch">5.4. Registre A o AAAA</a></li>
+      <li><a href="55_registre_cname.html" class="no-ch">5.5. Registre CNAME</a></li>
+      <li><a href="56_otros_registros.html" class="no-ch">5.6. Otros registros</a></li>
+      <li><a href="57_ejemplo_de_zona_directa_e_inversa.html" class="no-ch">5.7. Ejemplo de zona directa e inversa</a></li>
+      <li><a href="prctica_2_dominio_local.html" class="no-ch">Práctica 2: Dominio local</a></li>
+      <li><a href="prctica_3_implementacin_de_un_dominio_local.html" class="no-ch">Práctica 3: Implementación de un dominio local</a></li>
+      <li><a href="prctica_4_zona_de_resolucin_inversa.html" class="no-ch">Práctica 4: Zona de resolución inversa</a></li>
+      <li><a href="prctica_5_configuracin_de_un_servidor_secundario.html" class="no-ch">Práctica 5: Configuración de un servidor secundario</a></li>
+   </ul>
+   </li>
+   <li><a href="6_evolucin_del_protocolo_y_seguridad.html" class="no-ch">6. Evolución del protocolo y seguridad</a></li>
+   <li><a href="actividades.html" class="no-ch">Actividades</a></li>
+   <li><a href="mapa_conceptual.html" class="no-ch">Mapa conceptual</a></li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="44_servidores_raz.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="5_tipos_de_registros.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">4.5. El protocol DNS</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id29">
+<div class="iDevice emphasis0">
+<div id="ta29_85" class="block iDevice_content">
+<h2>El protocol DNS</h2>
+<p>El servicio de nombres de dominio utiliza el protocolo DNS para realizar las consultas y las respuestas. Se trata de un protocolo de capa de aplicación que puede utilizar tanto UDP como TCP en la capa de transporte. Usualmente, tanto las consultas del cliente como las respuestas del servidor se pueden incluir en un datagrama (512 bytes) y se utiliza UDP (de hecho, generalmente se dice que el DNS usa UDP). Pero si la información a transmitir es amplia (por ejemplo, una respuesta con una lista con mucha información), la comunicación se pasa a TCP automáticamente. Otro caso en el que la información es TCP es cuando se realiza la transferencia de información de una zona entre servidores primarios y secundarios. El servidor DNS utiliza el puerto privilegiado 53.</p>
+<div class="destacado">
+<p>El protocolo DNS es usualmente UDP, pero puede ser TCP y UDP. Se trata de un protocolo de capa de aplicación y utiliza el puerto 53.</p>
+</div>
+<p>Los datagramas DNS se componen de varios apartados tal como se puede ver en la consulta host siguiente:</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>[root@portatil ~]# host -a uoc.es
+Trying "uoc.es"
+;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 14091
+;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 2, ADDITIONAL: 2
+
+;; QUESTION SECTION:
+;uoc.es. IN ANY
+
+;; ANSWER SECTION:
+uoc.es. 82747 IN NS tibet.uoc.es.
+uoc.es. 82747 IN NS nepal.uoc.es.
+
+;; AUTHORITY SECTION:
+uoc.es. 82747 IN NS nepal.uoc.es.
+uoc.es. 82747 IN NS tibet.uoc.es.
+
+;; ADDITIONAL SECTION:
+nepal.uoc.es. 73649 IN A 213.73.40.47
+tibet.uoc.es. 76582 IN A 213.73.40.45
+
+Received 124 bytes from 127.0.0.1#53 in 2 ms</code></pre>
+</div>
+</div>
+<p>La comunicación DNS es un mecanismo de consulta / respuesta entre el cliente y el servidor. Los datagramas, pues, serán de query (consulta) o answer (respuesta).</p>
+<p>Los apartados que componen un mensaje DNS son:</p>
+<ul>
+<li><strong>ENCABEZAMIENTO. </strong>Cabecera del mensaje indicando si es una consulta o una respuesta. Contiene el id (identificador) del mensaje, <em>flags </em>y un resumen de qué secciones del mensaje llevan información y cuánta.</li>
+<li><strong>PREGUNTA. </strong>Esta sección contiene la consulta que se ha efectuado. Es decir, qué dato se ha pedido al servidor. Puede ser una resolución de dirección IP a un dominio, pedir la lista de servidores de impresión, etc.</li>
+<li><strong>RESPONDER. </strong>Sección que contiene la respuesta obtenida del servidor. Se entiende que esta sección contiene la respuesta no autoritativa. A veces en las utilidades de consulta esta sección se muestra como <em>non-autority answer.</em></li>
+<li><strong>AUTORIDAD. </strong>Esta sección contiene las respuestas que son autoritativa para la consulta efectuada. Evidentemente puede ser vacía.</li>
+<li><strong>ADICIONAL. </strong>Contiene información adicional para completar la respuesta. En el ejemplo se observa que completa la resolución de los nombres de máquina que hay en la sección <em>answer</em> indicando su dirección IP correspondiente.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="44_servidores_raz.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="5_tipos_de_registros.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

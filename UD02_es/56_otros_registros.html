@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.6. Otros registros | Unitat 2. Servei DNS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-70"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">Unitat 2. Servei DNS</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">2. Servicio DNS</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="contenidos.html" class="no-ch">Contenidos</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1. Introducción</a></li>
+   <li><a href="2_sistemas_de_nombres_planos_y_jerrquicos.html" class="no-ch">2. Sistemas de nombres planos y jerárquicos</a></li>
+   <li><a href="3_zonas_primarias_y_secundarias_transferencias_de_zona.html" class="daddy">3. Zonas primarias y secundarias. Transferencias de zona.</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_instalacin_y_configuracin_de_un_servidor_dns_de_reenvo.html" class="no-ch">Práctica 1: Instalación y configuración de un servidor DNS de reenvío</a></li>
+   </ul>
+   </li>
+   <li><a href="4_resolucin_de_nombres.html" class="daddy">4. Resolución de nombres</a>
+   <ul class="other-section">
+      <li><a href="41_consultas_recursivas.html" class="no-ch">4.1. Consultas recursivas</a></li>
+      <li><a href="42_consultas_iterativas.html" class="no-ch">4.2. Consultas iterativas</a></li>
+      <li><a href="43_resolucin_inversa.html" class="no-ch">4.3. Resolución inversa</a></li>
+      <li><a href="44_servidores_raz.html" class="no-ch">4.4. Servidores raíz</a></li>
+      <li><a href="45_el_protocol_dns.html" class="no-ch">4.5. El protocol DNS</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="5_tipos_de_registros.html" class="current-page-parent daddy">5. Tipos de registros</a>
+   <ul>
+      <li><a href="51_registros_de_recurso.html" class="no-ch">5.1. Registros de recurso</a></li>
+      <li><a href="52_registrar_soa.html" class="no-ch">5.2. Registrar SOA</a></li>
+      <li><a href="53_registro_ns.html" class="no-ch">5.3. Registro NS</a></li>
+      <li><a href="54_registre_a_o_aaaa.html" class="no-ch">5.4. Registre A o AAAA</a></li>
+      <li><a href="55_registre_cname.html" class="no-ch">5.5. Registre CNAME</a></li>
+      <li id="active"><a href="56_otros_registros.html" class="active no-ch">5.6. Otros registros</a></li>
+      <li><a href="57_ejemplo_de_zona_directa_e_inversa.html" class="no-ch">5.7. Ejemplo de zona directa e inversa</a></li>
+      <li><a href="prctica_2_dominio_local.html" class="no-ch">Práctica 2: Dominio local</a></li>
+      <li><a href="prctica_3_implementacin_de_un_dominio_local.html" class="no-ch">Práctica 3: Implementación de un dominio local</a></li>
+      <li><a href="prctica_4_zona_de_resolucin_inversa.html" class="no-ch">Práctica 4: Zona de resolución inversa</a></li>
+      <li><a href="prctica_5_configuracin_de_un_servidor_secundario.html" class="no-ch">Práctica 5: Configuración de un servidor secundario</a></li>
+   </ul>
+   </li>
+   <li><a href="6_evolucin_del_protocolo_y_seguridad.html" class="no-ch">6. Evolución del protocolo y seguridad</a></li>
+   <li><a href="actividades.html" class="no-ch">Actividades</a></li>
+   <li><a href="mapa_conceptual.html" class="no-ch">Mapa conceptual</a></li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="55_registre_cname.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="57_ejemplo_de_zona_directa_e_inversa.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">5.6. Otros registros</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id106">
+<div class="iDevice emphasis0">
+<div id="ta106_86" class="block iDevice_content">
+<h3>5.6.1. Registre MX</h3>
+<p>Un registro MX mail échanges (servidor de correo electrónico) define un servidor de correo. Se puede poner una entrada MX para cada servidor de correo, pero no es obligatorio que haya ninguno.</p>
+<p>Un registro MX consta de los campos:</p>
+<div class="highlighted-code language-c">
+<div>
+<pre><code class="  language-c">nomDomini<span class="token punctuation">.</span> IN MX num mailServer<span class="token punctuation">.</span></code></pre>
+</div>
+</div>
+<p>Un ejemplo sería este:</p>
+<div class="highlighted-code language-c">
+<div>
+<pre><code class="  language-c">inf<span class="token punctuation">.</span>ioc<span class="token punctuation">.</span>cat<span class="token punctuation">.</span> IN MX <span class="token number">10</span> ns1<span class="token punctuation">.</span>inf<span class="token punctuation">.</span>ioc<span class="token punctuation">.</span>cat<span class="token punctuation">.</span></code></pre>
+</div>
+</div>
+<p><br />La descripción de cada campo es la siguiente:</p>
+<ul>
+<li>nomDomini. indica el nombre del dominio que se está definiendo.</li>
+<li>IN indica que la clase es Internet.</li>
+<li>MX describe que se trata de un registro de recurso donde se define un servidor de correo para este dominio.</li>
+<li>num es un valor numérico que expresa el grado de preferencia de este servidor de correo respecto a otros servidores de correo del dominio. El valor más bajo es el que se prefiere más. Son valores arbitrarios que define el administrador de redes.</li>
+<li>mailServer. corresponde al nombre FQDN del servidor de correo que se está definiendo.</li>
+</ul>
+<p>Podemos observar la lista de servidores de correo de google haciendo:</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code class="  language-clike"><span class="token punctuation">[</span>root@localhost <span class="token operator">~</span><span class="token punctuation">]</span># host google<span class="token punctuation">.</span>com
+google<span class="token punctuation">.</span>com has address <span class="token number">74.125</span><span class="token punctuation">.</span><span class="token number">45.100</span>
+google<span class="token punctuation">.</span>com has address <span class="token number">74.125</span><span class="token punctuation">.</span><span class="token number">127.100</span>
+google<span class="token punctuation">.</span>com has address <span class="token number">74.125</span><span class="token punctuation">.</span><span class="token number">67.100</span>
+google<span class="token punctuation">.</span>com mail is handled by <span class="token number">10</span> google<span class="token punctuation">.</span>com<span class="token punctuation">.</span>s9b1<span class="token punctuation">.</span>psmtp<span class="token punctuation">.</span>com<span class="token punctuation">.</span>
+google<span class="token punctuation">.</span>com mail is handled by <span class="token number">100</span> smtp2<span class="token punctuation">.</span>google<span class="token punctuation">.</span>com<span class="token punctuation">.</span>
+google<span class="token punctuation">.</span>com mail is handled by <span class="token number">10</span> google<span class="token punctuation">.</span>com<span class="token punctuation">.</span>s9a2<span class="token punctuation">.</span>psmtp<span class="token punctuation">.</span>com<span class="token punctuation">.</span>
+google<span class="token punctuation">.</span>com mail is handled by <span class="token number">10</span> google<span class="token punctuation">.</span>com<span class="token punctuation">.</span>s9b2<span class="token punctuation">.</span>psmtp<span class="token punctuation">.</span>com<span class="token punctuation">.</span>
+google<span class="token punctuation">.</span>com mail is handled by <span class="token number">10</span> google<span class="token punctuation">.</span>com<span class="token punctuation">.</span>s9a1<span class="token punctuation">.</span>psmtp<span class="token punctuation">.</span>com<span class="token punctuation">.</span>
+google<span class="token punctuation">.</span>com mail is handled by <span class="token number">100</span> smtp1<span class="token punctuation">.</span>google<span class="token punctuation">.</span>com<span class="token punctuation">.</span></code>/pre&gt;</pre>
+</div>
+</div>
+<p>Las dos listas siguientes muestran ejemplos de los archivos de configuración para la resolución directa y la resolución inversa de la zona ioc.cat. En el primero se definen dos servidores de nombre, un router, una impresora y dos nodos. El primero de los servidores de nombres también hace las funciones de servidor de correo, web y FTP.</p>
+<p>&lt;</p>
+<div class="highlighted-code language-clike line-numbers">
+<div>
+<pre><code>;Exemple de fitxer de zona ioc.cat
+$TTL 3D
+ioc.cat.	IN	SOA	ns1.ioc.cat. admin.ioc.cat. {
+23 ;serial
+8H ;refresh
+2H ;retry
+4W ;expire
+1D); minimum ttl
+NS	ns1.ioc.cat.
+NS	ns2.ioc.cat.
+MX 10	correu.ioc.cat.
+ns1.ioc.cat.	A 192.168.0.5 ; servidor amb 2 ip
+A 172.16.20.5
+ns2.ioc.cat. 	A 192.168.0.7; servidor dns slave
+router 		A 192.168.0.1; router. Nom relatiu
+correu 		CNAME ns1 ; alias correu
+www			CNAME ns1 ; alias web
+ftp 		CNAME ns1 ; alias ftp
+hp-7200c	A 192.168.0.2; impressora
+pc01		A 192.168.0.50
+pc02		A 192.168.0.51</code></pre>
+</div>
+</div>
+<p>En la lista siguiente se puede ver cómo se define una entrada PTR para cada nombre canónico definido en la resolución directa para una subred concreta. La subred 192.168.0.0/24 utiliza el archivo 0.168.192.in-addr.arpa.</p>
+<div class="highlighted-code code-style-2 language-clike line-numbers">
+<div>
+<pre><code>;Zona 0.168.192.in-addr.arpa.
+;Exemple de fitxer de zona inversa ioc.cat
+; correspon a la xarxa 192.168.0.0/24
+$TTL 3D
+ioc.cat.	IN	SOA	ns1.ioc.cat. admin.ioc.cat. {
+23; serial
+8H; refresh
+2H; retry
+4W; expire
+1D) ; minimum ttl
+NS	ns1.ioc.cat.
+5	IN	PTR	ns1.ioc.cat.
+7	IN	PTR	ns2.ioc.cat.
+1	IN	PTR	router.ioc.cat.
+2	IN	PTR	hp-7200c.ioc.cat.
+50	IN	PTR	pc01.ioc.cat.
+51	IN	PTR	pc02.ioc.cat.</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id107">
+<div class="iDevice emphasis0">
+<div id="ta107_86" class="block iDevice_content">
+<h3>5.6.2. Registro PTR</h3>
+<p>Un registro de recurso PTR o pointer (puntero) asocia una dirección IP al nombre de host pertinente (resolución inversa). Hay una entrada PTR para cada interfaz de red de la zona. Un registro PTR consta de los campos:</p>
+<div class="highlighted-code language-c">
+<div>
+<pre><code>ipInversa.in-addr.arpa. PTR hostCanonicalName.</code></pre>
+</div>
+</div>
+<p><span>Un ejemplo sería este:</span></p>
+<div class="highlighted-code language-c">
+<div>
+<pre><code>2.20.168.192.in-addr.apra. IN PTR mahatma.inf.ioc.cat.</code></pre>
+</div>
+</div>
+<p><span>La descripción de cada campo es la siguiente:</span></p>
+<ul>
+<li><code>ipInversa.in-addr.arpa.indica la dirección IP escrita en forma de dominiin-addr.arpa para poder hacer la resolución inversa. Las direcciones IP se escriben al revés cuando forman parte del dominio in-addr.arpa. Así una IP 192.168.20.2 escribe 2.20.168.192.in-addr.arpa.</code></li>
+<li>IN indica que la clase es Internet.</li>
+<li>PTR describe que se trata de un registro de recurso de definición de la resolución inversa de una dirección IP.</li>
+<li>hostCanonicalName. es el nombre de host FQDN asignado a la dirección IP. El nombre del host debe ser por fuerza el nombre canónico. No puede haber dos definiciones de la misma IP con nombres diferentes (alias), sólo de la IP al nombre canónico.</li>
+</ul>
+<h4></h4>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id105">
+<div class="iDevice emphasis0">
+<div id="ta105_86" class="block iDevice_content">
+<h3>5.6.3. otros registros</h3> <p>Hay otros tipos de registros de recurso que no son tan utilizados y que se mencionan a continuación:</p> <ul>
+<li>HINFO: (Host Information) información sobre el tipo de ordenador.</li><li>MB: (Mail Box) información sobre un buzón de correo.</li><li>MG: (Mailgroup) información sobre un grupo de correo.</li><li>MR: nombre nuevo de un buzón de correo.</li><li>WKS (Well Known Services) lista de servicios del host.</li><li>TXT: (Texto) texto descriptivo.</li><li>NULL: (Null) registro vacío.</li><li>AAAA () correspondiente a una dirección de host usando Ipv6.</li></ul> 
+ <h3>5.6.4. abreviaciones</h3> <p>El estándar DNS permite hacer abreviaciones en los ficheros de definición de zona a fin de facilitar su sintaxis. Las más importantes son:</p> <ul>
+<li>Se puede usar @ como indicador del nombre de dominio cuando es el mismo que el nombre de dominio origen (lo que se está definiendo).</li><li>Si no se indica un nombre de dominio en el primer campo y se deja vacío, se entiende el mismo nombre que el definido en el registro anterior.</li><li>A los nombres de dominio relativos (no terminados en punto) se les añade el nombre de dominio origen o nombre de la zona que se está definiendo.</li></ul> 
+ <p>Un ejemplo con abreviaciones: zona inf.ioc.cat:</p> <div class="highlighted-code language-clike">
+<div>
+<pre><code>@ IN SOA ns1.inf.ioc.cat. Admin.ns1.ioc.cat (1 3h 1h 1w 1h)
+; Utilizado @ para referirse al dominio inf.ioc.cat
+IN NS ns1; primera columna toma idem valor que la anterior @
+IN NS ns2; primera columna toma idem valor que la anterior, @
+
+mahatma IN A 192.168.0.2
+
+ftp IN CNAME mahatma; los nombres relativos añade inf.ioc.cat</code></pre>
+</div>
+</div> 
+ <p></p>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="55_registre_cname.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="57_ejemplo_de_zona_directa_e_inversa.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

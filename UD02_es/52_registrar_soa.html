@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.2. Registrar SOA | Unitat 2. Servei DNS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-66"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">Unitat 2. Servei DNS</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">2. Servicio DNS</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="contenidos.html" class="no-ch">Contenidos</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1. Introducción</a></li>
+   <li><a href="2_sistemas_de_nombres_planos_y_jerrquicos.html" class="no-ch">2. Sistemas de nombres planos y jerárquicos</a></li>
+   <li><a href="3_zonas_primarias_y_secundarias_transferencias_de_zona.html" class="daddy">3. Zonas primarias y secundarias. Transferencias de zona.</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_instalacin_y_configuracin_de_un_servidor_dns_de_reenvo.html" class="no-ch">Práctica 1: Instalación y configuración de un servidor DNS de reenvío</a></li>
+   </ul>
+   </li>
+   <li><a href="4_resolucin_de_nombres.html" class="daddy">4. Resolución de nombres</a>
+   <ul class="other-section">
+      <li><a href="41_consultas_recursivas.html" class="no-ch">4.1. Consultas recursivas</a></li>
+      <li><a href="42_consultas_iterativas.html" class="no-ch">4.2. Consultas iterativas</a></li>
+      <li><a href="43_resolucin_inversa.html" class="no-ch">4.3. Resolución inversa</a></li>
+      <li><a href="44_servidores_raz.html" class="no-ch">4.4. Servidores raíz</a></li>
+      <li><a href="45_el_protocol_dns.html" class="no-ch">4.5. El protocol DNS</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="5_tipos_de_registros.html" class="current-page-parent daddy">5. Tipos de registros</a>
+   <ul>
+      <li><a href="51_registros_de_recurso.html" class="no-ch">5.1. Registros de recurso</a></li>
+      <li id="active"><a href="52_registrar_soa.html" class="active no-ch">5.2. Registrar SOA</a></li>
+      <li><a href="53_registro_ns.html" class="no-ch">5.3. Registro NS</a></li>
+      <li><a href="54_registre_a_o_aaaa.html" class="no-ch">5.4. Registre A o AAAA</a></li>
+      <li><a href="55_registre_cname.html" class="no-ch">5.5. Registre CNAME</a></li>
+      <li><a href="56_otros_registros.html" class="no-ch">5.6. Otros registros</a></li>
+      <li><a href="57_ejemplo_de_zona_directa_e_inversa.html" class="no-ch">5.7. Ejemplo de zona directa e inversa</a></li>
+      <li><a href="prctica_2_dominio_local.html" class="no-ch">Práctica 2: Dominio local</a></li>
+      <li><a href="prctica_3_implementacin_de_un_dominio_local.html" class="no-ch">Práctica 3: Implementación de un dominio local</a></li>
+      <li><a href="prctica_4_zona_de_resolucin_inversa.html" class="no-ch">Práctica 4: Zona de resolución inversa</a></li>
+      <li><a href="prctica_5_configuracin_de_un_servidor_secundario.html" class="no-ch">Práctica 5: Configuración de un servidor secundario</a></li>
+   </ul>
+   </li>
+   <li><a href="6_evolucin_del_protocolo_y_seguridad.html" class="no-ch">6. Evolución del protocolo y seguridad</a></li>
+   <li><a href="actividades.html" class="no-ch">Actividades</a></li>
+   <li><a href="mapa_conceptual.html" class="no-ch">Mapa conceptual</a></li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="51_registros_de_recurso.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="53_registro_ns.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">5.2. Registrar SOA</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id102">
+<div class="iDevice emphasis0">
+<div id="ta102_86" class="block iDevice_content">
+<p>El registro de recurso SOA o start of authority (inicio de definición de zona con autoridad) dice que el archivo de zona donde se encuentra es la mejor fuente de datos para la zona, que el servidor de nombres es autoritario para la zona. Suele ser el primer RR que hay en el archivo de zona, aunque no es obligatorio. Por cada archivo de zona debe haber sólo un registro SOA.</p>
+<p>Un registro SOA tiene el formato:</p>
+<div class="highlighted-code language-c">
+<div>
+<pre><code>nombreDominio. IN SOA nsPrimario. admin.nsPrimario. (opciones-slaves)</code></pre>
+</div>
+</div>
+<p>Un ejemplo sería el siguiente:</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code></code></pre>
+<pre class="  language-clike"><code class="  language-clike">inf<span class="token punctuation">.</span>ioc<span class="token punctuation">.</span>cat<span class="token punctuation">.</span> IN SOA ns1<span class="token punctuation">.</span>inf<span class="token punctuation">.</span>ioc<span class="token punctuation">.</span>cat<span class="token punctuation">.</span> admin<span class="token punctuation">.</span>ns1<span class="token punctuation">.</span>inf<span class="token punctuation">.</span>ioc<span class="token punctuation">.</span>cat<span class="token punctuation">.</span> <span class="token punctuation">(</span> 1h 3h 1h 1w 1h <span class="token punctuation">)</span></code><code></code></pre>
+</div>
+</div>
+<div class="exe-block-warning">
+<p><strong>Punto final en el nombre de dominio</strong></p>
+<p>Poner, o no, el punto al final de un nombre de dominio es importante. Si termina con punto es un nombre de dominio absoluto. Si termina sin punto, es un nombre relativo y se añadirá el dominio por defecto al final.</p>
+</div>
+<p>La descripción de cada campo es la siguiente:</p>
+<ul>
+<li><strong>nombreDominio. </strong>indica el nombre del dominio que se está definiendo y por el que el servidor de nombres es autoritario. Fíjese en el punto al final del nombre del dominio, es importante ponerlo.</li>
+<li><strong>IN </strong>indica que la clase es Internet.</li>
+<li><strong>SOA</strong><span> describe que es un registro de recurso tipo SOA.</span></li>
+<li><strong>nsPrimario.</strong><span> es el nombre del host servidor de nombres primario para esta zona. Otra vez lea sobre el punto del final.</span></li>
+<li><strong>admin.nsPrimario. es la dirección de correo electrónico del administrador del servidor de nombres de dominio, con el formato usuario.servidor. El primer punto que separa el nombre de usuario y el nombre del servidor hay que interpretarlo como si fuera una @ (usuario @ servidor).</strong></li>
+<li><strong>opciones-slaves</strong><span> son parámetros que indican entre paréntesis y que sirven para definir cómo debe ser la comunicación entre el servidor primario (o</span><span> </span><em>Maestro</em>) Y los servidores secundarios (o <em>esclavos)</em>. A grandes rasgos se indican los siguientes conceptos:
+<ul>
+<li><strong>De serie: </strong>El número de serie de la versión de los datos. En cada cambio de los datos de la zona, el número se incrementa.</li>
+<li><strong>Actualizar: </strong>Tiempo a transcurrir entre cada refresco de datos del servidor secundario.</li>
+<li><strong>Rever: </strong>Tiempo de espera para volver a intentar un refresco si el servidor secundario ha fallado en el intento de actualizar sus datos del servidor primario.</li>
+<li><strong>Expire: </strong>Tiempo a partir del cual los datos del servidor secundario se consideran sin autoridad si no se han refrescado antes.</li>
+<li><strong>Mínimo: </strong>Valor del TTL de los campos por defecto. Recuerde que cada campo se puede asignar un TTL específico. Según la versión del servidor indicará el TTL de las respuestas negativas <strong>(</strong><em>negative caching</em>), es decir, el tiempo que una respuesta negativa se almacenará encaché.</li>
+</ul>
+</li>
+</ul>
+<h4></h4>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="51_registros_de_recurso.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="53_registro_ns.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

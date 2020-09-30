@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3. Zonas primarias y secundarias. Transferencias de zona. | Unitat 2. Servei DNS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-43"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">Unitat 2. Servei DNS</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">2. Servicio DNS</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="contenidos.html" class="no-ch">Contenidos</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1. Introducción</a></li>
+   <li><a href="2_sistemas_de_nombres_planos_y_jerrquicos.html" class="no-ch">2. Sistemas de nombres planos y jerárquicos</a></li>
+   <li id="active"><a href="3_zonas_primarias_y_secundarias_transferencias_de_zona.html" class="active daddy">3. Zonas primarias y secundarias. Transferencias de zona.</a>
+   <ul>
+      <li><a href="prctica_1_instalacin_y_configuracin_de_un_servidor_dns_de_reenvo.html" class="no-ch">Práctica 1: Instalación y configuración de un servidor DNS de reenvío</a></li>
+   </ul>
+   </li>
+   <li><a href="4_resolucin_de_nombres.html" class="daddy">4. Resolución de nombres</a>
+   <ul class="other-section">
+      <li><a href="41_consultas_recursivas.html" class="no-ch">4.1. Consultas recursivas</a></li>
+      <li><a href="42_consultas_iterativas.html" class="no-ch">4.2. Consultas iterativas</a></li>
+      <li><a href="43_resolucin_inversa.html" class="no-ch">4.3. Resolución inversa</a></li>
+      <li><a href="44_servidores_raz.html" class="no-ch">4.4. Servidores raíz</a></li>
+      <li><a href="45_el_protocol_dns.html" class="no-ch">4.5. El protocol DNS</a></li>
+   </ul>
+   </li>
+   <li><a href="5_tipos_de_registros.html" class="daddy">5. Tipos de registros</a>
+   <ul class="other-section">
+      <li><a href="51_registros_de_recurso.html" class="no-ch">5.1. Registros de recurso</a></li>
+      <li><a href="52_registrar_soa.html" class="no-ch">5.2. Registrar SOA</a></li>
+      <li><a href="53_registro_ns.html" class="no-ch">5.3. Registro NS</a></li>
+      <li><a href="54_registre_a_o_aaaa.html" class="no-ch">5.4. Registre A o AAAA</a></li>
+      <li><a href="55_registre_cname.html" class="no-ch">5.5. Registre CNAME</a></li>
+      <li><a href="56_otros_registros.html" class="no-ch">5.6. Otros registros</a></li>
+      <li><a href="57_ejemplo_de_zona_directa_e_inversa.html" class="no-ch">5.7. Ejemplo de zona directa e inversa</a></li>
+      <li><a href="prctica_2_dominio_local.html" class="no-ch">Práctica 2: Dominio local</a></li>
+      <li><a href="prctica_3_implementacin_de_un_dominio_local.html" class="no-ch">Práctica 3: Implementación de un dominio local</a></li>
+      <li><a href="prctica_4_zona_de_resolucin_inversa.html" class="no-ch">Práctica 4: Zona de resolución inversa</a></li>
+      <li><a href="prctica_5_configuracin_de_un_servidor_secundario.html" class="no-ch">Práctica 5: Configuración de un servidor secundario</a></li>
+   </ul>
+   </li>
+   <li><a href="6_evolucin_del_protocolo_y_seguridad.html" class="no-ch">6. Evolución del protocolo y seguridad</a></li>
+   <li><a href="actividades.html" class="no-ch">Actividades</a></li>
+   <li><a href="mapa_conceptual.html" class="no-ch">Mapa conceptual</a></li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="2_sistemas_de_nombres_planos_y_jerrquicos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="prctica_1_instalacin_y_configuracin_de_un_servidor_dns_de_reenvo.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">3. Zonas primarias y secundarias. Transferencias de zona.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id87">
+<div class="iDevice emphasis0">
+<div id="ta87_155" class="block iDevice_content">
+<p>Sabemos que el sistema de nombres de dominio está basado en una arquitectura cliente-servidor en el que los clientes harán preguntas del tipo"que IP tiene este dominio?", Y los servidores tratarán de contestarlas. Los servidores de nombres DNS son los programas que almacenan y gestionan la información en la base de datos de una parte del espacio de nombres llamada zona.</p>
+<h2>3.1. Las áreas</h2>
+<p>Una zona es parte del espacio de nombres de dominio gestionada por un (o más) servidores DNS. Los servidores que gestionan la zona tienen información completa sobre la zona y se dice que tienen autoridad respecto a ella. Podríamos pensar que un servidor DNS gestiona un dominio y que una zona es lo mismo que un dominio, pero esto no tiene que ser necesariamente así. Un dominio se divide en subdominios para facilitar su administración, y cada parte administrada por uno (o más) servidor DNS es una zona. El dominio es el árbol del espacio de nombres y la zona es la parte del árbol administrada por un servidor de nombres de dominio concreto. En la figura siguiente se puede ver un espacio de nombres con cuatro zonas y catorce dominios.</p>
+<div class="exe-figure exe-image position-center license-CC-BY-NC" style="width: 600px;">
+<div class="figcaption header"><strong>Ejemplo de zonas y dominios</strong></div>
+<img alt=" Exemple de zones i dominis" src="smxm7uf1ud1_im6.png" width="600" height="344" />
+<div class="figcaption"><a>COI.</a><a class="title" href=" Exemple de zones i dominis" rel="noopener noreferrer" target="_blank"><em>Ejemplo de zonas y dominios</em></a> <span class="license"><span>(</span><a>CC BY-NC</a><span>)</span></span></div>
+<p>En la figura se pueden ver tantos dominios como recuadros de letras agrupados en cuatro zonas. El nombre de dominio correspondiente a cada zona (se denominan según su nodo superior) es A, B.A, C.A, I.C.A. Cada una de estas cuatro zonas tendrá un (o más) servidores DNS para gestionarla.</p>
+</div>
+<p>En general, podemos decir que una zona contiene la información completa de los equipos que forman el dominio correspondiente a la zona y los equipos de los subdominios que no se hayan delegado. Esta información se almacena en la base de datos de zona.</p>
+<div class="exe-block-info">
+<p>Conviene tener claro en todo momento que dominio y zona no son equivalentes (aunque pueden coincidir).</p>
+<ul>
+<li>El dominio es el árbol del espacio de nombres.</li>
+<li>La zona es la parte del árbol administrada por un servidor DNS concreto.</li>
+<li>La base de datos de zona la forman los ficheros que almacenan la descripción de los equipos que pertenecen a la zona.</li>
+<li>La delegación consiste en pasar la autoridad de la gestión de un subdominio a otra entidad.</li>
+</ul>
+</div>
+<p><strong>Delegar </strong>la administración de un subdominio es traspasar la autoridad sobre este subdominio a otra entidad (a otros servidores DNS). Esta entidad es la r<span>esponsable de la administración de la zona delegada. Tiene toda la autoridad para hacer y deshacer a su criterio. La zona padre pierde el control administrativo de la zona delegada y simplemente apunta a los servidores de nombres de la zona delegada para obtener información cuando la requiere.</span></p>
+<h2>3.2. Tipo de servidores</h2>
+<p>El estándar que define el DNS establece que es necesario configurar dos o más servidores autoritarios para cada zona llamados servidor primario y servidor secundario. El motivo es proporcionar un mecanismo de redundancia, robustez, rendimiento y copia de seguridad. Si el servidor de nombres falla y es único posiblemente la red caerá, será inoperativa.</p>
+<p>Los servidores primario y secundario son autoridad. Sólo el primario tiene los archivos de zona y es el encargado de editarlos. El secundario obtiene una copia para transferencia de zona.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id22">
+<div class="iDevice emphasis_parasabermasfpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Servidores DNS caché</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta22_128" class="block iDevice_content">
+<p>Aparte de los servidores primarios (también llamados maestros) y secundarios (esclavos) mencionados anteriormente hay también otro tipo de servidores, los servidores DNS caché (caché). Los servidores DNS caché sólo atienden consultas de los clientes DNS sobre nombres de dominio. No contiene ninguna información sobre la zona y su utilidad principal es acelerar las consultas.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="2_sistemas_de_nombres_planos_y_jerrquicos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="prctica_1_instalacin_y_configuracin_de_un_servidor_dns_de_reenvo.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

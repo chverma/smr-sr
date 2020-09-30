@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.3. Resolución inversa | Unitat 2. Servei DNS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-55"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">Unitat 2. Servei DNS</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">2. Servicio DNS</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="contenidos.html" class="no-ch">Contenidos</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1. Introducción</a></li>
+   <li><a href="2_sistemas_de_nombres_planos_y_jerrquicos.html" class="no-ch">2. Sistemas de nombres planos y jerárquicos</a></li>
+   <li><a href="3_zonas_primarias_y_secundarias_transferencias_de_zona.html" class="daddy">3. Zonas primarias y secundarias. Transferencias de zona.</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_instalacin_y_configuracin_de_un_servidor_dns_de_reenvo.html" class="no-ch">Práctica 1: Instalación y configuración de un servidor DNS de reenvío</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_resolucin_de_nombres.html" class="current-page-parent daddy">4. Resolución de nombres</a>
+   <ul>
+      <li><a href="41_consultas_recursivas.html" class="no-ch">4.1. Consultas recursivas</a></li>
+      <li><a href="42_consultas_iterativas.html" class="no-ch">4.2. Consultas iterativas</a></li>
+      <li id="active"><a href="43_resolucin_inversa.html" class="active no-ch">4.3. Resolución inversa</a></li>
+      <li><a href="44_servidores_raz.html" class="no-ch">4.4. Servidores raíz</a></li>
+      <li><a href="45_el_protocol_dns.html" class="no-ch">4.5. El protocol DNS</a></li>
+   </ul>
+   </li>
+   <li><a href="5_tipos_de_registros.html" class="daddy">5. Tipos de registros</a>
+   <ul class="other-section">
+      <li><a href="51_registros_de_recurso.html" class="no-ch">5.1. Registros de recurso</a></li>
+      <li><a href="52_registrar_soa.html" class="no-ch">5.2. Registrar SOA</a></li>
+      <li><a href="53_registro_ns.html" class="no-ch">5.3. Registro NS</a></li>
+      <li><a href="54_registre_a_o_aaaa.html" class="no-ch">5.4. Registre A o AAAA</a></li>
+      <li><a href="55_registre_cname.html" class="no-ch">5.5. Registre CNAME</a></li>
+      <li><a href="56_otros_registros.html" class="no-ch">5.6. Otros registros</a></li>
+      <li><a href="57_ejemplo_de_zona_directa_e_inversa.html" class="no-ch">5.7. Ejemplo de zona directa e inversa</a></li>
+      <li><a href="prctica_2_dominio_local.html" class="no-ch">Práctica 2: Dominio local</a></li>
+      <li><a href="prctica_3_implementacin_de_un_dominio_local.html" class="no-ch">Práctica 3: Implementación de un dominio local</a></li>
+      <li><a href="prctica_4_zona_de_resolucin_inversa.html" class="no-ch">Práctica 4: Zona de resolución inversa</a></li>
+      <li><a href="prctica_5_configuracin_de_un_servidor_secundario.html" class="no-ch">Práctica 5: Configuración de un servidor secundario</a></li>
+   </ul>
+   </li>
+   <li><a href="6_evolucin_del_protocolo_y_seguridad.html" class="no-ch">6. Evolución del protocolo y seguridad</a></li>
+   <li><a href="actividades.html" class="no-ch">Actividades</a></li>
+   <li><a href="mapa_conceptual.html" class="no-ch">Mapa conceptual</a></li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="42_consultas_iterativas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="44_servidores_raz.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">4.3. Resolución inversa</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id28">
+<div class="iDevice emphasis0">
+<div id="ta28_85" class="block iDevice_content">
+<h2>resolución inversa</h2>
+<p>El DNS proporciona un mecanismo para obtener el nombre de dominio al que corresponde una dirección IP. Este mecanismo, llamado resolución inversa, se basa en un dominio especial llamado in-addr.arpa. Hay protocolos de red que requieren una resolución inversa correcta para funcionar bien ya menudo se utiliza como medida de seguridad para verificar la existencia de la dirección IP en un dominio.</p>
+<p>Se ha ideado un dominio de nombre in-addr.arpa que permite representar en forma de nombre de dominio todas las direcciones IP posibles. El formato son etiquetas numéricas del 0-255 que representan cada octeto de una dirección IP. Las etiquetas de los bytes se concatenan en orden inverso y se les añade el sufijo in-addr.arpa. Un nombre de dominio con cuatro etiquetas de bytes corresponde a un nodo, un nombre de dominio con menos etiquetas corresponde a una red.</p>
+<p>En el ejemplo siguiente se muestran los servidores de nombres del dominio ioc.cat y se hace una consulta de resolución inversa a cada uno de ellos:</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>[root@localhost ~]# host -vt NS ioc.cat
+Trying "ioc.cat"
+;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 6116
+;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 2
+
+;; QUESTION SECTION:
+;ioc.cat. IN NS
+
+;; ANSWER SECTION:
+ioc.cat. 900 IN NS dns1.nominalia.com.
+ioc.cat. 900 IN NS dns2.nominalia.com.
+
+;; ADDITIONAL SECTION:
+dns1.nominalia.com. 145929 IN A 62.97.103.68
+dns2.nominalia.com. 145925 IN A 213.151.118.169
+
+Received 108 bytes from 80.58.61.250#53 in 112 ms
+
+[root@localhost ~]# host 62.97.103.68
+68.103.97.62.in-addr.arpa domain name pointer dns1.nominalia.com.
+
+[root@localhost ~]# host 213.151.118.169
+169.118.151.213.in-addr.arpa domain name pointer dns2.nominalia.com.</code></pre>
+</div>
+</div>
+<h3></h3>
+<h3></h3>
+<div class="exe-figure exe-image position-center license-CC-BY-NC-SA" style="width: 498px;"><img alt="Resolució inversa" src="diagrama-dns-invers.jpg" width="498" height="463" />
+<div class="figcaption"><a>sombrero rojo</a><span class="license"><span>(</span><a>CC BY-NC-SA</a><span>)</span></span></div>
+</div>
+<p>En la imagen anterior podemos observar que la dirección IP 209132177110 resuelve el nombre rhn.redhat.com</p>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="42_consultas_iterativas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="44_servidores_raz.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>
