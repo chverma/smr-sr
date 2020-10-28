@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5. Opciones adicionales del protocolo. | 3. El servei DHCP </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-46"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">3. El servei DHCP</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">3. Servicio DHCP</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="contenidos.html" class="no-ch">Contenidos</a></li>
+   <li><a href="1_introduccin.html" class="daddy">1. Introducción</a>
+   <ul class="other-section">
+      <li><a href="11_evolucin_del_protocolo_dhcp.html" class="no-ch">1.1. Evolución del protocolo DHCP</a></li>
+      <li><a href="12_un_servicio_cliente__servidor.html" class="no-ch">1.2. Un servicio cliente / servidor</a></li>
+   </ul>
+   </li>
+   <li><a href="2_configuracin_de_los_equipos_de_la_red.html" class="no-ch">2. Configuración de los equipos de la red</a></li>
+   <li><a href="3_el_model_funcional_dhcp.html" class="no-ch">3. El model funcional DHCP</a></li>
+   <li><a href="4_intervalos_exclusiones_concesiones_i_reservas.html" class="no-ch">4. Intervalos, exclusiones, concesiones i reservas</a></li>
+   <li id="active"><a href="5_opciones_adicionales_del_protocolo.html" class="active daddy">5. Opciones adicionales del protocolo.</a>
+   <ul>
+      <li><a href="prctica_1_instalacin_y_configuracin_de_un_servicio_dhcp.html" class="no-ch">Práctica 1: Instalación y configuración de un servicio DHCP</a></li>
+   </ul>
+   </li>
+   <li><a href="6_problemas_del_servicio.html" class="no-ch">6. Problemas del servicio</a></li>
+   <li><a href="instalacin_de_un_servidor_dhcp.html" class="no-ch">Instalación de un servidor DHCP</a></li>
+   <li><a href="actividades.html" class="no-ch">actividades</a></li>
+   <li><a href="prcticas.html" class="no-ch">prácticas</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="4_intervalos_exclusiones_concesiones_i_reservas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="prctica_1_instalacin_y_configuracin_de_un_servicio_dhcp.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">5. Opciones adicionales del protocolo.</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id23">
+<div class="iDevice emphasis0">
+<div id="ta23_85" class="block iDevice_content">
+<p>Recuerda que el protocolo DHCP la configuración IP no sólo una dirección IP y la máscara. Para añadir nuevos parámetros se utiliza la palabra reservada options.</p>
+<h2>option subnet-mask</h2>
+<p>La opción subnet-mask utiliza para especificar la máscara de subred que se enviará al cliente, si se omite se enviaría la máscara que va asociada con la declaración subnet a la que pertenezca la IP asignada. Lo normal es omitirlo para facilitar el mantenimiento del archivo de configuración. Su sintaxis es la siguiente:</p>
+<p style="padding-left: 30px;"><code>option subnet-mask ip-address;</code></p>
+<p>Ejemplo:</p>
+<div class="highlighted-code code-style-2 language-c line-numbers">
+<div>
+<pre><code></code></pre>
+<pre class="line-numbers  language-c"><code class="  language-c">subnet <span class="token number">10.0</span><span class="token punctuation">.</span><span class="token number">0.0</span> netmask <span class="token number">255.255</span><span class="token punctuation">.</span><span class="token number">255.0</span> <span class="token punctuation">{</span>
+   range <span class="token number">10.0</span><span class="token punctuation">.</span><span class="token number">0.10</span> <span class="token number">10.0</span><span class="token punctuation">.</span><span class="token number">0.254</span><span class="token punctuation">;</span>
+   option domain<span class="token operator">-</span>name<span class="token operator">-</span>servers <span class="token number">8.8</span><span class="token punctuation">.</span><span class="token number">8.8</span><span class="token punctuation">,</span> <span class="token number">8.8</span><span class="token punctuation">.</span><span class="token number">4.4</span><span class="token punctuation">;</span>
+   option routers <span class="token number">10.0</span><span class="token punctuation">.</span><span class="token number">0.1</span><span class="token punctuation">;</span>
+   option broadcast<span class="token operator">-</span>address <span class="token number">10.0</span><span class="token punctuation">.</span><span class="token number">0.255</span><span class="token punctuation">;</span>
+   option subnet<span class="token operator">-</span>mask <span class="token number">255.255</span><span class="token punctuation">.</span><span class="token number">255.0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<pre><code></code></pre>
+</div>
+</div>
+<h2>option routers</h2>
+<p>La opción routers usa para enviarle al cliente su puerta de enlace. Puede especificar una IP numérica o un nombre. Su sintaxis es la siguiente:</p>
+<p style="padding-left: 30px;"><code>option routers ip-address;</code></p>
+<p>ejemplo:</p>
+<div class="highlighted-code code-style-2 language-c line-numbers">
+<div>
+<pre><code></code></pre>
+<pre class="line-numbers  language-c"><code class="  language-c">subnet <span class="token number">10.0</span><span class="token punctuation">.</span><span class="token number">0.0</span> netmask <span class="token number">255.255</span><span class="token punctuation">.</span><span class="token number">255.0</span> <span class="token punctuation">{</span>
+    range <span class="token number">10.0</span><span class="token punctuation">.</span><span class="token number">0.10</span> <span class="token number">10.0</span><span class="token punctuation">.</span><span class="token number">0.254</span><span class="token punctuation">;</span>
+    option domain<span class="token operator">-</span>name<span class="token operator">-</span>servers <span class="token number">8.8</span><span class="token punctuation">.</span><span class="token number">8.8</span><span class="token punctuation">,</span> <span class="token number">8.8</span><span class="token punctuation">.</span><span class="token number">4.4</span><span class="token punctuation">;</span>
+    option routers <span class="token number">10.0</span><span class="token punctuation">.</span><span class="token number">0.1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<pre><code></code></pre>
+</div>
+</div>
+<h2><br />option domain-name-servers</h2>
+<p>La opción domain-name-servers se emplea para enviar al cliente los servidores DNS que utilizará. Su sintaxis es la siguiente:</p>
+<p style="padding-left: 30px;"><code>option domain-name-servers ip-address [, ip-address ...];</code></p>
+<p>Los servidores se especificarán por orden de preferencia, siendo el primero de la lista el que se utilizará como servidor DNS primario.</p>
+<p>Los servidores DNS también se pueden especificar, si queremos, a través de nombres que el servidor DHCP resolverá con la ayuda del servidor de nombres especificado en la configuración de la red del equipo donde se encuentre. La ventaja de usar nombres en lugar de IP, es que si estas cambian, el nombre normalmente no cambiará y por tanto no será necesario modificar la configuración del servidor DHCP, pero el inconveniente es que la respuesta al cliente, que siempre será una IP, tardará un poco más.</p>
+<p>En el caso de usar nombres en lugar de IP es aconsejable instalar en el servidor DHCP un servidor DNS, o por lo menos que el servidor DNS esté en el mismo segmento de red que el servidor DHCP, esto agilizará bastante la respuesta los clientes.</p>
+<p>Ejemplos:</p>
+<div class="highlighted-code code-style-2 language-c line-numbers">
+<div>
+<pre><code></code></pre>
+<pre class="line-numbers  language-c"><code class="  language-c">option domain<span class="token operator">-</span>name<span class="token operator">-</span>servers ns<span class="token punctuation">.</span>midns<span class="token punctuation">.</span>com<span class="token punctuation">;</span></code></pre>
+<pre><code> </code></pre>
+</div>
+</div>
+<div class="highlighted-code code-style-2 language-c line-numbers">
+<div>
+<pre><code>option domain-name-servers 8.8.8.8, 8.8.4.4;</code></pre>
+</div>
+</div>
+<div class="highlighted-code code-style-2 language-clike line-numbers">
+<div>
+<pre><code>subnet 10.0.0.0 netmask 255.255.255.0 {
+    range 10.0.0.10 10.0.0.254;
+    option domain-name-servers 8.8.8.8, 8.8.4.4;
+}</code></pre>
+</div>
+</div>
+<p><br /><br /></p>
+<p></p>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="4_intervalos_exclusiones_concesiones_i_reservas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="prctica_1_instalacin_y_configuracin_de_un_servicio_dhcp.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

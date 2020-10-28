@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1. Introducción | 3. El servei DHCP </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-40"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">3. El servei DHCP</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">3. Servicio DHCP</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="contenidos.html" class="no-ch">Contenidos</a></li>
+   <li id="active"><a href="1_introduccin.html" class="active daddy">1. Introducción</a>
+   <ul>
+      <li><a href="11_evolucin_del_protocolo_dhcp.html" class="no-ch">1.1. Evolución del protocolo DHCP</a></li>
+      <li><a href="12_un_servicio_cliente__servidor.html" class="no-ch">1.2. Un servicio cliente / servidor</a></li>
+   </ul>
+   </li>
+   <li><a href="2_configuracin_de_los_equipos_de_la_red.html" class="no-ch">2. Configuración de los equipos de la red</a></li>
+   <li><a href="3_el_model_funcional_dhcp.html" class="no-ch">3. El model funcional DHCP</a></li>
+   <li><a href="4_intervalos_exclusiones_concesiones_i_reservas.html" class="no-ch">4. Intervalos, exclusiones, concesiones i reservas</a></li>
+   <li><a href="5_opciones_adicionales_del_protocolo.html" class="daddy">5. Opciones adicionales del protocolo.</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_instalacin_y_configuracin_de_un_servicio_dhcp.html" class="no-ch">Práctica 1: Instalación y configuración de un servicio DHCP</a></li>
+   </ul>
+   </li>
+   <li><a href="6_problemas_del_servicio.html" class="no-ch">6. Problemas del servicio</a></li>
+   <li><a href="instalacin_de_un_servidor_dhcp.html" class="no-ch">Instalación de un servidor DHCP</a></li>
+   <li><a href="actividades.html" class="no-ch">actividades</a></li>
+   <li><a href="prcticas.html" class="no-ch">prácticas</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="contenidos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="11_evolucin_del_protocolo_dhcp.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">1. Introducción</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id75">
+<div class="iDevice emphasis0">
+<div id="ta75_154" class="block iDevice_content">
+<p>El administrador de red tiene la tarea de configurar los equipos que la componen. Esto significa configurar los servidores, los equipos cliente, concentradores, enrutadores, etc. Cada equipo de la red debe identificarse con la dirección IP correspondiente y la máscara de red, y generalmente dispondrá de un camino de acceso a Internet.</p> <p>Tanto los usuarios como los servicios requerirán el acceso a otros equipos identificándolos por el nombre de dominio en lugar de hacerlo por la dirección IP, que es más difícil de recordar. Hacer esto equipo por equipo resulta un trabajo pesado y repetitiva si no se dispone de servicios de red que la facilitan.</p> <p>El servicio DHCP permite la configuración de direcciones IP, máscaras, pasarelas por defecto y muchas otras opciones de configuración de forma totalmente dinámica. DHCP es el acrónimo de dynamic host configuration protocolo, en catalán, protocolo de configuración dinámica de equipos.</p> <div class="exe-block-info">
+<p><strong>¿Qué hace el DHCP?</strong></p>
+<p>Una forma sencilla de entender el DHCP es imaginar que los equipos de cliente al arrancar hacen un grito por la red y preguntan&quot;hay alguien?&quot;,&quot;¿Quién soy yo?&quot;. El servidor de DHCP les contesta proporcionándoles toda la información necesaria para que sepan quiénes son y cómo deben configurar sus parámetros de red.</p></div> 
+ <p>El servicio DHCP proporciona un mecanismo de configuración centralizado de los equipos de la red. En lugar de configurar uno a uno los equipos de red con direcciones y valores estáticos, un servidor DHCP irá asignando los equipos clientes los valores que les correspondan. Esta asignación se hace por un período de tiempo finito, pasado el cual habrá que renovarse.</p> <div class="exe-block-info">
+<p><strong>ventajas DHCP</strong></p>
+<p>El servicio DHCP tiene varias ventajas:</p><ul>
+<li>Centraliza la administración.</li><li>Evita errores y conflictos IP.</li><li>Ahorra tiempo.</li><li>Simplifica la administración.</li></ul>
+</div> 
+ <p>Las principales ventajas de utilizar DHCP son: por un lado, evitar conflictos de direcciones IP (direcciones repetidas y direcciones erróneas), ya que pasó equipo por equipo a cambiar la configuración es mucho más pesado y propenso al error que hacer -lo editando un archivo de configuración en el servidor DHCP; y, por otra parte, poder hacer la administración centralizada representa un ahorro de tiempo y de trabajo.</p> <p>El servicio DHCP simplifica la administración de la configuración de los equipos de red haciéndola centralizada, dinámica y con concesiones por períodos de tiempo finitos.</p> <p>La concesión dinámica de direcciones IP y otros parámetros de configuración de red se realiza para un periodo de tiempo determinado, que varía en función de las necesidades del cliente y del servidor.</p> <h3>Ejemplos de uso del servicio DHCP</h3> <p>Los siguientes son algunos ejemplos de uso del servicio DHCP:</p> <ul>
+<li>En una biblioteca que admite conexiones Wi-Fi, los clientes obtendrán concesiones para un tiempo reducido, por ejemplo, minutos.</li><li>Un usuario de Internet que recibe a su equipo de casa una dirección IP dinámica de su proveedor de acceso a Internet (ISP) tendrá una concesión que seguramente será por horas.</li><li>En la red corporativa de una empresa que se ha configurado dinámicamente usando DHCP, los equipos recibirán concesiones dinámicas por períodos de tiempo muy largos, por ejemplo, días.</li></ul>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ReflectionfpdmodifIdevice em_iDevice" id="id76">
+<div class="iDevice emphasis_reflexionfpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Reflexiona</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta76_121" class="block iDevice_content">
+<p><strong>Reconfiguración de una red</strong></p> 
+ <p>Imagínese la diversión del administrador de una red corporativa de 1.000 equipos con direcciones estáticas cuando es necesario reconfigurar en un fin de semana!</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id79">
+<div class="iDevice emphasis_parasabermasfpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta79_128" class="block iDevice_content">
+<p><strong>DNS dinámico</strong></p> 
+ <p>Hay servicios de DNS dinámico (DDNS) que permiten asignar un nombre de dominio en equipos con dirección IP dinámica.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="contenidos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="11_evolucin_del_protocolo_dhcp.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

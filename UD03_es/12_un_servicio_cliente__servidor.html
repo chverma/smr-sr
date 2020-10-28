@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.2. Un servicio cliente / servidor | 3. El servei DHCP </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-58"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">3. El servei DHCP</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">3. Servicio DHCP</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="contenidos.html" class="no-ch">Contenidos</a></li>
+   <li class="current-page-parent"><a href="1_introduccin.html" class="current-page-parent daddy">1. Introducción</a>
+   <ul>
+      <li><a href="11_evolucin_del_protocolo_dhcp.html" class="no-ch">1.1. Evolución del protocolo DHCP</a></li>
+      <li id="active"><a href="12_un_servicio_cliente__servidor.html" class="active no-ch">1.2. Un servicio cliente / servidor</a></li>
+   </ul>
+   </li>
+   <li><a href="2_configuracin_de_los_equipos_de_la_red.html" class="no-ch">2. Configuración de los equipos de la red</a></li>
+   <li><a href="3_el_model_funcional_dhcp.html" class="no-ch">3. El model funcional DHCP</a></li>
+   <li><a href="4_intervalos_exclusiones_concesiones_i_reservas.html" class="no-ch">4. Intervalos, exclusiones, concesiones i reservas</a></li>
+   <li><a href="5_opciones_adicionales_del_protocolo.html" class="daddy">5. Opciones adicionales del protocolo.</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_instalacin_y_configuracin_de_un_servicio_dhcp.html" class="no-ch">Práctica 1: Instalación y configuración de un servicio DHCP</a></li>
+   </ul>
+   </li>
+   <li><a href="6_problemas_del_servicio.html" class="no-ch">6. Problemas del servicio</a></li>
+   <li><a href="instalacin_de_un_servidor_dhcp.html" class="no-ch">Instalación de un servidor DHCP</a></li>
+   <li><a href="actividades.html" class="no-ch">actividades</a></li>
+   <li><a href="prcticas.html" class="no-ch">prácticas</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="11_evolucin_del_protocolo_dhcp.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="2_configuracin_de_los_equipos_de_la_red.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">1.2. Un servicio cliente / servidor</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id87">
+<div class="iDevice emphasis0">
+<div id="ta87_154" class="block iDevice_content">
+<p>Como suele ocurrir con los servicios cliente / servidor, un equipo puede realizar las dos funciones al mismo tiempo.</p> <p>El servicio DHCP es uno más de los servicios de red que tienen la estructura cliente / servidor. Los servidores DHCP son los equipos que tienen en ejecución el programa servidor. Es el programa encargado de atender las peticiones de los clientes y ofrecerles la configuración de red, llevando el registro de las IP que concede y el registro de todas las acciones que realiza. Los clientes DHCP son aquellos equipos que realizan peticiones para obtener una configuración de red a un servidor DHCP.</p> <h2>El client DHCP</h2> <p>Un equipo cliente DHCP es un equipo que solicita la IP y otros parámetros de configuración de red a un servidor DHCP en lugar de tenerlos definidos localmente en el equipo.</p> <blockquote class="destacado">
+<p><strong>ISP</strong></p>
+<p>ISP: Internet service provider o proveedor de servicio / acceso a Internet. Lo son por ejemplo las empresas Ono, Vodafone, Jazztel, etc.</p></blockquote> 
+ <p>Si conecta su equipo informático en la red Internet por medio de un ISP (Internet service provider o proveedor de servicio / acceso a Internet), seguramente recibirá una IP dinámica de su proveedor. Cuando se realizaba una llamada telefónica con módem y usando el protocolo PPP (Point-to-Point Protocol, protocolo punto a punto), el proveedor proporcionaba una dirección IP dinámica. Si utiliza ADSL y un router o router, seguramente el router proporciona una dirección IP dinámica privada en el ordenador de casa. Al mismo tiempo, el router obtiene una IP dinámica pública del proveedor. Estas direcciones IP dinámicas son fijas (siempre las mismas) o dinámicas de intervalo (puede ser cualquier IP del conjunto de direcciones IP que tiene disponibles para conceder el servidor DHCP).</p> <blockquote class="destacado">
+<p><strong>IP pública / IP privada</strong></p>
+<p>La diferencia entre una IP pública y una IP privada es que la pública es visible para todos los equipos de Internet, mientras que la privada es visible sólo dentro de la misma red local.</p></blockquote> 
+ <p>El cliente DHCP debe tener en funcionamiento un demonio (daemon) encargado de la gestión de las tareas DHCP por parte del cliente. El programa cliente realiza la parte de negociación encargada al cliente (DHCP discovery, request) y también lleva un registro de las concesiones (leases) recibidas. Este registro es el que utiliza el cliente para volver a pedir la misma IP que tenía anteriormente. Una vez recibida la concesión el programa cliente queda "dormido", pendiente de volver a ejecutar automáticamente cuando sea necesario renegociar la concesión. Sin intervención del usuario, el programa cliente se activa y sigue el procedimiento necesario para renegociar la dirección IP cada vez que el tiempo de la concesión se agota.</p> <p><strong>configuración cliente</strong></p> 
+ <p>Usualmente las configuraciones clientes se pueden hacer de tres maneras diferentes:</p> <ul>
+<li>archivo de texto: editar directamente los archivos de configuración.</li><li>menús en modo texto: usando algún programa de menús de interfaz.</li><li>aplicación gráfica: usando una aplicación de ventanas en el entorno gráfico.</li></ul> 
+ <p>Los programas cliente varían de un sistema operativo a otro y la manera de ejecutarlos también. Generalmente se dispone de un cliente ejecutable en modo texto o órdenes y de una interfaz gráfica (GUI, graphics user interface o interfaz gráfica de usuario) para la configuración. Huelga decir que los sistemas Windows tienden a la configuración gráfica usando ventanas y en la configuración y ejecución interna a escondidas del usuario. Normalmente, en los sistemas GNU / Linux, la configuración se hace usando archivos de texto o como opciones en el orden de ejecución. La interfaz gráfica suele ser un frontal (front-end) para llamar la orden. Según sea el sistema operativo se puede consultar el archivo de registro de las concesiones recibidas por el cliente, el fichero de leases, más o menos detalladamente.</p> <p>Generalmente el programa cliente se puede configurar para definir su comportamiento en la comunicación con el servidor: información a pedir, información a proporcionar al servidor, opciones por defecto, etc.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id88">
+<div class="iDevice emphasis0">
+<div id="ta88_154" class="block iDevice_content">
+<h2>El servidor DHCP</h2> <p>El administrador de red es el encargado de pensar la ubicación del servidor o servidores DHCP en la estructura corporativa. Cuanto más complicada sea la topología de la red, más difícil será la gestión. Una red corporativa básica puede disponer de un único servidor DHCP que ofrece sus servicios a todos los equipos de la red. Los clientes pueden estar en una misma subred o en varias subredes, pero todas con conectividad con el servidor DHCP. Este también puede ser el esquema de una red privada en casa, donde un enrutador (el del ISP, por ejemplo) proporciona el servicio DHCP en todos los ordenadores de la casa.</p> <p>Si la red corporativa crece y pasa a tener subredes segmentadas con cortafuegos las unas de las otras, la configuración del servidor DHCP se complica. Si se quiere continuar con un único servidor para toda la red, será necesario que los cortafuegos (firewalls) dejen pasar los paquetes DHCP entre las subredes y el servidor. Otra opción es poner un servidor DHCP para cada subred o grupos de subredes. Haciéndolo así, la administración de cada servidor es más sencilla pero hay más servidores a administrar. Una red con una casuística completa es la que tiene varios servidores DHCP para diversas partes de la red y cortafuegos entre clientes y servidores que deben permitir el paso de paquetes DHCP.</p> <p>Si el servidor DHCP es el encargado de dar direcciones IP a los clientes, quienes le proporciona una dirección IP a él? O bien otro servidor DHCP (y podríamos volver a hacer la misma pregunta indefinidamente) o bien el administrador. Usualmente, en una red corporativa el servidor DHCP utiliza una IP estática definida por el administrador. Esto le permite estar siempre disponible para los clientes con la misma IP y no lo hace depender de otro servidor externo.</p> <p>Hay varios programas servidores DHCP: en modo texto, en modo gráfico, en modo "mágico" (no se ve qué hacen) y en modo Unix (todo basado en ficheros de texto). Cada administrador trabaja con sus herramientas preferidas. Las tareas básicas para aprender a utilizar un servidor DHCP son observar / hacer una lista de la configuración actual, activar / detener el servicio, modificar la configuración, monitorizar los logs (registro de sucesos del servicio) y, evidentemente, saber instalar y desinstalar la aplicación servidor.</p> <p>Los ficheros de logs (sucesos) recogen los eventos que se quieren monitorizar.</p> <p>Como la mayoría de servicios de red, el servicio DHCP es un servicio que se ejecuta en segundo plano en forma de demonio. El servidor DHCP siempre está encendido escuchando en el puerto 67 las peticiones que recibe de los clientes. Cuando recibe una petición entrante, el programa ejecutable del servidor DHCP la procesa y pone en marcha todo el mecanismo DHCP pertinente para volver a escuchar nuevas peticiones. De hecho, el servidor siempre escucha peticiones y las procesa simultáneamente (según la configuración).</p> <p>Los archivos del registro del servicio, donde se anotan las concesiones, permiten mantener la información aunque el servicio se detenga o que el servidor se apague. Al volver a poner en marcha se leerán de nuevo los archivos de registros para saber cuáles son las concesiones que se habían realizado.</p> <p>Los ficheros de concesiones permiten mantener la coherencia de la asignación de direcciones IP entre paradas del servicio.</p>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="11_evolucin_del_protocolo_dhcp.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="2_configuracin_de_los_equipos_de_la_red.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

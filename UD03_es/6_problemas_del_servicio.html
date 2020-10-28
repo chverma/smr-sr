@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6. Problemas del servicio | 3. El servei DHCP </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-50"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">3. El servei DHCP</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">3. Servicio DHCP</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="contenidos.html" class="no-ch">Contenidos</a></li>
+   <li><a href="1_introduccin.html" class="daddy">1. Introducción</a>
+   <ul class="other-section">
+      <li><a href="11_evolucin_del_protocolo_dhcp.html" class="no-ch">1.1. Evolución del protocolo DHCP</a></li>
+      <li><a href="12_un_servicio_cliente__servidor.html" class="no-ch">1.2. Un servicio cliente / servidor</a></li>
+   </ul>
+   </li>
+   <li><a href="2_configuracin_de_los_equipos_de_la_red.html" class="no-ch">2. Configuración de los equipos de la red</a></li>
+   <li><a href="3_el_model_funcional_dhcp.html" class="no-ch">3. El model funcional DHCP</a></li>
+   <li><a href="4_intervalos_exclusiones_concesiones_i_reservas.html" class="no-ch">4. Intervalos, exclusiones, concesiones i reservas</a></li>
+   <li><a href="5_opciones_adicionales_del_protocolo.html" class="daddy">5. Opciones adicionales del protocolo.</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_instalacin_y_configuracin_de_un_servicio_dhcp.html" class="no-ch">Práctica 1: Instalación y configuración de un servicio DHCP</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="6_problemas_del_servicio.html" class="active no-ch">6. Problemas del servicio</a></li>
+   <li><a href="instalacin_de_un_servidor_dhcp.html" class="no-ch">Instalación de un servidor DHCP</a></li>
+   <li><a href="actividades.html" class="no-ch">actividades</a></li>
+   <li><a href="prcticas.html" class="no-ch">prácticas</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="prctica_1_instalacin_y_configuracin_de_un_servicio_dhcp.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="instalacin_de_un_servidor_dhcp.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">6. Problemas del servicio</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id85">
+<div class="iDevice emphasis0">
+<div id="ta85_154" class="block iDevice_content">
+<h2>6.1. Ataques al funcionamiento de DHCP y conflictos de direcciones IP</h2> <p>Como todo servicio de red, el servidor DHCP es susceptible de sufrir ataques mal intencionados. El ataque más fácil y clásico es el DoS o de denegación de servicio. Consiste en inundar de peticiones un servidor para saturarlo y bloquear su funcionamiento. Un cliente puede realizar innumerables peticiones DHCP discovery fingiendo que son clientes diferentes (enmascarando su MAC) con la intención de agotar las direcciones IP disponibles del servidor o simplemente con la intención de sobrecargarlo con tantas peticiones que no dé al alcance atenderlas o que lo haga lentamente.</p> <p>Otro tipo de ataque consiste en falsear la información que se envía al cliente (DHCP Spoofing). Recordemos que el cliente hace una solicitud de IP en forma de difusión (broadcast) y su petición puede ser atendida por uno o más servidores DHCP. Uno de los servidores DHCP puede ser un atacante que intentará proporcionar información de configuración falsa al cliente. Por ejemplo indicando un servidor DNS también malicioso. Este puede falsear las identidades de las máquinas de la red y, cuando el cliente se dirige a su entidad bancaria, el servidor DNS en realidad le ha proporcionado una IP de una máquina que falsea la de la entidad bancaria. Peligroso, verdad?</p> <p>Para poner remedio a la inseguridad en la comunicación cliente-servidor DHCP, el protocolo permite utilizar mecanismos de autenticación y cifrado. Estos mecanismos quedan fuera del alcance de esta explicación.</p> <div class="exe-figure exe-image position-center license-CC-BY-NC-SA" style="width: 516px;">
+<div class="figcaption header"><strong>Esquema de funcionamiento del DHCP Spoofing</strong></div>
+<img alt="DHCP Spoffing" height="299" src="dhcp-spoofing.jpg" width="516"/>
+<div class="figcaption"><a>IES Haría.</a><span class="title"><em>Esquema de funcionamiento del DHCP Spoofing</em></span> <span class="license"><span>(</span><a>CC BY-NC-SA</a><span>)</span></span></div>
+</div> 
+ <h2>6.2. Conflictos con las direcciones IP</h2> <p>Uno de los principales motivos para utilizar DHCP es simplificar el proceso de configuración de red y minimizar los conflictos por solapamiento de direcciones IP. Por desgracia, esto no garantiza que no se puedan producir conflictos. Por ejemplo, nos podemos encontrar en situaciones en que dos máquinas diferentes tengan la misma IP por una simple mala configuración del servidor DHCP. Otro caso típico es el de un cliente que se ha configurado él mismo una IP estática cuando en la red ya había un equipo que utilizaba la misma dirección IP asignada por el servidor DHCP.</p> <p>Un problema habitual para los administradores poco experimentados es definir una configuración de red local al cliente (hostname, servidor DNS, puerta de enlace a utilizar, etc.), pero pedir la dirección IP dinámicamente. La configuración dinámica no es solamente la IP y la máscara, sino que el servidor DHCP puede proporcionar otros parámetros de red que sobrescribirán los que el cliente tenía definidos localmente (este es el objetivo de DHCP!).</p> <p>La configuración recibida por DHCP sobrescribe la configuración local del cliente.</p> <h2>6.3. Varios servidores DHCP en la misma red</h2> <p>Otro de los problemas habituales es que por error o maldad se conecte a la red otro servidor DHCP que responda primero a las peticiones de DHCP Discover. En los entornos corporativos hay que tener control de que se conecta a la red para evitar problemas. Estos tipos de escenarios se pueden minimizar indicando que el servidor es autoritario en el segmento de red afectado.</p>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="prctica_1_instalacin_y_configuracin_de_un_servicio_dhcp.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="instalacin_de_un_servidor_dhcp.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2. Configuración de los equipos de la red | 3. El servei DHCP </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-48"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">3. El servei DHCP</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">3. Servicio DHCP</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="contenidos.html" class="no-ch">Contenidos</a></li>
+   <li><a href="1_introduccin.html" class="daddy">1. Introducción</a>
+   <ul class="other-section">
+      <li><a href="11_evolucin_del_protocolo_dhcp.html" class="no-ch">1.1. Evolución del protocolo DHCP</a></li>
+      <li><a href="12_un_servicio_cliente__servidor.html" class="no-ch">1.2. Un servicio cliente / servidor</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="2_configuracin_de_los_equipos_de_la_red.html" class="active no-ch">2. Configuración de los equipos de la red</a></li>
+   <li><a href="3_el_model_funcional_dhcp.html" class="no-ch">3. El model funcional DHCP</a></li>
+   <li><a href="4_intervalos_exclusiones_concesiones_i_reservas.html" class="no-ch">4. Intervalos, exclusiones, concesiones i reservas</a></li>
+   <li><a href="5_opciones_adicionales_del_protocolo.html" class="daddy">5. Opciones adicionales del protocolo.</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_instalacin_y_configuracin_de_un_servicio_dhcp.html" class="no-ch">Práctica 1: Instalación y configuración de un servicio DHCP</a></li>
+   </ul>
+   </li>
+   <li><a href="6_problemas_del_servicio.html" class="no-ch">6. Problemas del servicio</a></li>
+   <li><a href="instalacin_de_un_servidor_dhcp.html" class="no-ch">Instalación de un servidor DHCP</a></li>
+   <li><a href="actividades.html" class="no-ch">actividades</a></li>
+   <li><a href="prcticas.html" class="no-ch">prácticas</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="12_un_servicio_cliente__servidor.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_el_model_funcional_dhcp.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">2. Configuración de los equipos de la red</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id1">
+<div class="iDevice emphasis0">
+<div id="ta1_85" class="block iDevice_content">
+<h2>Configuración de un equipo de red</h2> <p>Cualquier equipo que pertenece a una red requiere que se configure con unos parámetros mínimos, que son la dirección IP, la máscara y la puerta de enlace predeterminada. La dirección IP identifica el equipo de manera única, y la máscara permite determinar la red o subred en que se encuentra el equipo. Con estos dos parámetros es suficiente para tener conectividad en la red. Si se quiere disponer de acceso fuera de la red propia (por ejemplo, en Internet o en el resto de la red corporativa) hay que definir también la puerta de enlace predeterminada. Aparte de la configuración básica, los equipos pueden necesitar (y de hecho lo necesitan) más parámetros de configuración como, por ejemplo: el nombre del host, el servidor DNS, el archivo de iniciación a bajar, etc.</p> <div class="destacado">
+<p>Todo equipo de red necesita disponer de una dirección IP que lo identifica de manera única en la red. Hay también una máscara para poder separar de la dirección IP cuál es la parte de dirección de red y cuál la parte de dirección de host. Finalmente, es imprescindible disponer de la dirección de la puerta de enlace predeterminada o pasarela por defecto (o gateway), para disponer de acceso a redes externas.</p></div> 
+ <p><strong>Ejemplo de configuración de red de un equipo de casa:</strong></p> 
+ <p>La mayoría de usuarios disponen en casa de un equipo (o más) conectados a un router que proporciona el acceso a Internet. Este equipo está configurado como cliente DHCP y al iniciarse recibe la configuración de red del router. Puede comprobar en casa qué configuración tiene. Una configuración de ejemplo podría ser:</p> <div class="highlighted-code language-c">
+<div>
+<pre><code>Dirección IP. . . . . . . . . . . : 192.168.1.33
+Máscara de subred . . . . . . . . : 255.255.255.0
+Puerta de enlace predeterminada.. : 192.168.1.1
+Servidor DHCP . . . . . . . . . . : 192.168.1.1
+Servidores DNS . . . . . . . . .  : 80.58.61.250 80.58.61.254</code></pre>
+</div>
+</div> 
+ <div class="emphasis1">
+<p><strong>El inconveniente de la configuración estática</strong></p>
+<p>La configuración estática implica configurar los equipos uno a uno. Incluso aunque se tenga acceso remoto a los equipos (por Telnet o SSH), como que hay que modificar la configuración de red no se puede hacer sentado desde el equipo del administrador, sino que hay que ir equipo por equipo a modificar la configuración.</p></div> 
+ <p>Este proceso de configuración es necesario que se haga para cada equipo de la red. Hacerlo manualmente implica configurar equipo para equipo sin cometer errores al teclear las direcciones y las máscaras. Cualquier cambio en la estructura de la red, como por ejemplo redefinir las subredes o modificar algunas direcciones IP, significa volver a configurar los equipos implicados. Es evidente que toda esa labor no es agradable para el administrador de red (y es muy aburrida!). Tanto si la red corporativa consta de pocos equipos como de muchos, hay una solución que permita automatizar la configuración de red de cada equipo de manera centralizada.</p> <p>Las opciones de configuración de red se pueden asignar a cada equipo estáticamente o se pueden configurar de forma dinámica utilizando DHCP.</p> <p>Como administradores de red, la gestión centralizada que nos proporciona DHCP nos permite modificar la red añadiendo, eliminando y redefiniendo, equipos con un coste mínimo.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id77">
+<div class="iDevice emphasis0">
+<div id="ta77_154" class="block iDevice_content">
+<h3>2.2. Tipo de asignaciones de direcciones IP</h3> <p>Cada equipo de red tiene asignada una dirección IP que lo identifica de manera única dentro de la red. La composición de la dirección IP y la máscara determina la red o subred a la que pertenece. Además, se configuran otros parámetros de red como la puerta de enlace predeterminada, servidores DNS, etc. Esto se puede configurar manualmente yendo equipo por equipo e introduciendo esta información.</p> <p>Cuando la dirección IP y los demás parámetros necesarios de configuración de la red se configuran equipo por equipo, manualmente, se dice que tienen una configuración IP estática.</p> <p>Cuando la configuración de red de un equipo no se hace manualmente y localmente en el equipo sino que se recibe por medio de un servidor DHCP, se dice que el equipo utiliza una configuración IP dinámica. Para realizar configuraciones de red dinámicamente serán necesarios uno o más servidores de DHCP (a modo de redundancia) que proporcionarán la configuración a los equipos clientes (los que hay que configurar). Por lo tanto, será una estructura cliente-servidor. Las direcciones IP dinámicas que recibe el cliente se pueden clasificar en dos categorías: asignación dinámica de intervalo y asignación fija.</p> <p>El servidor DHCP dispone de un intervalo de direcciones que puede asignar a los clientes que piden una dirección IP. Cuando el servidor asigna una dirección cualquiera del intervalo al cliente (al azar) se trata de una asignación dinámica de intervalo. El cliente no sabe qué dirección IP tendrá y no hay manera de predecir qué dirección se le concederá en una futura configuración. A cada nueva asignación de la dirección IP puede ser diferente.</p> <p>Una asignación fija se produce cuando el servidor DHCP siempre asigna la misma dirección al cliente. Para asignar siempre la misma dirección IP al cliente es necesario que el servidor pueda identificar inequívocamente el cliente (por la dirección MAC). El servidor dispone de una tabla con las correspondencias entre las direcciones MAC y direcciones IP fijas.</p> <p>Cuando la configuración de red de un equipo se recibe por medio de un servidor DHCP se dice que utiliza una dirección IP dinámica. Esta dirección puede variar dentro de un intervalo de direcciones disponibles para el servidor DHCP o puede ser fija. Si la asignación de la configuración se hace para siempre se dice que se hace una asignación de configuración IP automática.</p> <p>Las ventajas de disponer de una IP fija son que su identificación en Internet (su dirección IP) no varía y todo el mundo le puede identificar siempre por la misma IP. Puede proporcionar servicios a otros equipos, los clientes te identifican siempre con la misma dirección sin tener que recordar en cada momento qué dirección IP tiene hoy (como ocurre en el caso de una IP dinámica).</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id78">
+<div class="iDevice emphasis_debesconocerfpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Es necesario que conozcas</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta78_129" class="block iDevice_content">
+<p><strong>MAC:Cada interfaz de red identifica de manera única físicamente por la dirección MAC (</strong><em>media acces control, Dirección de acceso al medio).</em></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id84">
+<div class="iDevice emphasis_parasabermasfpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta84_128" class="block iDevice_content">
+<p><strong>Peces</strong></p> 
+ <p>El orden GNU permite (Mascarade) enmascarar la dirección MAC propia. ¡Cuidado! No haga maldades.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="12_un_servicio_cliente__servidor.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_el_model_funcional_dhcp.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

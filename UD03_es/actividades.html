@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>actividades | 3. El servei DHCP </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-42"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">3. El servei DHCP</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">3. Servicio DHCP</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="contenidos.html" class="no-ch">Contenidos</a></li>
+   <li><a href="1_introduccin.html" class="daddy">1. Introducción</a>
+   <ul class="other-section">
+      <li><a href="11_evolucin_del_protocolo_dhcp.html" class="no-ch">1.1. Evolución del protocolo DHCP</a></li>
+      <li><a href="12_un_servicio_cliente__servidor.html" class="no-ch">1.2. Un servicio cliente / servidor</a></li>
+   </ul>
+   </li>
+   <li><a href="2_configuracin_de_los_equipos_de_la_red.html" class="no-ch">2. Configuración de los equipos de la red</a></li>
+   <li><a href="3_el_model_funcional_dhcp.html" class="no-ch">3. El model funcional DHCP</a></li>
+   <li><a href="4_intervalos_exclusiones_concesiones_i_reservas.html" class="no-ch">4. Intervalos, exclusiones, concesiones i reservas</a></li>
+   <li><a href="5_opciones_adicionales_del_protocolo.html" class="daddy">5. Opciones adicionales del protocolo.</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_instalacin_y_configuracin_de_un_servicio_dhcp.html" class="no-ch">Práctica 1: Instalación y configuración de un servicio DHCP</a></li>
+   </ul>
+   </li>
+   <li><a href="6_problemas_del_servicio.html" class="no-ch">6. Problemas del servicio</a></li>
+   <li><a href="instalacin_de_un_servidor_dhcp.html" class="no-ch">Instalación de un servidor DHCP</a></li>
+   <li id="active"><a href="actividades.html" class="active no-ch">actividades</a></li>
+   <li><a href="prcticas.html" class="no-ch">prácticas</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="instalacin_de_un_servidor_dhcp.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="prcticas.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">actividades</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id8">
+<div class="iDevice emphasis0">
+<div id="ta8_85" class="block iDevice_content">
+<p>1. ¿Cuáles son las ventajas de utilizar un servidor DHCP en una red? Explícales.</p> <p>2. ¿Qué diferencias hay entre una dirección IP y una MAC?</p> <p>3. ¿De qué formas podemos asignar una dirección IP con DHCP? Explícalas.</p> <p>4. ¿Qué indica cada línea del siguiente archivo de configuración de DHCP? Excepto 1) y 2).</p> <div class="highlighted-code language-c line-numbers">
+<div>
+<pre><code>autoritario;
+identificador de servidor 192.168.1.1;
+tiempo de arrendamiento predeterminado 86400;
+tiempo máximo de arrendamiento 86400;
+opción máscara de subred 255.255.255.0;
+opción dirección de transmisión 192.168.1.255;
+enrutadores opcionales 192.168.1.1;
+subred 192.168.1.0 máscara de red 255.255.255.0
+{
+   rango 192.168.1.2 192.168.1.10;
+   enrutadores opcionales 192.168.1.254;
+}
+host fantasia {
+   hardware ethernet AA: BB: CC: DD: EE: FF;
+   dirección fija 192.168.1.2;
+}</code></pre>
+</div>
+</div> 
+ <p>5. Investiga que significan las líneas 1) y 2). Compruébalo menos en dos recursos.</p> <p>6. ¿Qué información se guarda en el fichero / etc / network / interfaces? Explica el siguiente archivo.</p> <div class="highlighted-code language-clike">
+<div>
+<pre><code>auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet dhcp
+
+auto eth1
+iface eth1 inet estático
+dirección 192.168.1.5
+máscara de red 255.255.255.0
+puerta de enlace 192.168.1.1</code></pre>
+</div>
+</div> 
+ <p><br/>7. Si un servidor DHCP té configurat el següent interval 192.168.0.44 – 192.168.0.244, quantes adreces IP té excloses?</p> 
+ <p>8. De los siguientes mensajes cuáles envía el cliente y cuáles el servidor?</p> <ul>
+<li>Oferta DHCP</li><li>Lanzamiento de DHCP</li><li>DHCP Descubrir</li><li>Solicitud de DHCP</li><li>Informar DHCP</li><li>ACUSE DE DHCP</li><li>DHCP NACK</li></ul> 
+ <p>9. Con los datos del ejercicio 4 escribe un archivo interfaces que asigne una dirección IP fija a un nuevo equipo.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper activityIdevice em_iDevice" id="id9">
+<div class="iDevice emphasis1" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Actividad: Bloque 2</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta9_91_2" class="block iDevice_content">
+<ol>
+<li>Lista los cuatro parámetros más importantes de la configuración de una red IP.</li><li>Dibuja y explica cómo se comunican cliente y servidor para negociar una nueva configuración IP, indicando los puertos involucrados, el nombre del mensaje, el emisor y el destinatario.</li><li>¿Qué es una concesión? Y una reserva?</li><li>Indica cuál de las siguientes afirmaciones referentes al servicio DHCP es verdadera:
+
+Sigue el modelo cliente / servidor y utiliza los puertos TCP 67 y 68.
+Permite asignar una dirección IP a una máquina concreta en función de su MAC.
+Permite la resolución de nombres de host de forma dinámica.
+Utiliza un mensaje de tipo DHCPACK en el que envía al cliente la confirmación de los parámetros de configuración de nombre.</li><li>Qué es Webmin? Explica su utilidad.</li></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="instalacin_de_un_servidor_dhcp.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="prcticas.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

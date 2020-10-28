@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3. El model funcional DHCP | 3. El servei DHCP </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-49"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">3. El servei DHCP</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">3. Servicio DHCP</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="contenidos.html" class="no-ch">Contenidos</a></li>
+   <li><a href="1_introduccin.html" class="daddy">1. Introducción</a>
+   <ul class="other-section">
+      <li><a href="11_evolucin_del_protocolo_dhcp.html" class="no-ch">1.1. Evolución del protocolo DHCP</a></li>
+      <li><a href="12_un_servicio_cliente__servidor.html" class="no-ch">1.2. Un servicio cliente / servidor</a></li>
+   </ul>
+   </li>
+   <li><a href="2_configuracin_de_los_equipos_de_la_red.html" class="no-ch">2. Configuración de los equipos de la red</a></li>
+   <li id="active"><a href="3_el_model_funcional_dhcp.html" class="active no-ch">3. El model funcional DHCP</a></li>
+   <li><a href="4_intervalos_exclusiones_concesiones_i_reservas.html" class="no-ch">4. Intervalos, exclusiones, concesiones i reservas</a></li>
+   <li><a href="5_opciones_adicionales_del_protocolo.html" class="daddy">5. Opciones adicionales del protocolo.</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_instalacin_y_configuracin_de_un_servicio_dhcp.html" class="no-ch">Práctica 1: Instalación y configuración de un servicio DHCP</a></li>
+   </ul>
+   </li>
+   <li><a href="6_problemas_del_servicio.html" class="no-ch">6. Problemas del servicio</a></li>
+   <li><a href="instalacin_de_un_servidor_dhcp.html" class="no-ch">Instalación de un servidor DHCP</a></li>
+   <li><a href="actividades.html" class="no-ch">actividades</a></li>
+   <li><a href="prcticas.html" class="no-ch">prácticas</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="2_configuracin_de_los_equipos_de_la_red.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4_intervalos_exclusiones_concesiones_i_reservas.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">3. El model funcional DHCP</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id82">
+<div class="iDevice emphasis0">
+<div id="ta82_154" class="block iDevice_content">
+<p>El protocolo DHCP utiliza UDP en la capa de transporte. Utiliza dos puertos:</p>
+<ul>
+<li>Puerto 67, donde escucha el servidor.</li>
+<li>Puerto 68, donde escucha el cliente.</li>
+</ul>
+<p>El protocolo DHCP describe el diálogo que se produce entre cliente y servidor para la concesión de configuraciones IP. En una red con configuración de equipos dinámica, uno o más servidores DHCP escucharán las peticiones de los clientes en el puerto 67. Los clientes DHCP solicitarán al servidor DHCP una configuración IP, y comenzará un proceso de negociación que debe terminar ( si todo va bien) con la concesión de una dirección IP al cliente. Los servidores hablan en el puerto 68 de los clientes.</p>
+<p>La negociación que se establece se puede definir a grandes rasgos de la siguiente forma:</p>
+<ol>
+<li>El cliente solicita una dirección IP (de hecho, una configuración de red).</li>
+<li>El servidor mira las direcciones IP disponibles dentro del intervalo de direcciones dinámicas de que dispone para conceder y ofrece una al cliente.</li>
+<li>Si el cliente lo acepta, envía una solicitud al servidor para hacerla suya.</li>
+<li>Si el servidor le parece bien, acepta la petición del cliente y le confirma que puede utilizar esta IP, que se la concede por un periodo de tiempo limitado.</li>
+</ol>
+<h3>UDP en les transmissions DHCP</h3>
+<p>El intercambio de información entre cliente y servidor no es muy grande (poco volumen de datos) y no requiere un flujo permanente (una conversación continuada). Es por ello que el protocolo que se utiliza en las transmisiones DHCP es el UDP.</p>
+<p>La concesión de la dirección IP es por un período de tiempo establecido por el servidor. Esto significa que, transcurrido este periodo, el cliente deberá renegociar la concesión en un proceso similar al descrito anteriormente. En la figura.1 se puede ver el diálogo de cuatro fases cliente-servidor.</p>
+<p>El proceso real, sin embargo, es más detallado. Podemos repasar: consta principalmente de cuatro partes: la petición del cliente o discovery, la oferta del servidor o offer, la aceptación de la dirección IP por el cliente o request, y la confirmación del servidor o acknowledgement. Aparte de este tipo de mensajes, el protocolo DHCP define de otros como el de petición de información o information y el de liberación de la dirección IP o releasing.</p>
+<div class="exe-figure exe-image position-center license-CC-BY-NC-SA" style="width: 355px;">
+<div class="figcaption header"><strong>Model funcional del protocol DHCP</strong></div>
+<img alt="Model funcional del protocol DHCP" src="smxm7uf1ud1_im1.png" width="355" height="439" />
+<div class="figcaption"><a>COI.</a><a class="title" href="Model funcional del protocol DHCP" rel="noopener noreferrer" target="_blank"><em>Model funcional del protocol DHCP</em></a> <span class="license"><span>(</span><a>CC BY-NC-SA</a><span>)</span></span></div>
+</div>
+<p>Los siguientes son los tipos de paquetes DHCP:</p>
+<ul>
+<li>DHCP <em>discover</em>.</li>
+<li>DHCP <em>offer</em>.</li>
+<li>DHCP <em>request</em>.</li>
+<li>DHCP <em>ack</em> / DHCP <em>nack</em>.</li>
+<li>DHCP <em>decline</em>.</li>
+<li>DHCP <em>release</em>.</li>
+<li>DHCP <em>information</em>.</li>
+</ul>
+<h4>DHCP <em>discover</em></h4>
+<p>En un proceso de configuración IP de un cliente de DHCP el paquete DHCP discover es el primero que se envía. El envía el cliente a fin de pedir una configuración IP a algún servidor. Generalmente, el cliente acaba de inicializar y quiere obtener una configuración dinámica de red. El cliente no sabe a qué red pertenece (no tiene dirección IP ni máscara de red) y tampoco sabe qué servidores DHCP hay en la red (si hay alguno).</p>
+<div class="destacado">
+<p>Una difusión o broadcast dirige a la IP 255.255.255.255 o en la dirección MAC FF: FF: FF: FF: FF: FF, que es aceptada por todos los equipos.</p>
+</div>
+<p>Por lo tanto, el cliente genera un paquete de difusión (broadcast) destinado a todos los equipos de la red donde solicita una configuración IP. En la red puede haber ninguno, uno o más de un servidor DHCP para atender esta petición. Es responsabilidad del administrador de redes configurar correctamente la estructura y los servicios de red de forma que si define clientes DHCP haya servidores DHCP que atiendan sus peticiones.</p>
+<h4>DHCP <em>offer</em></h4>
+<p>Al recibir una solicitud de configuración de un cliente (DHCP discovery), un servidor DHCP intenta atenderla proporcionando una IP del intervalo de direcciones dinámicas que gestiona (puede haber más de un servidor DHCP en la misma red).</p>
+<h4>DHCP <em>request</em></h4>
+<p>Cuando el cliente recibe una oferta de configuración IP por parte de un servidor, la puede aceptar o rechazar. Si el cliente no acepta la oferta, simplemente realizará un DHCP discovery de nuevo. Esto es suficiente para que el servidor se dé cuenta que la oferta ha sido rechazada.</p>
+<p>Si el cliente acepta la oferta, lo comunicará al servidor. El mecanismo para hacerlo es mediante un paquete DHCP request enviado de nuevo por difusión. A estas alturas, el cliente todavía no dispone de la dirección IP para utilizarla. El servidor lo ha reservado, pero todavía no ha dado el sí definitivo para que sea concedida al cliente.</p>
+<p>El motivo por el que el cliente pide quedarse la concesión (DHCP pago) que ha recibido utilizando difusión es hacer público a todos de la red que ha aceptado una oferta de un servidor DHCP concreto. Recuerde que la petición del cliente se hace por difusión y, por tanto, puede recibir ofertas de diferentes servidores DHCP. Cuando acepta una de las ofertas, no debe decir nada a los demás servidores que ha rechazado. Simplemente haciendo pública qué oferta acepta, el resto de servidores DHCP entienden que su oferta se ha rechazado.</p>
+<h4>DHCP <em>ack </em>/ DHCP <em>nack</em></h4>
+<div class="destacado">
+<p><strong>ACK y NACK</strong></p>
+<p>ACK y NACK son dos acrónimos usuales en el mundo de la informática que significan confirmación (aceptación) y no conformidad (rechazo) respectivamente.</p>
+</div>
+<p>El último paso en una negociación DHCP básica lo realiza el servidor cuando finalmente autoriza la concesión enviando el paquete DHCPACK (DHCP akcnowledgement). A partir de ese momento, el cliente sí puede hacer uso de la dirección IP y de la configuración de red recibida. DHCPACK incluye toda la información referente a la duración de la concesión y los datos necesarios para gestionar cuando expira.</p>
+<p>El servidor anotará en el registro de concesiones la que acaba de realizar y detallará todos los aspectos de la misma, en especial el tiempo de concesión. El paquete de aceptación de la concesión DHCPACK es un paquete Unidestino dirigido a la MAC del cliente.</p>
+<h4>DHCP <em>decline</em></h4>
+<p>Por su parte, el cliente también puede examinar la dirección IP oferta por el servidor para comprobar si está en uso o no. Puede hacer otras pruebas para ver si le parece correcta o no la oferta recibida del servidor. Por ejemplo, en el caso de renovación de una IP el cliente puede recibir una IP diferente a la que utiliza y no le interesa. En estos casos, el cliente puede enviar un paquete DHCP decline en el servidor para indicar que su oferta ha sido rechazada.</p>
+<h4>DHCP <em>release</em></h4>
+<p>Cuando un cliente ya no necesita más el uso de la configuración IP que ha recibido, la puede liberar enviando al servidor un paquete DHCP release. Al hacerlo, el servidor añade la dirección IP al conjunto de direcciones dinámicas que tiene disponibles. También hace la anotación pertinente en el registro de concesiones (leases) para indicar que ha finalizado el uso de la dirección. De todos modos, muy a menudo el cliente no puede llegar a emitir este paquete porque es apagado por el usuario sin dejar tiempo al sistema para liberar la IP.</p>
+<h4>DHCP <em>information</em></h4>
+<p>En todo momento el cliente puede solicitar más información sobre la configuración de red al servidor utilizando un paquete DHCP information. En el paquete DHCP offer que el servidor envía al cliente, constan las informaciones generales de configuración de red que se envían en la oferta: dirección IP, máscara de red, puerta de enlace predeterminada, servidor DNS, archivo a bajar y muchos otros parámetros que pueden estar configurados para enviarse en la oferta. El cliente puede volver a pedir al servidor la información de estos parámetros o puede solicitar información para la configuración de otros parámetros (WINS, NetBIOS, hostname, etc.). El cliente sólo puede realizar una petición de información DHCP information al servidor una vez ya está configurado.</p>
+<h5>Varios servidores DHCP</h5>
+<p>Se puede configurar más de un servidor DHCP, tanto para copia de seguridad o backup como para incrementar el rendimiento en compartir la carga de las peticiones.</p>
+<p>El servidor trata de asignar una IP del conjunto o intervalo (también llamado pool) de direcciones dinámicas que gestiona. Para ello, tiene que mirar cuáles de las direcciones le quedan libres y disponibles para conceder al cliente. Cada vez que el servidor concede una IP a un cliente, lo anota en un fichero de registro de las concesiones efectuadas. Cada vez que finaliza una concesión, el servidor puede volver a utilizar la IP para otro cliente.</p>
+<div class="destacado">
+<p>Toda concesión (o lease) DHCP es por un período determinado de tiempo y una vez transcurrido necesario renovarla.</p>
+</div>
+<p>El mecanismo que utiliza el servidor para elegir la IP dentro del conjunto de direcciones IP disponibles varía en función del programa de servidor que se utilice. Además se pueden configurar innumerables opciones del servidor para establecer cómo se deben hacer las concesiones. Un caso típico es el de las direcciones fijas. A un determinado cliente siempre se le asigna la misma IP. Para ello hay que disponer de la lista de direcciones MAC de los clientes a los que se quiere asignar una IP fija.</p>
+<p>El servidor selecciona una IP disponible y la reserva para el cliente (aunque no está asignada). A continuación envía un paquete DHCP offer (Unidestino o unicast) al cliente con toda la información de configuración requerida. La dirección IP y MAC origen identifican el servidor que hace la oferta. El destinatario se indica por su dirección MAC (que es conocida). El campo IP del destinatario es la dirección IP que el servidor ofrece (pensad que el cliente aún no tiene IP). Otro concepto importante es por cuánto tiempo se realiza la concesión. El paquete incluye más campos para completar el resto de configuración de red, por ejemplo, la puerta de enlace predeterminada, los servidores DNS, etc.</p>
+<h5>Ejemplo de mala configuración de un equipo</h5>
+<p>Un ejemplo de mala configuración es la de un equipo que se ha puesto en marcha con una dirección IP estática errónea que se solapa con las direcciones IP que reparte el servidor. El mecanismo usado para comprobar si la dirección IP ya está siendo utilizada es hacer un ping. Si nadie responde es que está libre (seguramente).</p>
+<p>Cuando un servidor DHCP detecta que la IP que había reservado para un cliente y que le iba a conceder ya está en uso, el servidor envía al cliente un paquete DHCPNACK e indica la no autorización de la concesión. El cliente que recibe un DHCPNACK debe volver a iniciar todo el proceso de negociación comenzando de nuevo por el DHCP discovery.</p>
+<p>Como es posible que algún equipo de la red utilice una dirección IP que forma parte del conjunto de direcciones IP dinámicas que reparte el servidor DHCP? La respuesta es sencilla: porque hay algún equipo mal configurado.</p>
+<h3>Petición de renovación / concesión de una IP concreta</h3>
+<p>El proceso de cuatro fases usuales de DHCP consistente en discovery / offer / request / ack se produce cuando el cliente solicita una IP de nuevo. Sabemos que las concesiones son para un intervalo de tiempo pasado, la renovación de la que es necesario que el cliente la pida. Existe, pues, un proceso de renovación simplificado. El cliente pide continuar usando la misma IP con un paquete DHCP request, y el servidor le concede o no con los paquetes DHCP ACK / NACK.</p>
+<p>Otro caso es un cliente que pide usar (renovar) una dirección IP que el servidor no le puede conceder (está en uso, no es del intervalo que gestiona, etc.). En esta situación, el servidor envía un DHCP NACK.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id83">
+<div class="iDevice emphasis_debesconocerfpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Es necesario que conozcas</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta83_129" class="block iDevice_content">
+<p><strong>Tipo de direccionamiento</strong></p> 
+ <p>Hay varios tipos de direccionamiento:</p> <ul>
+<li>Unidestino o unicast: a un equipo.</li><li>Multidestino multicast: un conjunto de equipos.</li><li>De difusión o broadcast: todos.</li></ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper activityIdevice em_iDevice" id="id13">
+<div class="iDevice emphasis1" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Actividad 1: Diagrama UDP</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta13_90_2" class="block iDevice_content">
+<div class="box generalbox boxaligncenter" id="intro">
+<div>Elabora un diagrama que represente el intercambio de mensajes que realizan servidor y cliente DHCP para obtener una nueva configuración IP, puertos UDP que se utilizan y la explicación de cada mensaje.</div><div class="no-overflow"></div>
+<div>Además, añade una captura de la secuencia de mensajes que se intercambian utilizando wireshark (filtro: bootp).</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="2_configuracin_de_los_equipos_de_la_red.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4_intervalos_exclusiones_concesiones_i_reservas.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

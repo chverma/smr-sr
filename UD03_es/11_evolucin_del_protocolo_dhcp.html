@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.1. Evolución del protocolo DHCP | 3. El servei DHCP </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-57"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">3. El servei DHCP</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">3. Servicio DHCP</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="contenidos.html" class="no-ch">Contenidos</a></li>
+   <li class="current-page-parent"><a href="1_introduccin.html" class="current-page-parent daddy">1. Introducción</a>
+   <ul>
+      <li id="active"><a href="11_evolucin_del_protocolo_dhcp.html" class="active no-ch">1.1. Evolución del protocolo DHCP</a></li>
+      <li><a href="12_un_servicio_cliente__servidor.html" class="no-ch">1.2. Un servicio cliente / servidor</a></li>
+   </ul>
+   </li>
+   <li><a href="2_configuracin_de_los_equipos_de_la_red.html" class="no-ch">2. Configuración de los equipos de la red</a></li>
+   <li><a href="3_el_model_funcional_dhcp.html" class="no-ch">3. El model funcional DHCP</a></li>
+   <li><a href="4_intervalos_exclusiones_concesiones_i_reservas.html" class="no-ch">4. Intervalos, exclusiones, concesiones i reservas</a></li>
+   <li><a href="5_opciones_adicionales_del_protocolo.html" class="daddy">5. Opciones adicionales del protocolo.</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_instalacin_y_configuracin_de_un_servicio_dhcp.html" class="no-ch">Práctica 1: Instalación y configuración de un servicio DHCP</a></li>
+   </ul>
+   </li>
+   <li><a href="6_problemas_del_servicio.html" class="no-ch">6. Problemas del servicio</a></li>
+   <li><a href="instalacin_de_un_servidor_dhcp.html" class="no-ch">Instalación de un servidor DHCP</a></li>
+   <li><a href="actividades.html" class="no-ch">actividades</a></li>
+   <li><a href="prcticas.html" class="no-ch">prácticas</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="1_introduccin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="12_un_servicio_cliente__servidor.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">1.1. Evolución del protocolo DHCP</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id80">
+<div class="iDevice emphasis0">
+<div id="ta80_154" class="block iDevice_content">
+<h2>El protocolo DHCP y sus componentes.</h2> <p>El protocolo DHCP viene descrito, como la mayoría de protocolos de red, por un documento oficial llamado RFC. A lo largo de los años ha sufrido varias evoluciones para irse adaptando a las necesidades de cada momento. Todo protocolo implica un diálogo entre los equipos que intervienen, necesitaremos pues analizar qué es y cómo se produce este diálogo. Finalmente se describirá el significado de términos tan usuales en DHCP como intervalos, exclusiones, concesiones y reservas.</p> <h3>Evolución del protocolo DHCP</h3> <p>El servicio DHCP es un servicio del tipo cliente-servidor que proporciona la configuración de red a los clientes que lo soliciten. Proporciona los parámetros básicos de red como la dirección IP, la máscara de red, la puerta de enlace y también de otros parámetros necesarios para una conexión en una red IP. Se trata de un protocolo de la capa de aplicación del modelo TCP / IP.</p> <p>El protocolo DHCP está basado en la arquitectura de servicios cliente-servidor y utiliza como transporte el protocolo UDP de la pila de protocolos TCP / IP. El servidor DHCP se comunica con los clientes utilizando paquetes UDP, que recibe en su puerto 67 y envía al puerto 68 del cliente.</p> <p>La configuración dinámica de equipos de red se inició con el protocolo BOOTP (BOOT strap protocolo, protocolo de arranque). Un protocolo más básico que principalmente permitía definir la dirección IP, la máscara de red y la pasarela por defecto para el cliente. El protocolo BOOTP (RFC 951, 1985) es un protocolo pensado para proporcionar automáticamente la IP a clientes de red en el proceso de arranque. Originariamente se utilizaba para estaciones de trabajo sin disco que obtenían la configuración de red del protocolo BOOTP y también obtenían el nombre de un archivo de arranque que se había de bajar mediante TFTP, que usualmente era el sistema operativo.</p> <p>El BOOTP dio paso al protocolo DHCP, que es una evolución con muchas más prestaciones. El DHCP surge en octubre de 1993 a través de la RFC 1531. Rápidamente evoluciona mediante varias RFC, como el RFC 1,541 el mismo año 1993, que será sustituida por la RFC 2131 en marzo de 1997. Este documento es la base del protocolo DHCP actual. A grandes rasgos, el protocolo se describe en el RFC 2131 para redes Ipv4, el conjunto de opciones de configuración de DHCP se describen en el RFC 2132, y la especificación de DHCP para redes IPv6 es en el RFC 3315.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id81">
+<div class="iDevice emphasis_parasabermasfpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta81_128" class="block iDevice_content">
+<p><strong>¿Qué son los RFC?</strong></p> 
+ <p>Los Request for Comments (RFC) son memorandos sobre nuevas investigaciones, innovaciones y metodologías relacionadas con las tecnologías de Internet. Cuando los publica el IETF (Internet Engineering Task Force) definen a escala mundial los protocolos y sus revisiones. Es decir, son las publicaciones oficiales que describen los protocolos.</p> <p><strong>RFC de DHCP</strong></p> 
+ <p>Principales RFC dedicadas a DHCP:</p> <ul>
+<li>RFC 2131. Març 1997. Protocolo de configuración dinámica de host DHCP.</li><li>RFC 2132. Opciones de DHCP.</li><li>RFC 3396. Codificación de opciones largas.</li><li>RFC 4361. No hay identificaciones de cliente específicas para dhcpv4.</li><li>RFC 3315. Protocolo de configuración de host dinámico DHCPv6 Ipv6.</li></ul> 
+ <div style="overflow: hidden; position: absolute; top: -5000px; height: 1px;">
+<p>RFC de DHCP</p><p>Principales RFC dedicadas a DHCP:</p><ul>
+<li class="level1">
+<div class="li"><acronym>RFC2131. Marzo 1997.</acronym><acronym>DHCP</acronym><em>protocolo de configuración huésped dinámico.</em></div>
+</li>
+<li class="level1">
+<div class="li"><acronym>RFC2132.</acronym><acronym>DHCP</acronym><em>opciones.</em></div>
+</li>
+<li class="level1">
+<div class="li"><acronym>RFC3396.</acronym><em>Codificación de opciones largas.</em></div>
+</li>
+<li class="level1">
+<div class="li"><acronym>RFC4361.</acronym><em>No hay identificaciones de cliente específicas para dhcpv4.</em></div>
+</li>
+<li class="level1">
+<div class="li"><acronym>RFC3315. DHCPv6</acronym><em>protocolo de configuración huésped dinámico</em><em>Ipv6.</em></div>
+</li>
+</ul>
+</div> 
+ <div style="overflow: hidden; position: absolute; top: -5000px; height: 1px;">
+<p>RFC de DHCP</p><p>Principales RFC dedicadas a DHCP:</p><ul>
+<li class="level1">
+<div class="li"><acronym>RFC2131. Marzo 1997.</acronym><acronym>DHCP</acronym><em>protocolo de configuración huésped dinámico.</em></div>
+</li>
+<li class="level1">
+<div class="li"><acronym>RFC2132.</acronym><acronym>DHCP</acronym><em>opciones.</em></div>
+</li>
+<li class="level1">
+<div class="li"><acronym>RFC3396.</acronym><em>Codificación de opciones largas.</em></div>
+</li>
+<li class="level1">
+<div class="li"><acronym>RFC4361.</acronym><em>No hay identificaciones de cliente específicas para dhcpv4.</em></div>
+</li>
+<li class="level1">
+<div class="li"><acronym>RFC3315. DHCPv6</acronym><em>protocolo de configuración huésped dinámico</em><em>Ipv6.</em></div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="1_introduccin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="12_un_servicio_cliente__servidor.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

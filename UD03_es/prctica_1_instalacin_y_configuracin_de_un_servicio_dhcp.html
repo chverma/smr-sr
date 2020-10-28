@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Práctica 1: Instalación y configuración de un servicio DHCP | 3. El servei DHCP </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-59"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">3. El servei DHCP</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">3. Servicio DHCP</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="contenidos.html" class="no-ch">Contenidos</a></li>
+   <li><a href="1_introduccin.html" class="daddy">1. Introducción</a>
+   <ul class="other-section">
+      <li><a href="11_evolucin_del_protocolo_dhcp.html" class="no-ch">1.1. Evolución del protocolo DHCP</a></li>
+      <li><a href="12_un_servicio_cliente__servidor.html" class="no-ch">1.2. Un servicio cliente / servidor</a></li>
+   </ul>
+   </li>
+   <li><a href="2_configuracin_de_los_equipos_de_la_red.html" class="no-ch">2. Configuración de los equipos de la red</a></li>
+   <li><a href="3_el_model_funcional_dhcp.html" class="no-ch">3. El model funcional DHCP</a></li>
+   <li><a href="4_intervalos_exclusiones_concesiones_i_reservas.html" class="no-ch">4. Intervalos, exclusiones, concesiones i reservas</a></li>
+   <li class="current-page-parent"><a href="5_opciones_adicionales_del_protocolo.html" class="current-page-parent daddy">5. Opciones adicionales del protocolo.</a>
+   <ul>
+      <li id="active"><a href="prctica_1_instalacin_y_configuracin_de_un_servicio_dhcp.html" class="active no-ch">Práctica 1: Instalación y configuración de un servicio DHCP</a></li>
+   </ul>
+   </li>
+   <li><a href="6_problemas_del_servicio.html" class="no-ch">6. Problemas del servicio</a></li>
+   <li><a href="instalacin_de_un_servidor_dhcp.html" class="no-ch">Instalación de un servidor DHCP</a></li>
+   <li><a href="actividades.html" class="no-ch">actividades</a></li>
+   <li><a href="prcticas.html" class="no-ch">prácticas</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="5_opciones_adicionales_del_protocolo.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="6_problemas_del_servicio.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Práctica 1: Instalación y configuración de un servicio DHCP</h1></div>
+<div class="iDevice_wrapper objectivesIdevice em_iDevice" id="id25">
+<div class="iDevice emphasis1" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">objetivos</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta25_91_2" class="block iDevice_content">
+<ul>
+<li>Instalar un servicio de configuración dinámica de los parámetros de red.</li><li>Presentar el servicio para asignar la configuración básica a los sistemas de una red local.</li><li>Realizar asignaciones dinámicas y estáticas.</li></ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper preknowledgeIdevice em_iDevice" id="id27">
+<div class="iDevice emphasis1" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">recursos necesarios</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta27_93_2" class="block iDevice_content">
+<p>Para poder realizar la práctica necesitarás:</p> <ul>
+<li>Un ordenador con conexión a Internet o una máquina virtual con Ubuntu Server.</li><li>El software ISC DHCP.</li><li>La guía de instalación:
+
+https://help.ubuntu.com/16.04/serverguide/dhcp.html.ca
+https://help.ubuntu.com/community/isc-dhcp-server</li></ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id16">
+<div class="iDevice emphasis_casopracticofpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">enunciado</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta16_148" class="block iDevice_content">
+<h2></h2> 
+ <p>Para la red interna del entorno de trabajo instala el servicio DHCP y configúralo de forma que:</p> <ul>
+<li>assign dinámicamente las 100 primeras direcciones disponibles</li><li>assign la configuración adicional necesaria para que los clientes DHCP puedan conectarse a Internet</li><li>los clientes resuelvan dinámicamente y con dominios relativos para el dominio de la red.</li><li>reserve la dirección IP 101 para el equipo con Windows XP.</li></ul> 
+ <h3>Entregable</h3> <p>Guía de instalación y configuración del servicio DHCP en Ubuntu a partir de la Ubuntu Server Guide 4.16 (web) incluyendo:</p> <ul>
+<li>Archivos de configuración básicos.
+
+Limitación porque el DCHP sólo funcione en la red interna.
+Cambios realizados explicando los efectos.</li><li>Archivo de concesiones (leases)</li><li>Registro del sistema donde se demuestre una concesión.</li><li>Captura del mando: sudo dhcpd -t -cf /etc/dhcp/dhcpd.conf</li><li>En Windows XP
+
+Ejecución de ipconfig / release
+Ejecución de ipconfig / renew
+Comprobación de la configuración asignada al Windows XP.
+Captura con wireshark del tráfico DHCP donde se compruebe todo el proceso.</li></ul> 
+ <p></p> 
+ <p></p> 
+ <p></p> 
+ <p></p> 
+ <p></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="5_opciones_adicionales_del_protocolo.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="6_problemas_del_servicio.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

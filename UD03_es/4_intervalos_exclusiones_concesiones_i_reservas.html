@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4. Intervalos, exclusiones, concesiones i reservas | 3. El servei DHCP </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-47"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">3. El servei DHCP</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">3. Servicio DHCP</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="contenidos.html" class="no-ch">Contenidos</a></li>
+   <li><a href="1_introduccin.html" class="daddy">1. Introducción</a>
+   <ul class="other-section">
+      <li><a href="11_evolucin_del_protocolo_dhcp.html" class="no-ch">1.1. Evolución del protocolo DHCP</a></li>
+      <li><a href="12_un_servicio_cliente__servidor.html" class="no-ch">1.2. Un servicio cliente / servidor</a></li>
+   </ul>
+   </li>
+   <li><a href="2_configuracin_de_los_equipos_de_la_red.html" class="no-ch">2. Configuración de los equipos de la red</a></li>
+   <li><a href="3_el_model_funcional_dhcp.html" class="no-ch">3. El model funcional DHCP</a></li>
+   <li id="active"><a href="4_intervalos_exclusiones_concesiones_i_reservas.html" class="active no-ch">4. Intervalos, exclusiones, concesiones i reservas</a></li>
+   <li><a href="5_opciones_adicionales_del_protocolo.html" class="daddy">5. Opciones adicionales del protocolo.</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_instalacin_y_configuracin_de_un_servicio_dhcp.html" class="no-ch">Práctica 1: Instalación y configuración de un servicio DHCP</a></li>
+   </ul>
+   </li>
+   <li><a href="6_problemas_del_servicio.html" class="no-ch">6. Problemas del servicio</a></li>
+   <li><a href="instalacin_de_un_servidor_dhcp.html" class="no-ch">Instalación de un servidor DHCP</a></li>
+   <li><a href="actividades.html" class="no-ch">actividades</a></li>
+   <li><a href="prcticas.html" class="no-ch">prácticas</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="3_el_model_funcional_dhcp.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="5_opciones_adicionales_del_protocolo.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">4. Intervalos, exclusiones, concesiones i reservas</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id86">
+<div class="iDevice emphasis0">
+<div id="ta86_154" class="block iDevice_content">
+<p>Los clientes DHCP obtienen del servidor una configuración de red. Describimos ahora algunos de los términos que tienen lugar durante este proceso, y que forman parte de la configuración DHCP.</p>
+<p><strong>Intervalo:llaman intervalo de direcciones IP el conjunto de direcciones dinámicas que el servidor tiene disponibles para asignar a los clientes. Las direcciones IP disponibles se agrupan para ofrecer a las varias subredes que atiende el servidor. Una misma subred puede disponer de varios intervalos. Seguramente se entenderá más fácilmente con un ejemplo:</strong></p>
+<div class="highlighted-code language-c line-numbers">
+<div>
+<pre><code></code></pre>
+<pre class="line-numbers  language-c"><code class="  language-c">subnet <span class="token number">140.220</span><span class="token punctuation">.</span><span class="token number">191.0</span> netmask <span class="token number">255.255</span><span class="token punctuation">.</span><span class="token number">255.0</span> <span class="token punctuation">{</span>
+    range <span class="token number">140.220</span><span class="token punctuation">.</span><span class="token number">191.150</span> <span class="token number">140.220</span><span class="token punctuation">.</span><span class="token number">191.249</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+subnet <span class="token number">239.252</span><span class="token punctuation">.</span><span class="token number">197.0</span> netmask <span class="token number">255.255</span><span class="token punctuation">.</span><span class="token number">255.0</span> <span class="token punctuation">{</span>
+   range <span class="token number">239.252</span><span class="token punctuation">.</span><span class="token number">197.10</span> <span class="token number">239.252</span><span class="token punctuation">.</span><span class="token number">197.107</span><span class="token punctuation">;</span>
+   range <span class="token number">239.252</span><span class="token punctuation">.</span><span class="token number">197.113</span> <span class="token number">239.252</span><span class="token punctuation">.</span><span class="token number">197.250</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<pre><code></code></pre>
+</div>
+</div>
+<p>En el ejemplo anterior se observa que la primera subred dispone de un intervalo de 100 direcciones dinámicas (de la 140 220 191 150 al 250). La segunda subred permite asignar dinámicamente dos intervalos de direcciones no correlativos.</p>
+<p><strong>Exclusiones:entendemos por exclusiones aquellas direcciones IP que no se ofrecen dinámicamente por parte del servidor. Es decir, que no forman parte de ningún intervalo.</strong></p>
+<p><strong>Concesiones:la asignación de una dirección IP y el resto de parámetros de red a un cliente por parte del servidor, es una concesión (o</strong><em>arrendamiento). Los clientes reciben las concesiones por períodos de tiempo finitos, que al finalizar, hay que renegociar. Tanto el cliente como el servidor se anotan las concesiones, el cliente la que recibe y el servidor las que concede. Cuando finaliza una concesión el servidor puede decidir revocarla o ampliar la concesión.</em></p>
+<p>El cliente en todo momento puede decidir renunciar a la concesión. Si el cliente quiere alargar la concesión inicia un diálogo DHCP abreviado con el servidor que puede acabar con una renovación o con la pérdida de la concesión (siempre puede volver a empezar el proceso). Tanto el servidor como el cliente normalmente miran las concesiones que se han efectuado entre ellos con anterioridad a fin de, si es posible, repetir la misma asignación.</p>
+<p><strong>Reservas:llamamos reservas aquellas direcciones IP que se asignan vía DHCP pero de manera fija. Es decir, son direcciones que se asignan dinámicamente pero siempre y únicamente a un host determinado. Tenga en cuenta que a pesar de ser una dirección dinámica sólo se utiliza si el host asociado hace uso. Si el host está apagado la dirección no se puede usar para otros hosts, está reservada. Un ejemplo podría ser:</strong></p>
+<div class="highlighted-code language-clike line-numbers">
+<div>
+<pre><code></code></pre>
+<pre class="line-numbers  language-clike"><code class="  language-clike">subnet <span class="token number">140.220</span><span class="token punctuation">.</span><span class="token number">191.0</span> netmask <span class="token number">255.255</span><span class="token punctuation">.</span><span class="token number">255.0</span> <span class="token punctuation">{</span>
+   host iesserver <span class="token punctuation">{</span>
+      hardware ethernet <span class="token number">08</span><span class="token punctuation">:</span><span class="token number">00</span><span class="token punctuation">:</span>2b<span class="token punctuation">:</span>4c<span class="token punctuation">:</span><span class="token number">59</span><span class="token punctuation">:</span><span class="token number">23</span><span class="token punctuation">;</span>
+      fixed<span class="token operator">-</span>address <span class="token number">140.220</span><span class="token punctuation">.</span><span class="token number">191.1</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+   range <span class="token number">140.220</span><span class="token punctuation">.</span><span class="token number">191.150</span> <span class="token number">140.220</span><span class="token punctuation">.</span><span class="token number">191.249</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<pre><code></code></pre>
+</div>
+</div>
+<p>En este ejemplo se puede ver que la dirección 140.220.191.1 es una dirección reservada exclusivamente para el host iocserver, que se identifica mediante su dirección MAC.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper activityIdevice em_iDevice" id="id14">
+<div class="iDevice emphasis1" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Actividad 2: Conceptos básicos</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta14_91_2" class="block iDevice_content">
+<div class="box generalbox boxaligncenter" id="intro">
+<p>Define en un documento los siguientes conceptos:</p><ul>
+<li>Intervalo</li><li>Exclusiones</li><li>Concesiones</li><li>Reservas</li></ul>
+<p>Crea un archivo de configuración indicando ejemplos de los conceptos anteriores. La red de trabajo será la 192.168.10.0/24.</p><div class="no-overflow"></div>
+</div> 
+ <div class="groupselector">
+<div class="singleselect"><form action="http://moodle.iesevalorpego.org/mod/assign/view.php" id="selectgroup" method="get"></form></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="3_el_model_funcional_dhcp.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="5_opciones_adicionales_del_protocolo.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>
