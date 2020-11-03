@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6. Servidores virtuales </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-11"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">6. Servei HTTP</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1. Introducción</a></li>
+   <li><a href="2_el_protocol_http.html" class="daddy">2. El protocol HTTP</a>
+   <ul class="other-section">
+      <li><a href="21_un_poco_de_historia.html" class="no-ch">2.1. Un poco de historia</a></li>
+      <li><a href="22_caractersitcas_de_http.html" class="no-ch">2.2. Caracterísitcas de HTTP</a></li>
+   </ul>
+   </li>
+   <li><a href="3_etapas_de_una_transaccin_http.html" class="no-ch">3. Etapas de una transacción HTTP</a></li>
+   <li><a href="4_el_estndar_http10.html" class="daddy">4. El estándar HTTP/1.0</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_transacciones_http.html" class="no-ch">Práctica 1: Transacciones HTTP</a></li>
+   </ul>
+   </li>
+   <li><a href="5_instalacin_y_configuracin_de_apache2.html" class="daddy">5. Instalación y configuración de Apache2</a>
+   <ul class="other-section">
+      <li><a href="prctica_2_instalacin_de_apache2.html" class="no-ch">Práctica 2: Instalación de Apache2</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="6_servidores_virtuales.html" class="active daddy">6. Servidores virtuales</a>
+   <ul>
+      <li><a href="prctica_3_configuracin_bsica.html" class="no-ch">Práctica 3: Configuración básica</a></li>
+   </ul>
+   </li>
+   <li><a href="7_acceso_annimo_y_autenticado_formas_de_autenticacin.html" class="daddy">7. Acceso anónimo y autenticado. Formas de autenticación.</a>
+   <ul class="other-section">
+      <li><a href="prctica_4_control_de_acceso_autorizacin_y_autenticacin.html" class="no-ch">Práctica 4: Control de acceso, autorización y autenticación</a></li>
+   </ul>
+   </li>
+   <li><a href="8_ejecucin_de_cdigo_scripts_de_servidor_y_de_cliente.html" class="daddy">8. Ejecución de código. Scripts de servidor y de cliente.</a>
+   <ul class="other-section">
+      <li><a href="prctica_5_ejecucin_del_cdigo_en_el_cliente_y_en_el_servidor.html" class="no-ch">Práctica 5: Ejecución del código en el cliente y en el servidor</a></li>
+   </ul>
+   </li>
+   <li><a href="9_establecimiento_de_conexiones_seguras_.html" class="daddy">9. Establecimiento de conexiones seguras .</a>
+   <ul class="other-section">
+      <li><a href="prctica_6_assegurant_les_comunicacions.html" class="no-ch">Pràctica 6: Assegurant les comunicacions</a></li>
+   </ul>
+   </li>
+   <li><a href="mapa_conceptual.html" class="no-ch">Mapa conceptual</a></li>
+   <li><a href="actividades.html" class="no-ch">actividades</a></li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="prctica_2_instalacin_de_apache2.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="prctica_3_configuracin_bsica.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">6. Servidores virtuales</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id22">
+<div class="iDevice emphasis0">
+<div id="ta22_86" class="block iDevice_content">
+<p><span style="vertical-align: inherit;">Cuando hablamos de la creación de sitios virtuales nos estamos refiriendo a la acción de hacer trabajar más de un sitio web, por ejemplo, las páginas web </span><code>www.web1.cat</code><span style="vertical-align: inherit;">y </span><code>www.web2.cat</code><span style="vertical-align: inherit;">en un único ordenador.</span></p>
+<p><span style="vertical-align: inherit;">Tal como muestra la figura siguiente aunque ambos dominios estén trabajando en la misma máquina física, nunca nos daremos cuenta cuando visitamos estos sitios web.</span></p>
+<p></p>
+<p><img alt="Servidors virtuals" src="smx_m07u3-36_1.png" style="display: block; margin-left: auto; margin-right: auto;" title="Servidors virtuals" width="430" height="623" /></p>
+<p></p>
+<p></p>
+<p></p>
+<p><span style="vertical-align: inherit;">Los sitios web virtuales se pueden </span><strong><span style="vertical-align: inherit;">basarse tanto en direcciones de Internet (IP)</span></strong><span style="vertical-align: inherit;"> , donde cada sitio web tiene una dirección de Internet (IP) diferente, como </span><strong><span style="vertical-align: inherit;">en nombres diferentes</span></strong><span style="vertical-align: inherit;"> , es decir, varios sitios web con diferentes nombres de dominio estarán trabajando con una única dirección de Internet (IP). Cabe decir que, aunque estemos trabajando en la misma máquina física, como usuarios observaremos que el usuario, cuando visita estos sitios web, no se da cuenta.</span></p>
+<p><span style="vertical-align: inherit;">Para explicar la técnica de la creación de sitios web virtuales, trabajaremos con dos ejemplos: </span><code> www.aplicacionsweb.org</code><span style="vertical-align: inherit;"> y </span><code>www.serveisenxarxa.org</code><span style="vertical-align: inherit;">.</span></p>
+<p><span style="vertical-align: inherit;">Los dos sitios webs virtuales serán servidos por el mismo servidor web. El directorio por defecto donde se encuentran las páginas web es </span><code>/var/www</code><span style="vertical-align: inherit;">, donde crearemos las diferentes estructuras de directorio. Por lo tanto, dentro de los directorios </span><code>/var/www/aplicacionsweb</code><span style="vertical-align: inherit;">y </span><code>/var/www/seveisenxarxa</code><span style="vertical-align: inherit;">encontraremos los archivos de los sitios web correspondientes a las páginas web anteriores.</span></p>
+<p><span style="vertical-align: inherit;">Para la configuración y puesta en marcha de los sitios web virtuales debemos construir, en primer lugar, la estructura de directorios donde guardaremos los sitios. Utilizaremos dentro del directorio reservado a cada sitio web la carpeta de </span><code>public_html</code><span style="vertical-align: inherit;">para alojar los archivos del sitio web.</span></p>
+<p><span style="vertical-align: inherit;">Una vez definidos los directorios donde guardaremos los sitios web virtuales, tendremos que dirigirnos al directorio </span><code>/etc/apache2</code><span style="vertical-align: inherit;">, donde encontraremos los archivos de configuración de Apache. En este caso, el archivo principal de configuración es </span><code>apache2.conf</code><span style="vertical-align: inherit;">.</span></p>
+<p><span style="vertical-align: inherit;">Considerando que para trabajar con los sitios virtuales tendremos que hacer algunos cambios en el contenido del archivo, tendremos que considerar, antes de establecer ningún cambio, qué configuración de sitios web virtuales queremos crear, es decir, lugares virtuales basados ​​en direcciones de Internet (IP) o bien basados ​​en nombres.</span></p>
+<p></p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id25">
+<div class="iDevice emphasis0">
+<div id="ta25_86" class="block iDevice_content">
+<h3><span style="vertical-align: inherit;">Servidores virtuales en Apache</span></h3>
+<p><span style="vertical-align: inherit;">Apache2 se entrega con una configuración predeterminada </span><em><span style="vertical-align: inherit;">virtual-host-friendly</span></em><span style="vertical-align: inherit;"> . Es decir, está configurado con un único </span><em><span style="vertical-align: inherit;">host</span></em><span style="vertical-align: inherit;"> virtual predeterminado (utilizando la directiva </span><code>VirtualHost</code><span style="vertical-align: inherit;">) que se puede modificar o utilizar como si tuviera un solo lugar o que se utilizara como plantilla para servidores virtuales adicionales si tiene varios sitios. Si se deja solo, el anfitrión virtual predeterminado servirá como lugar predeterminado o los usuarios del sitio verán si la URL que introduzca no coincide con la directiva </span><code>ServerName</code><span style="vertical-align: inherit;">de ninguna de sus sitios personalizados. Para modificar el servidor virtual predeterminado, edite el archivo</span><code>/etc/apache2/sites-available/000-default.conf.</code></p>
+<p><span style="font-size: 1em;"><span style="vertical-align: inherit;">Si desea configurar un nuevo host virtual o lugar, copie estos archivos en el mismo directorio con el nombre que seleccione. Por ejemplo:</span></span></p>
+<div class="highlighted-code language-clike">
+<div>
+<pre class="  language-clike"><code class="  language-clike">sudo cp <span class="token operator">/</span>etc<span class="token operator">/</span>apache2<span class="token operator">/</span>sites<span class="token operator">-</span>available<span class="token operator">/</span><span class="token number">000</span><span class="token operator">-</span>default<span class="token punctuation">.</span>conf <span class="token operator">/</span>etc<span class="token operator">/</span>apache2<span class="token operator">/</span>sites<span class="token operator">-</span>available<span class="token operator">/</span>elmeullocweb<span class="token punctuation">.</span>conf
+</code></pre>
+</div>
+</div>
+<p><span style="vertical-align: inherit;">La configuración por defecto es la siguiente:</span></p>
+<div class="highlighted-code language-clike line-numbers">
+<div>
+<pre class="line-numbers  language-clike"><code class="  language-clike"><span class="token operator">&lt;</span>VirtualHost <span class="token operator">*</span><span class="token punctuation">:</span><span class="token number">80</span><span class="token operator">&gt;</span>
+	# The ServerName directive sets the request scheme<span class="token punctuation">,</span> hostname and port that<span></span>
+	# the server uses to identify itself<span class="token punctuation">.</span> This is used when creating<span></span>
+	# redirection URLs<span class="token punctuation">.</span> In the context of virtual hosts<span class="token punctuation">,</span> the ServerName<span></span>
+	# specifies what hostname must appear <span class="token keyword">in</span> the request's Host<span class="token punctuation">:</span> header to<span></span>
+	# match this virtual host<span class="token punctuation">.</span> For the default virtual <span class="token function">host</span> <span class="token punctuation">(</span>this file<span class="token punctuation">)</span> this<span></span>
+	# value is not decisive as it is used as a last resort host regardless<span class="token punctuation">.</span>
+	# However<span class="token punctuation">,</span> you must set it <span class="token keyword">for</span> any further virtual host explicitly<span class="token punctuation">.</span>
+	#ServerName www<span class="token punctuation">.</span>example<span class="token punctuation">.</span>com<span></span>
+<span></span>
+	ServerAdmin webmaster@localhost<span></span>
+	DocumentRoot <span class="token operator">/</span>var<span class="token operator">/</span>www<span class="token operator">/</span>html<span></span>
+<span></span>
+	# Available loglevels<span class="token punctuation">:</span> trace8<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span> trace1<span class="token punctuation">,</span> debug<span class="token punctuation">,</span> info<span class="token punctuation">,</span> notice<span class="token punctuation">,</span> warn<span class="token punctuation">,</span>
+	# error<span class="token punctuation">,</span> crit<span class="token punctuation">,</span> alert<span class="token punctuation">,</span> emerg<span class="token punctuation">.</span>
+	# It is also possible to configure the loglevel <span class="token keyword">for</span> particular<span></span>
+	# modules<span class="token punctuation">,</span> e<span class="token punctuation">.</span>g<span class="token punctuation">.</span>
+	#LogLevel info ssl<span class="token punctuation">:</span>warn<span></span>
+<span></span>
+	ErrorLog $<span class="token punctuation">{</span>APACHE_LOG_DIR<span class="token punctuation">}</span><span class="token operator">/</span>error<span class="token punctuation">.</span>log<span></span>
+	CustomLog $<span class="token punctuation">{</span>APACHE_LOG_DIR<span class="token punctuation">}</span><span class="token operator">/</span>access<span class="token punctuation">.</span>log combined<span></span>
+<span></span>
+	# For most configuration files from conf<span class="token operator">-</span>available<span class="token operator">/</span><span class="token punctuation">,</span> which are<span></span>
+	# enabled or disabled at a global level<span class="token punctuation">,</span> it is possible to<span></span>
+	# include a line <span class="token keyword">for</span> only one particular virtual host<span class="token punctuation">.</span> For example the<span></span>
+	# following line enables the CGI configuration <span class="token keyword">for</span> this host only<span></span>
+	# after it has been globally disabled with <span class="token string">"a2disconf"</span><span class="token punctuation">.</span>
+	#Include conf<span class="token operator">-</span>available<span class="token operator">/</span>serve<span class="token operator">-</span>cgi<span class="token operator">-</span>bin<span class="token punctuation">.</span>conf
+<span class="token operator">&lt;</span><span class="token operator">/</span>VirtualHost<span class="token operator">&gt;</span><span></span>
+<span></span>
+# vim<span class="token punctuation">:</span> syntax<span class="token operator">=</span>apache ts<span class="token operator">=</span><span class="token number">4</span> sw<span class="token operator">=</span><span class="token number">4</span> sts<span class="token operator">=</span><span class="token number">4</span> sr noet</code></pre>
+</div>
+</div>
+<div class="highlighted-code language-clike line-numbers">
+<div></div>
+</div>
+<p><span style="vertical-align: inherit;">Una vez realizados los cambios activaremos en sitio web con el mando </span><code>a2ensite</code><span style="vertical-align: inherit;">:</span></p>
+<div class="highlighted-code language-clike">
+<div>
+<pre class="  language-clike"><code class="  language-clike">#a2ensite elmeullocweb</code></pre>
+</div>
+</div>
+<p><span style="vertical-align: inherit;">Después cargaremos de nuevo la configuración de Apache2 con el comando:</span></p>
+<div class="highlighted-code language-clike">
+<div>
+<pre class="  language-clike"><code class="  language-clike">#service apache2 reload
+</code></pre>
+</div>
+</div>
+<p><span style="vertical-align: inherit;">Para la depuración de error en los archivos de configuración de sitios virtuales utilizar:</span></p>
+<div class="highlighted-code language-clike">
+<div>
+<pre class="  language-clike"><code class="  language-clike">#apache2ctl <span class="token operator">-</span>t</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id24">
+<div class="iDevice emphasis0">
+<div id="ta24_86" class="block iDevice_content">
+<h2><span style="vertical-align: inherit;">Lugares virtuales basados ​​en la dirección de Internet (IP)</span></h2>
+<p><span style="vertical-align: inherit;">En este caso, podremos alojar múltiples dominios en una única máquina que dispondrá de diferentes direcciones de Internet (IP) y, en cada una de ellas, se ejecutará un sitio virtual.</span></p>
+<p><span style="vertical-align: inherit;">Tendremos que cambiar la directiva </span><code>&lt;VirtualHost *:80&gt;</code><span style="vertical-align: inherit;">de forma que se especifique a qué dirección IP debe responder. Por ejemplo </span><code>&lt;VirtualHost 192.168.2.112:80&gt;</code><span style="vertical-align: inherit;">si debe responder a la dirección IP 192.168.2.112.</span></p>
+<div class="highlighted-code language-clike">
+<div>
+<pre class="  language-clike"><code class="  language-clike"><span class="token operator">&lt;</span>VirtualHost <span class="token number">192.168</span><span class="token punctuation">.</span><span class="token number">2.112</span><span class="token punctuation">:</span><span class="token number">80</span><span class="token operator">&gt;</span>
+DocumentRoot <span class="token string">"/var/www/serveisenxarxa/public_html"</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>VirtualHost<span class="token operator">&gt;</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id23">
+<div class="iDevice emphasis0">
+<div id="ta23_86" class="block iDevice_content">
+<h2><span style="vertical-align: inherit;">Lugares virtuales basados ​​en el nombre de dominio</span></h2>
+<p><span style="vertical-align: inherit;">El problema de los sitios web virtuales basados en direcciones de Internet (IP) es que, considerando que se alojan muchos dominios, necesitaremos una dirección de Internet (IP) para cada uno de los dominios. Por lo tanto, puede ser preferible trabajar con sitios virtuales basados en nombres. En este caso, después de copiar el archivo de configuración por defecto, deberemos añadir la directriz </span><code>ServerName</code><span style="vertical-align: inherit;">dado que, si bien los sitios virtuales se encuentran en la misma IP, se debe cambiar el nombre para cada uno de los puestos. En el caso de trabajar con servidor DNS, éste deberá estar configurado para resolver estos lugares en las zonas correspondientes. Y la directiva DocumentRoot para indicar desde qué directorio se servirán las páginas. Esta sería la configuración para puesto www.serveisenxarxa.org:</span></p>
+<div class="highlighted-code language-clike">
+<div>
+<pre class="  language-clike"><code class="  language-clike"><span class="token operator">&lt;</span>VirtualHost <span class="token operator">*</span><span class="token punctuation">:</span><span class="token number">80</span><span class="token operator">&gt;</span>
+ServerName www<span class="token punctuation">.</span>serveisenxarxa<span class="token punctuation">.</span>org<span></span>
+DocumentRoot <span class="token string">"/var/www/serveisenxarxa/public_html"</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>VirtualHost<span class="token operator">&gt;</span></code></pre>
+</div>
+</div>
+<p><span style="vertical-align: inherit;">Finalmente, para verificar que todos los cambios aplicados han tenido éxito, volveremos a arrancar el servidor web.</span></p>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="prctica_2_instalacin_de_apache2.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="prctica_3_configuracin_bsica.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

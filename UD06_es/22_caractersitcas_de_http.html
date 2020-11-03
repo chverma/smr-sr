@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.2. Caracterísitcas de HTTP </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-17"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">6. Servei HTTP</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1. Introducción</a></li>
+   <li class="current-page-parent"><a href="2_el_protocol_http.html" class="current-page-parent daddy">2. El protocol HTTP</a>
+   <ul>
+      <li><a href="21_un_poco_de_historia.html" class="no-ch">2.1. Un poco de historia</a></li>
+      <li id="active"><a href="22_caractersitcas_de_http.html" class="active no-ch">2.2. Caracterísitcas de HTTP</a></li>
+   </ul>
+   </li>
+   <li><a href="3_etapas_de_una_transaccin_http.html" class="no-ch">3. Etapas de una transacción HTTP</a></li>
+   <li><a href="4_el_estndar_http10.html" class="daddy">4. El estándar HTTP/1.0</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_transacciones_http.html" class="no-ch">Práctica 1: Transacciones HTTP</a></li>
+   </ul>
+   </li>
+   <li><a href="5_instalacin_y_configuracin_de_apache2.html" class="daddy">5. Instalación y configuración de Apache2</a>
+   <ul class="other-section">
+      <li><a href="prctica_2_instalacin_de_apache2.html" class="no-ch">Práctica 2: Instalación de Apache2</a></li>
+   </ul>
+   </li>
+   <li><a href="6_servidores_virtuales.html" class="daddy">6. Servidores virtuales</a>
+   <ul class="other-section">
+      <li><a href="prctica_3_configuracin_bsica.html" class="no-ch">Práctica 3: Configuración básica</a></li>
+   </ul>
+   </li>
+   <li><a href="7_acceso_annimo_y_autenticado_formas_de_autenticacin.html" class="daddy">7. Acceso anónimo y autenticado. Formas de autenticación.</a>
+   <ul class="other-section">
+      <li><a href="prctica_4_control_de_acceso_autorizacin_y_autenticacin.html" class="no-ch">Práctica 4: Control de acceso, autorización y autenticación</a></li>
+   </ul>
+   </li>
+   <li><a href="8_ejecucin_de_cdigo_scripts_de_servidor_y_de_cliente.html" class="daddy">8. Ejecución de código. Scripts de servidor y de cliente.</a>
+   <ul class="other-section">
+      <li><a href="prctica_5_ejecucin_del_cdigo_en_el_cliente_y_en_el_servidor.html" class="no-ch">Práctica 5: Ejecución del código en el cliente y en el servidor</a></li>
+   </ul>
+   </li>
+   <li><a href="9_establecimiento_de_conexiones_seguras_.html" class="daddy">9. Establecimiento de conexiones seguras .</a>
+   <ul class="other-section">
+      <li><a href="prctica_6_assegurant_les_comunicacions.html" class="no-ch">Pràctica 6: Assegurant les comunicacions</a></li>
+   </ul>
+   </li>
+   <li><a href="mapa_conceptual.html" class="no-ch">Mapa conceptual</a></li>
+   <li><a href="actividades.html" class="no-ch">actividades</a></li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="21_un_poco_de_historia.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_etapas_de_una_transaccin_http.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">2.2. Caracterísitcas de HTTP</h1></div>
+<div class="iDevice_wrapper textIdevice" id="id42">
+<div class="iDevice emphasis0" >
+<div id="ta42_108_2" class="block iDevice_content">
+<div class="exe-text"><div class="iDevice emphasis0">
+<div id="ta4_85" class="block iDevice_content">
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;" class="goog-text-highlight">El protocolo de transferencia de hipertexto (HTTP) es un protocolo cliente-servidor bastante sencillo que articula los intercambios de información entre los clientes web y los servidores HTTP. </span>HTTP fue desarrollado por el consorcio W3C y la IETF. Esta colaboración culminó en 1999 con la publicación de una serie de RFC, el más importante de los cuales fue el RFC 2616, que especificaba la versión 1.1</span></p>
+<div class="exe-block-info">
+<p><span style="vertical-align: inherit;">Los </span><em><span style="vertical-align: inherit;">Request for Comments</span></em><span style="vertical-align: inherit;"> , más conocidos por sus siglas RFC, son una serie de publicaciones del grupo de trabajo de ingeniería de Internet que describen diversos aspectos del funcionamiento de Internet y otras redes de computadoras, como protocolos, procedimientos, etc. y comentarios e ideas sobre los mismos.</span></p>
+</div>
+<p><span style="vertical-align: inherit;">Desde el punto de vista de las comunicaciones, está soportado en los servicios de conexión TCP / IP y funciona de la misma manera que el resto de servicios propios de los entornos UNIX.</span></p>
+<p><span style="vertical-align: inherit;">Técnicamente, un proceso servidor escucha en un puerto de comunicaciones TCP (por defecto, 80) y espera las solicitudes de conexión de los clientes web. Una vez establecida la conexión, el protocolo TCP se encarga de mantener la comunicación y garantizar un intercambio de datos libre de errores.</span></p>
+<p><span style="vertical-align: inherit;">El protocolo de transferencia de hipertexto se basa en </span><strong><span style="vertical-align: inherit;">operaciones sencillas de solicitud / respuesta</span></strong><span style="vertical-align: inherit;"> . Cuando un cliente establece una conexión con un servidor y envía un mensaje con los datos de la solicitud, el servidor responde con un mensaje similar, que contiene el </span><strong><span style="vertical-align: inherit;">estado de la operación</span></strong><span style="vertical-align: inherit;"> y su resultado posible. Todas las operaciones pueden adjuntar un objeto o recurso sobre el que actúan; cada objeto web (documento HTML, archivo multimedia o aplicación CGI) es conocido por su localizador uniforme de recursos (URL, </span><em><span style="vertical-align: inherit;">uniform resource locator</span></em><span style="vertical-align: inherit;"> ). Los recursos pueden ser archivos, el resultado de la ejecución de un programa, una consulta a una base de datos, la traducción automática de un documento, etc.</span></p>
+<p><strong><span style="vertical-align: inherit;">HTTP es un protocolo sin estado</span></strong><span style="vertical-align: inherit;"> , es decir, no guarda ninguna información sobre conexiones anteriores. El desarrollo de aplicaciones web frecuentemente necesita mantener estado. Para ello se utilizan las galletas ( </span><em><span style="vertical-align: inherit;">cookies</span></em><span style="vertical-align: inherit;"> ), es decir, la información que un servidor puede almacenar en el sistema cliente. Esto permite que las aplicaciones web instituyan la noción de "sesión", y, al mismo tiempo, permite rastrear usuarios, ya que las galletas se pueden almacenar en el cliente durante un tiempo indeterminado.</span></p>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DestacadofpdIdevice" id="id5">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta5_151" class="block iDevice_content">
+<div class="iDevice emphasis0">
+<div class="iDevice_destacadofpd">
+<div id="ta5_151" class="block iDevice_content">
+<div class="exe-block-info">
+<p><strong><span style="vertical-align: inherit;">Localizador uniforme de recursos (URL)</span></strong></p>
+<p><span style="vertical-align: inherit;">Generalmente, la vía de que dispone un usuario para acceder a una página web o un objeto (archivo) es mediante su localizador uniforme de recursos (URL), que es un tipo de dirección que indica la localización exacta de un documento a Internet.</span></p>
+<p><span style="vertical-align: inherit;">La dirección que indica la localización exacta del documento se compone del nombre o la dirección de Internet (IP, Internet Protocol) del servidor y el camino relativo del documento dentro del servidor. <span style="vertical-align: inherit;" class="">También puede incluir otros aspectos como el puerto por el que se solicita el servicio (por defecto, se asume que el 80 es para el protocolo HTTP, el 21 para el protocolo FTP, etc.) y un nombre de usuario y una contraseña para aquellos documentos que requieran autenticación para acceder.<br /></span></span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="21_un_poco_de_historia.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_etapas_de_una_transaccin_http.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

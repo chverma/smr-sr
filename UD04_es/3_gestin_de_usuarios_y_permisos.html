@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3. Gestión de usuarios y permisos | 3. Servei FTP </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-42"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">3. Servei FTP</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">4. Servicio FTP</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1. Introducción</a></li>
+   <li><a href="2_funcionamiento.html" class="no-ch">2. Funcionamiento</a></li>
+   <li id="active"><a href="3_gestin_de_usuarios_y_permisos.html" class="active no-ch">3. Gestión de usuarios y permisos</a></li>
+   <li><a href="4_comandos.html" class="no-ch">4. Comandos</a></li>
+   <li><a href="5_transferencia_de_texto_y_binario.html" class="no-ch">5. Transferencia de texto y binario.</a></li>
+   <li><a href="ejercicios.html" class="no-ch">Ejercicios</a></li>
+   <li><a href="prctica.html" class="no-ch">Práctica</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="2_funcionamiento.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4_comandos.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">3. Gestión de usuarios y permisos</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id93">
+<div class="iDevice emphasis0">
+<div id="ta93_154" class="block iDevice_content">
+<p></p>
+<ul>
+<li><strong>Usuarios locales: </strong>emplean las credenciales de los usuarios del sistema para acceder.</li>
+<li><strong>Usuarios genéricos: </strong>Se conecta con el usuario <code>anonymous [Anónimo] </code>y una clave libre (suele ser una cuenta de correo). Permite una conexión como invitado, con la que sólo se puede acceder a una parte del servicio.</li>
+<li><strong>Usuarios virtuales: </strong>No requiere una cuenta local del sistema. Se conecta y se autentica en una base de datos específica que no tiene conexión con el resto de servicios del sistema.</li>
+</ul>
+<h2>3.1. Acceso anónimo</h2>
+<p>Normalmente, si bien, el establecimiento de conexiones con servidores de archivos conlleva la necesidad de disponer de un nombre de usuario y una contraseña para autorizar tanto la conexión como el acceso a una cuenta dentro del servidor, dentro de Internet hay servidores de archivos que facilitan el acceso de forma anónima.</p>
+<p>Los servidores de archivos anónimos suelen ser grandes "cajones de sastre" que contienen archivos de software -normalmente, de dominio público o de libre distribución-, archivos de imagen, de sonido y / o de vídeo, etc.</p>
+<p>Por último, a pesar de que gran parte de los servidores de archivos anónimos suelen permitir, únicamente, la lectura de los archivos almacenados, también hay que facilitan la posibilidad de dejar archivos dentro de un directorio de entrada (incoming) que , de vez en cuando, es revisado por el administrador del servidor.</p>
+<h2></h2>
+<div class="level2">
+<p>Dado que el protocolo FTP se desarrolló en el entorno de GNU / Linux, existe la posibilidad de otorgar diferentes permisos de ejecución, lectura y escritura a los archivos y, a la vez, establecer tres tipos de usuarios (Propietario, Grupo y otros). Normalmente, el Propietario es quien ha creado o ha subido el archivo al servidor. El Grupo se refiere a un grupo de usuarios al que puede pertenecer al propietario y, por último, los Otros son todos aquellos usuarios anónimos o que pertenecen al grupo indicado.</p>
+<h2>3.3. Cuotas</h2>
+<p>Un servidor de protocolo de transferencia de archivos (FTP, file transfer protocol) no es más que un programa que se puede instalar y ejecutar en cualquier ordenador conectado a cualquier tipo de red para facilitar el intercambio de datos entre el ordenador servidor y los ordenadores cliente. Ahora bien, la utilización de un ordenador conlleva que haya limitaciones de espacio.</p>
+<p>En consecuencia, con el fin de respetar el espacio para el software presente en el ordenador y el de los archivos almacenados, dentro de las diferentes cuentas FTP existe un parámetro consistente en la cuota o el espacio en disco disponible. Por lo tanto, el tamaño de todo lo que haya almacenado dentro del servidor de archivos por parte de una cuenta FTP no puede superar la cuota establecida.</p>
+<p>Si no definiéramos cuotas de espacio en un servidor de archivos, este quedaría saturado en un espacio de tiempo breve.</p>
+<p>Es decir, podemos disponer de un servidor de archivos con varias cuentas definidos con diferentes cuotas de espacio cada una. Por ejemplo, si dispusiéramos de dos cuentas FTP diferentes, podríamos establecer una cuota de 100 MB y una cuota de 300 MB, respectivamente. En este caso, podríamos utilizar ambas cuentas siempre que el tamaño de los archivos almacenados en el servidor mediante una de las cuentas no excediera los 100 MB. En este caso, únicamente podríamos subir estos archivos mediante la cuenta con una cuota de espacio de 300 MB y almacenándolos en su espacio -con la condición de que no superáramos el espacio disponible de 300 Mb.</p>
+<h2>3.4. Límite de de ancho de banda</h2>
+<p>El límite del ancho de banda es la máxima cantidad de archivos que pueden ser transferidos entre el ordenador servidor y los navegadores web de los visitantes.</p>
+<p>La mayoría de los sitios web disponen de una determinada cantidad de archivos que, en el momento de ser visitados mediante las diferentes páginas web, se descargan desde el servidor temporalmente en el ordenador mientras el usuario esté visitando la página web.</p>
+<p>Normalmente, esta operación se realiza, por primera vez, cuando se visita la página web, ya que es entonces cuando los archivos quedan almacenados temporalmente en los directorios del navegador web. Es por este motivo que, en el caso de un sitio web con un gran número de visitantes, hay una transferencia masiva de los archivos temporales del sitio web y, en consecuencia, un alto consumo de ancho de banda. De hecho, esto puede conllevar que, en los momentos de mayor audiencia, el acceso al sitio web puede convertirse en imposible.</p>
+<p>En el caso del protocolo de transferencia de archivos (FTP, file transfer protocol), la subida de archivos muy pesados ​​mediante un cliente FTP puede conllevar un alto consumo de ancho de banda y, en consecuencia, limitar el acceso al sitio web.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="2_funcionamiento.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4_comandos.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

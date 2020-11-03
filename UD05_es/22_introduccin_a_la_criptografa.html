@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.2. Introducción a la criptografía </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="en" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-13"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Skip navigation</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Servicios de control y acceso remoto</a></li>
+   <li><a href="1_introduccin.html" class="daddy">1. Introducción</a>
+   <ul class="other-section">
+      <li><a href="11_usos_ms_frecuentes_del_acceso_remoto_a_ordenadores.html" class="no-ch">1.1. Usos más frecuentes del acceso remoto a ordenadores</a></li>
+      <li><a href="12_diferentes_tipos_de_acceso_remoto.html" class="no-ch">1.2. Diferentes tipos de acceso remoto</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_acceso_remoto_a_travs_del_terminal.html" class="current-page-parent daddy">2. Acceso remoto a través del terminal</a>
+   <ul>
+      <li><a href="21_telnet.html" class="no-ch">2.1. Telnet</a></li>
+      <li id="active"><a href="22_introduccin_a_la_criptografa.html" class="active no-ch">2.2. Introducción a la criptografía</a></li>
+      <li><a href="23_secure_shell_ssh.html" class="no-ch">2.3. Secure SHell (SSH)</a></li>
+      <li><a href="prctica_1_instalacin_del_servicio_telnet.html" class="no-ch">Práctica 1: Instalación del servicio Telnet</a></li>
+      <li><a href="prctica_2_instalacin_del_servicio_ssh.html" class="no-ch">Práctica 2: Instalación del servicio SSH</a></li>
+   </ul>
+   </li>
+   <li><a href="3_acceso_remoto_con_interfaz_grfica.html" class="daddy">3. Acceso remoto con interfaz gráfica</a>
+   <ul class="other-section">
+      <li><a href="prctica_3_acceso_remoto_con_terminal_grfico.html" class="no-ch">Práctica 3: Acceso remoto con terminal gráfico</a></li>
+   </ul>
+   </li>
+   <li><a href="actividades.html" class="no-ch">actividades</a></li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="21_telnet.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="23_secure_shell_ssh.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">2.2. Introducción a la criptografía</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id6">
+<div class="iDevice emphasis0">
+<div id="ta6_154" class="block iDevice_content">
+<p>La criptografía nos aporta técnicas para encriptar y desencriptar información, de manera que se puedan transmitir, con seguridad, mensajes por un canal que no es de confianza. El objetivo evidente es asegurar que el mensaje transmitido permanecerá secreto. Pero las comunicaciones electrónicas también se utiliza a menudo para autenticar que el emisor y el destinatario del mensaje son quienes pensamos y para garantizar que el mismo mensaje no ha sido alterado durante su transmisión.</p>
+<p>Hay diferentes técnicas criptográficas, pero dos de las más utilizadas son:</p>
+<ul>
+<li>Criptografía simétrica o de clave compartida</li>
+<li>Criptografía asimétrica o de clave pública</li>
+</ul>
+<h3>Criptografía de clave compartida</h3>
+<p>Al emplear un algoritmo de encriptación de clave compartida se utiliza la misma clave para cifrar y descifrar. Esta característica es su principal inconveniente, ya que si se quiere cambiar la clave se necesitará un medio de comunicación seguro para hacerla llegar del emisor al receptor. La principal ventaja de la criptografía simétrica es su velocidad. Algunos algoritmos de encriptación simétricos son: 3DES, AES, Blowfish e IDEA.</p>
+<h3>Criptografía de clave pública</h3>
+<p>La criptografía asimétrica o de clave pública evita el problema del intercambio de claves. En este casto, tanto el emisor como el receptor tendrán una pareja de claves diferentes. En cada pareja de claves hay una pública y una privada. La clave privada nunca viaja por el canal de comunicación, hay que garantizar su protección. La clave pública, como su nombre indica, se puede ofrecer a todo el mundo que la pida, puede viajar por medios inseguros o incluso se puede publicar.</p>
+<p></p>
+<ul>
+<li>Los mensajes que se encriptan utilizando una clave pública sólo pueden descifrar mediante la clave privada asociada.</li>
+<li>Las claves privadas permiten firmar un mensaje para que el receptor verifique la identidad del emisor. La comprobación de la firma se hará mediante la clave pública asociada.</li>
+</ul>
+<p>En una comunicación típica tendremos los pasos que se muestran a continuación y que puede ver de manera gráfica en la figura.2.</p>
+<ol>
+<li>El emisor utilizará su propia clave privada para firmar el mensaje.</li>
+<li>El emisor utilizará la clave pública del receptor para encriptar el mensaje.</li>
+<li>Se transmite el mensaje encriptado y firmado.</li>
+<li>El receptor desencriptarà el mensaje usando su propia clave privada.</li>
+<li>El receptor comprobará la firma del mensaje utilizando la clave pública del emisor.</li>
+</ol>
+<div class="exe-figure exe-image position-center license-CC-BY-NC-SA" style="width: 591px;">
+<div class="figcaption header"><strong>Comunicación con clave pública</strong></div>
+<img alt="Comunicació amb clau pública" src="smxm7uf4ud4_im7.png" width="591" height="544" />
+<div class="figcaption"><a>COI.</a><span class="title"><em>Comunicación con clave pública</em></span> <span class="license"><span>(</span><a>CC BY-NC-SA</a><span>)</span></span></div>
+</div>
+<p>En este procedimiento nunca se transmiten las claves privadas. El intercambio de las claves públicas es sencillo, ya que no es necesario que se transmitan haciendo uso de un canal seguro. Se garantiza que el mensaje no puede ser comprometido en su transmisión y tanto el emisor como el receptor comprueban la autenticidad de la otra entidad.</p>
+<p>El principal inconveniente de la criptografía de clave pública es su consumo de recursos. Es más costosa en tiempo de encriptación / desencriptación y el mensaje cifrado ocupa más que el texto claro. En la taula.3 puede ver un resumen de las principales ventajas e inconvenientes de las diferentes técnicas criptográficas.</p>
+<h4></h4>
+<p>La criptografía híbrida combina el sistema de clave compartida y el de clave pública para obtener todas las ventajas sin los inconvenientes. En este sistema sólo se utiliza la criptografía de clave pública para transmitir una clave compartida, normalmente generada de manera dinámica para esta comunicación, al receptor. Una vez se ha comunicado la clave compartida en ambas estaciones, se utiliza la encriptación convencional para encriptar el grueso del mensaje.</p>
+<p>Los sistemas basados ​​en criptografía híbrida son tan fuertes como los sistemas de clave compartida y clave pública que utilicen.</p>
+<p>La criptografía híbrida combina el sistema de clave compartida y el de clave pública para obtener todas las ventajas sin los inconvenientes. En este sistema sólo se utiliza la criptografía de clave pública para transmitir una clave compartida, normalmente generada de manera dinámica para esta comunicación, al receptor. Una vez se ha comunicado la clave compartida en ambas estaciones, se utiliza la encriptación convencional para encriptar el grueso del mensaje.</p>
+<p>Los sistemas basados ​​en criptografía híbrida son tan fuertes como los sistemas de clave compartida y clave pública que utilicen.</p>
+<table class="exe-table">
+<tbody>
+<tr>
+<td><strong><span style="vertical-align: inherit;">técnica criptográfica</span></strong></td>
+<td><strong><span style="vertical-align: inherit;"> ventajas </span></strong></td>
+<td><strong><span style="vertical-align: inherit;">inconvenientes </span></strong></td>
+</tr>
+<tr>
+<td><span style="vertical-align: inherit;">Criptografía clave compartida.</span></td>
+<td>
+<p><span style="vertical-align: inherit;">Consume pocos recursos. </span><br /><span style="vertical-align: inherit;">Encripta / desencripta con gran velocidad</span></p>
+</td>
+<td><span style="vertical-align: inherit;">El intercambio de claves necesita un canal seguro</span></td>
+</tr>
+<tr>
+<td><span style="vertical-align: inherit;">Criptografía clave pública.</span></td>
+<td><span style="vertical-align: inherit;">No necesita un canal seguro para intercambiar las claves.</span></td>
+<td>
+<p><span style="vertical-align: inherit;">Consume recursos. </span><br /><span style="vertical-align: inherit;">El proceso de encriptación / desencriptación es lento</span></p>
+</td>
+</tr>
+<tr>
+<td><span style="vertical-align: inherit;">Criptografía híbrida.</span></td>
+<td><span style="vertical-align: inherit;">Encripta / desencripta con gran velocidad.</span></td>
+<td><span style="vertical-align: inherit;">No necesita un canal seguro para intercambiar las claves.</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="21_telnet.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="23_secure_shell_ssh.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

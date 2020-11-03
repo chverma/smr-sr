@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3. Etapas de una transacción HTTP </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-4"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">6. Servei HTTP</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1. Introducción</a></li>
+   <li><a href="2_el_protocol_http.html" class="daddy">2. El protocol HTTP</a>
+   <ul class="other-section">
+      <li><a href="21_un_poco_de_historia.html" class="no-ch">2.1. Un poco de historia</a></li>
+      <li><a href="22_caractersitcas_de_http.html" class="no-ch">2.2. Caracterísitcas de HTTP</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="3_etapas_de_una_transaccin_http.html" class="active no-ch">3. Etapas de una transacción HTTP</a></li>
+   <li><a href="4_el_estndar_http10.html" class="daddy">4. El estándar HTTP/1.0</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_transacciones_http.html" class="no-ch">Práctica 1: Transacciones HTTP</a></li>
+   </ul>
+   </li>
+   <li><a href="5_instalacin_y_configuracin_de_apache2.html" class="daddy">5. Instalación y configuración de Apache2</a>
+   <ul class="other-section">
+      <li><a href="prctica_2_instalacin_de_apache2.html" class="no-ch">Práctica 2: Instalación de Apache2</a></li>
+   </ul>
+   </li>
+   <li><a href="6_servidores_virtuales.html" class="daddy">6. Servidores virtuales</a>
+   <ul class="other-section">
+      <li><a href="prctica_3_configuracin_bsica.html" class="no-ch">Práctica 3: Configuración básica</a></li>
+   </ul>
+   </li>
+   <li><a href="7_acceso_annimo_y_autenticado_formas_de_autenticacin.html" class="daddy">7. Acceso anónimo y autenticado. Formas de autenticación.</a>
+   <ul class="other-section">
+      <li><a href="prctica_4_control_de_acceso_autorizacin_y_autenticacin.html" class="no-ch">Práctica 4: Control de acceso, autorización y autenticación</a></li>
+   </ul>
+   </li>
+   <li><a href="8_ejecucin_de_cdigo_scripts_de_servidor_y_de_cliente.html" class="daddy">8. Ejecución de código. Scripts de servidor y de cliente.</a>
+   <ul class="other-section">
+      <li><a href="prctica_5_ejecucin_del_cdigo_en_el_cliente_y_en_el_servidor.html" class="no-ch">Práctica 5: Ejecución del código en el cliente y en el servidor</a></li>
+   </ul>
+   </li>
+   <li><a href="9_establecimiento_de_conexiones_seguras_.html" class="daddy">9. Establecimiento de conexiones seguras .</a>
+   <ul class="other-section">
+      <li><a href="prctica_6_assegurant_les_comunicacions.html" class="no-ch">Pràctica 6: Assegurant les comunicacions</a></li>
+   </ul>
+   </li>
+   <li><a href="mapa_conceptual.html" class="no-ch">Mapa conceptual</a></li>
+   <li><a href="actividades.html" class="no-ch">actividades</a></li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="22_caractersitcas_de_http.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4_el_estndar_http10.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">3. Etapas de una transacción HTTP</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id6">
+<div class="iDevice emphasis0">
+<div id="ta6_154" class="block iDevice_content">
+<p><span style="vertical-align: inherit;">Con la intención de conocer con más profundidad el protocolo HTTP podemos evaluar en qué consiste una transacción HTTP.</span></p>
+<p><span style="vertical-align: inherit;">Cada vez que un cliente hace una petición a un servidor, se ejecutan una serie de acciones:</span></p>
+<ol>
+<li><span style="vertical-align: inherit;">Un usuario accede a una dirección de Internet (URL) seleccionando un enlace de un documento HTML o introduciéndola directamente en la barra de navegación de un navegador web desde la perspectiva del cliente web. El cliente web descodifica la dirección de Internet (URL) separando las diferentes partes. Es así como se identifican el </span><strong><span style="vertical-align: inherit;">protocolo de acceso</span></strong><span style="vertical-align: inherit;"> , el nodo expresado con el nombre de dominio o su dirección IP, el posible puerto opcional (el valor predeterminado es el 80) y el objeto del servidor requerido.</span></li>
+<li><span style="vertical-align: inherit;">Se abre una conexión TCP / IP con el servidor llamando el puerto TCP correspondiente. Se hace la petición. En consecuencia, se envían la orden necesaria (GET, POST, HEAD, etc.), la dirección del objeto requerido (el contenido de la dirección de Internet del servidor), la versión del protocolo HTTP utilizada ( en la mayor parte de las ocasiones es HTTP / 1.0) y un conjunto variable de información que incluye datos sobre las capacidades del navegador web, datos opcionales para el servidor, etc.</span></li>
+<li><span style="vertical-align: inherit;">El servidor localiza el recurso solicitado y devuelve la respuesta al cliente.</span></li>
+<li><span style="vertical-align: inherit;">Esta respuesta consiste en un código de estado y el tipo de dato con extensiones multipropósito de correo de Internet (MIME, </span><em><span style="vertical-align: inherit;">Multipurpose Internet Mail Extension</span></em><span style="vertical-align: inherit;"> ) de la información de vuelta, seguido de la misma información.</span></li>
+<li><span style="vertical-align: inherit;">El cliente formatea y muestra el recurso recibido.</span></li>
+<li><span style="vertical-align: inherit;">Se cierra la conexión TCP.</span></li>
+</ol>
+<p><span style="vertical-align: inherit;">Este proceso se repite en cada acceso que se haga el servidor HTTP. Por ejemplo, si se recoge un documento HTML que contiene cuatro imágenes, el proceso de transición mostrado con anterioridad se repite cinco veces, es decir, una por el documento HTML y cuatro para las imágenes.</span></p>
+<div class="exe-figure exe-image position-center" style="width: 829px;">
+<div class="figcaption header"><strong><span style="vertical-align: inherit;"> </span></strong></div>
+</div>
+<div class="exe-figure exe-image position-center" style="width: 829px;">
+<div class="figcaption header"><strong>Etapas en la transición HTTP</strong></div>
+<img src="HTTP_Steps.png" alt="Etapas en la transición HTTP" title="Etapas en la transición HTTP" width="829" height="304" /></div>
+<p><br /><br /></p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DestacadofpdIdevice" id="id7">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta7_151" class="block iDevice_content">
+<div class="iDevice emphasis0">
+<div class="iDevice_destacadofpd">
+<div id="ta7_151" class="block iDevice_content">
+<div class="exe-block-warning">
+<p><strong><span style="vertical-align: inherit;">extensión MIME</span></strong></p>
+<p><span style="vertical-align: inherit;">El protocolo HTML fue diseñado para transportar por la red archivos en formato ASCII. Con el progreso de las tecnologías y la inclusión de diferentes tipos de archivos en un formato diferente al ASCII (imágenes, vídeos, sonidos, etc.) en las aplicaciones por Internet, surgió la necesidad de transformar estos formato ASCII para su correcta recepción en el navegador web.</span></p>
+<p><span style="vertical-align: inherit;">En 1992, se crearon los tipos MIME, que eran especificaciones para dar formato a los mensajes en un formato diferente al ASCII para que pudieran ser enviados e interpretados por Internet. Más adelante se aplicaron también a los documentos web.</span></p>
+<p><strong><span style="vertical-align: inherit;">Nomenclatura de tipo</span></strong></p>
+<p><span style="vertical-align: inherit;">MIME asigna un nombre a cada tipo de datos. Los nombres siguen el siguiente formato:</span></p>
+<pre style="padding-left: 30px;"><span style="vertical-align: inherit;">tipo / subtipo (tipo como subtipo son cadenas de caracteres)</span></pre>
+<p><span style="vertical-align: inherit;">El </span><code>tipus</code><span style="vertical-align: inherit;">define la categoría general de los datos y el </span><code>subtipus</code><span style="vertical-align: inherit;">define un tipo más específico de estos datos. El tipo tener los siguientes valores:</span></p>
+<ul>
+<li><strong><span style="vertical-align: inherit;">texto</span></strong><span style="vertical-align: inherit;"> : Indica que el contenido es texto plano. Ejemplos de subtipos: html, xml</span></li>
+<li><strong><span style="vertical-align: inherit;">multiparte</span></strong><span style="vertical-align: inherit;"> : Indica que tiene múltiples partes de datos independientes. Ejemplos de subtipos: form-data, digest</span></li>
+<li><strong><span style="vertical-align: inherit;">message</span></strong><span style="vertical-align: inherit;"> : Para encapsular un mensaje existente. Por ejemplo cuando queremos responder a un mensaje de correo incorporando el mensaje origen. Ejemplos de subtipos: partial, RFC822</span></li>
+<li><strong><span style="vertical-align: inherit;">image</span></strong><span style="vertical-align: inherit;"> : Indica que es una imagen. Ex de subtipos: png, gif</span></li>
+<li><strong><span style="vertical-align: inherit;">audio</span></strong><span style="vertical-align: inherit;"> : Indica que es un audio. Ejemplos de subtipos: mpeg, avi</span></li>
+<li><strong><span style="vertical-align: inherit;">video</span></strong><span style="vertical-align: inherit;"> : Indica que es un vídeo. Ejemplos de subtipos: mp4, 32kadpcm</span></li>
+<li><strong><span style="vertical-align: inherit;">application</span></strong><span style="vertical-align: inherit;"> : Indica que se trata de datos de aplicación de los cuales pueden ser binarios. Ejemplos de subtipos: json, pdf</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="22_caractersitcas_de_http.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4_el_estndar_http10.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

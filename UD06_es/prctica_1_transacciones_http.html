@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Práctica 1: Transacciones HTTP </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-18"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">6. Servei HTTP</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1. Introducción</a></li>
+   <li><a href="2_el_protocol_http.html" class="daddy">2. El protocol HTTP</a>
+   <ul class="other-section">
+      <li><a href="21_un_poco_de_historia.html" class="no-ch">2.1. Un poco de historia</a></li>
+      <li><a href="22_caractersitcas_de_http.html" class="no-ch">2.2. Caracterísitcas de HTTP</a></li>
+   </ul>
+   </li>
+   <li><a href="3_etapas_de_una_transaccin_http.html" class="no-ch">3. Etapas de una transacción HTTP</a></li>
+   <li class="current-page-parent"><a href="4_el_estndar_http10.html" class="current-page-parent daddy">4. El estándar HTTP/1.0</a>
+   <ul>
+      <li id="active"><a href="prctica_1_transacciones_http.html" class="active no-ch">Práctica 1: Transacciones HTTP</a></li>
+   </ul>
+   </li>
+   <li><a href="5_instalacin_y_configuracin_de_apache2.html" class="daddy">5. Instalación y configuración de Apache2</a>
+   <ul class="other-section">
+      <li><a href="prctica_2_instalacin_de_apache2.html" class="no-ch">Práctica 2: Instalación de Apache2</a></li>
+   </ul>
+   </li>
+   <li><a href="6_servidores_virtuales.html" class="daddy">6. Servidores virtuales</a>
+   <ul class="other-section">
+      <li><a href="prctica_3_configuracin_bsica.html" class="no-ch">Práctica 3: Configuración básica</a></li>
+   </ul>
+   </li>
+   <li><a href="7_acceso_annimo_y_autenticado_formas_de_autenticacin.html" class="daddy">7. Acceso anónimo y autenticado. Formas de autenticación.</a>
+   <ul class="other-section">
+      <li><a href="prctica_4_control_de_acceso_autorizacin_y_autenticacin.html" class="no-ch">Práctica 4: Control de acceso, autorización y autenticación</a></li>
+   </ul>
+   </li>
+   <li><a href="8_ejecucin_de_cdigo_scripts_de_servidor_y_de_cliente.html" class="daddy">8. Ejecución de código. Scripts de servidor y de cliente.</a>
+   <ul class="other-section">
+      <li><a href="prctica_5_ejecucin_del_cdigo_en_el_cliente_y_en_el_servidor.html" class="no-ch">Práctica 5: Ejecución del código en el cliente y en el servidor</a></li>
+   </ul>
+   </li>
+   <li><a href="9_establecimiento_de_conexiones_seguras_.html" class="daddy">9. Establecimiento de conexiones seguras .</a>
+   <ul class="other-section">
+      <li><a href="prctica_6_assegurant_les_comunicacions.html" class="no-ch">Pràctica 6: Assegurant les comunicacions</a></li>
+   </ul>
+   </li>
+   <li><a href="mapa_conceptual.html" class="no-ch">Mapa conceptual</a></li>
+   <li><a href="actividades.html" class="no-ch">actividades</a></li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="4_el_estndar_http10.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="5_instalacin_y_configuracin_de_apache2.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Práctica 1: Transacciones HTTP</h1></div>
+<div class="iDevice_wrapper activityIdevice em_iDevice" id="id17">
+<div class="iDevice emphasis1" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">1.6: Mandos HTTP 1.1</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta17_42_2" class="block iDevice_content">
+<h3><span style="vertical-align: inherit;">objetivo</span></h3>
+<p><span style="vertical-align: inherit;">Entender cómo funciona el intercambio de mensajes HTTP.</span></p>
+<h3><span style="vertical-align: inherit;">funcionamiento</span></h3>
+<p><span style="vertical-align: inherit;">Conectamos con el servidor http mediante telnet.</span></p>
+<div class="highlighted-code language-clike">
+<div>
+<pre class="  language-clike"><code class="  language-clike">$ telnet XXX<span class="token punctuation">.</span>XX<span class="token punctuation">.</span>XX<span class="token punctuation">.</span>XXX <span class="token number">80</span></code></pre>
+</div>
+</div>
+<p><span style="vertical-align: inherit;">Hacemos la solicitud HTTP utilizando el encabezado deseado.</span></p>
+<div class="highlighted-code language-clike">
+<pre class="  language-clike"><code class="  language-clike">GET <span class="token operator">/</span> HTTP<span class="token operator">/</span><span class="token number">1.1</span> 
+host<span class="token punctuation">:</span> www<span class="token punctuation">.</span>example<span class="token punctuation">.</span>com<span></span>
+User<span class="token operator">-</span>Agent<span class="token punctuation">:</span> Mozilla<span class="token operator">/</span><span class="token number">4</span><span class="token punctuation">.</span><span class="token function">0</span> <span class="token punctuation">(</span>compatible<span class="token punctuation">;</span> MSIE <span class="token number">7.0</span><span class="token punctuation">;</span> Windows NT <span class="token number">5.1</span><span class="token punctuation">)</span> <span class="token punctuation">[</span>opcional<span class="token punctuation">]</span>
+<span class="token punctuation">[</span>INTRO<span class="token punctuation">]</span>
+<span class="token punctuation">[</span>INTRO<span class="token punctuation">]</span></code></pre>
+</div>
+<p><span style="vertical-align: inherit;">En el ejemplo anterior solicitamos mediante el encabezado GET el documento raíz (/) con HTTP / 1.1 y el host: www.example.com</span></p>
+<h3><span style="vertical-align: inherit;">actividad</span></h3>
+<p><span style="vertical-align: inherit;">Haz las pruebas con </span><strong><span style="vertical-align: inherit;">Telnet</span></strong><span style="vertical-align: inherit;"> del mando </span><strong><span style="vertical-align: inherit;">HEAD</span></strong><span style="vertical-align: inherit;"> en las siguientes URL:</span></p>
+<ul>
+<li><span style="vertical-align: inherit;">http://www.pego.org (resuelto)</span></li>
+<li><span style="vertical-align: inherit;">http://www.marca.com</span></li>
+<li><span style="vertical-align: inherit;">http://moodle.iesevalorpego.org</span></li>
+<li><span style="vertical-align: inherit;">http://forbes.es/demo</span></li>
+<li><span style="vertical-align: inherit;">http://revistadefilosofia.com/60-05.pdf</span></li>
+<li><span style="vertical-align: inherit;">http://www.fincarustica.cat/contacto/lang/es</span></li>
+</ul>
+<p><span style="vertical-align: inherit;">Elabora un documento con capturas de pantalla que demuestran el funcionamiento y describe los problemas en que te has encontrado y las soluciones adoptadas. Anota también los código de respuesta y el tipo de archivo vuelto.</span></p>
+<p><strong><span style="vertical-align: inherit;">ejemplo</span></strong></p>
+<p><span style="vertical-align: inherit;">Para la primera URL haríamos:</span></p>
+<div class="highlighted-code language-c">
+<div>
+<pre class="  language-c"><code class="  language-c">$ telnet www<span class="token punctuation">.</span>google<span class="token punctuation">.</span>es <span class="token number">80</span></code></pre>
+</div>
+</div>
+<p><span style="vertical-align: inherit;">Una vez realizada la conexión hacemos la solicitud</span></p>
+<div class="highlighted-code language-clike">
+<div>
+<pre class="  language-clike"><code class="  language-clike">HEAD <span class="token operator">/</span> HTTP<span class="token operator">/</span><span class="token number">1.1</span>
+host<span class="token punctuation">:</span>www<span class="token punctuation">.</span>google<span class="token punctuation">.</span>es
+<span class="token punctuation">[</span>intro<span class="token punctuation">]</span>
+<span class="token punctuation">[</span>intro<span class="token punctuation">]</span></code></pre>
+</div>
+</div>
+<p><span style="vertical-align: inherit;">Y obtendremos la siguiente respuesta:</span></p>
+<div class="highlighted-code language-clike">
+<div>
+<pre class="  language-clike"><code class="  language-clike">HTTP<span class="token operator">/</span><span class="token number">1.1</span> <span class="token number">200</span> OK<span></span>
+Date<span class="token punctuation">:</span> Fri<span class="token punctuation">,</span> <span class="token number">12</span> Jan <span class="token number">2018</span> <span class="token number">09</span><span class="token punctuation">:</span><span class="token number">28</span><span class="token punctuation">:</span><span class="token number">23</span> GMT<span></span>
+Expires<span class="token punctuation">:</span> <span class="token operator">-</span><span class="token number">1</span>
+Cache<span class="token operator">-</span>Control<span class="token punctuation">:</span> private<span class="token punctuation">,</span> max<span class="token operator">-</span>age<span class="token operator">=</span><span class="token number">0</span>
+Content<span class="token operator">-</span>Type<span class="token punctuation">:</span> text<span class="token operator">/</span>html<span class="token punctuation">;</span> charset<span class="token operator">=</span>ISO<span class="token number">-8859</span><span class="token operator">-</span><span class="token number">1</span>
+<span class="token punctuation">[</span>contenido omitido<span class="token punctuation">]</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="4_el_estndar_http10.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="5_instalacin_y_configuracin_de_apache2.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5. Instalación y configuración de Apache2 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-10"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">6. Servei HTTP</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1. Introducción</a></li>
+   <li><a href="2_el_protocol_http.html" class="daddy">2. El protocol HTTP</a>
+   <ul class="other-section">
+      <li><a href="21_un_poco_de_historia.html" class="no-ch">2.1. Un poco de historia</a></li>
+      <li><a href="22_caractersitcas_de_http.html" class="no-ch">2.2. Caracterísitcas de HTTP</a></li>
+   </ul>
+   </li>
+   <li><a href="3_etapas_de_una_transaccin_http.html" class="no-ch">3. Etapas de una transacción HTTP</a></li>
+   <li><a href="4_el_estndar_http10.html" class="daddy">4. El estándar HTTP/1.0</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_transacciones_http.html" class="no-ch">Práctica 1: Transacciones HTTP</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="5_instalacin_y_configuracin_de_apache2.html" class="active daddy">5. Instalación y configuración de Apache2</a>
+   <ul>
+      <li><a href="prctica_2_instalacin_de_apache2.html" class="no-ch">Práctica 2: Instalación de Apache2</a></li>
+   </ul>
+   </li>
+   <li><a href="6_servidores_virtuales.html" class="daddy">6. Servidores virtuales</a>
+   <ul class="other-section">
+      <li><a href="prctica_3_configuracin_bsica.html" class="no-ch">Práctica 3: Configuración básica</a></li>
+   </ul>
+   </li>
+   <li><a href="7_acceso_annimo_y_autenticado_formas_de_autenticacin.html" class="daddy">7. Acceso anónimo y autenticado. Formas de autenticación.</a>
+   <ul class="other-section">
+      <li><a href="prctica_4_control_de_acceso_autorizacin_y_autenticacin.html" class="no-ch">Práctica 4: Control de acceso, autorización y autenticación</a></li>
+   </ul>
+   </li>
+   <li><a href="8_ejecucin_de_cdigo_scripts_de_servidor_y_de_cliente.html" class="daddy">8. Ejecución de código. Scripts de servidor y de cliente.</a>
+   <ul class="other-section">
+      <li><a href="prctica_5_ejecucin_del_cdigo_en_el_cliente_y_en_el_servidor.html" class="no-ch">Práctica 5: Ejecución del código en el cliente y en el servidor</a></li>
+   </ul>
+   </li>
+   <li><a href="9_establecimiento_de_conexiones_seguras_.html" class="daddy">9. Establecimiento de conexiones seguras .</a>
+   <ul class="other-section">
+      <li><a href="prctica_6_assegurant_les_comunicacions.html" class="no-ch">Pràctica 6: Assegurant les comunicacions</a></li>
+   </ul>
+   </li>
+   <li><a href="mapa_conceptual.html" class="no-ch">Mapa conceptual</a></li>
+   <li><a href="actividades.html" class="no-ch">actividades</a></li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="prctica_1_transacciones_http.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="prctica_2_instalacin_de_apache2.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">5. Instalación y configuración de Apache2</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id21">
+<div class="iDevice emphasis0">
+<div id="ta21_85" class="block iDevice_content">
+<p><span style="vertical-align: inherit;">La información la encontrará en </span><a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;pto=aue&amp;rurl=translate.google.es&amp;sl=ca&amp;sp=nmt4&amp;tl=es&amp;u=https://help.ubuntu.com/16.04/serverguide/httpd.html.es&amp;usg=ALkJrhjvHCt4oQTfGIZRG4nu1goMWMGeoQ" target="_blank" rel="noopener noreferrer"><span style="vertical-align: inherit;">https://help.ubuntu.com/lts/serverguide/httpd.html</span></a></p>
+<h3><span style="vertical-align: inherit;">directivas importantes</span></h3>
+<h4><span style="vertical-align: inherit;">Directiva &lt;Directory&gt;.</span></h4>
+<p><span style="vertical-align: inherit;">La directiva Directory permite configurar permisos en los diferentes directorios de nuestro espacio web. Se trata de una directriz que se utiliza para definir características que sólo se aplicarán al directorio especificado y no a todo el servidor (por ello se ha de cerrar).</span></p>
+<p><span style="vertical-align: inherit;">Estos permisos serían los siguientes:</span></p>
+<p></p>
+<ul>
+<li><strong><span style="vertical-align: inherit;">Options</span></strong><br />
+<ul>
+<li><strong><span style="vertical-align: inherit;">Indexes</span></strong><span style="vertical-align: inherit;"> . Si dentro de la carpeta no existe ningún archivo igual que lo que hemos definido en el parámetro DirectoryIndex el navegador se mostrará un índice con todos los archivos de la carpeta actual.</span></li>
+<li><strong><span style="vertical-align: inherit;">FollowSymLinks</span></strong><span style="vertical-align: inherit;"> . El servidor seguirá los enlaces simbólicos (lógicos), es decir, los alias.</span></li>
+</ul>
+</li>
+<li><b><span style="vertical-align: inherit;">Require </span></b><span style="vertical-align: inherit;"> all denied, require not ip 192.168.1.50. Deniega la petición a una carpeta, un archivo o una dirección de Internet.</span></li>
+<li><strong><span style="vertical-align: inherit;">Require</span></strong><span style="vertical-align: inherit;">  all granted, require ip 192.168.1.50. Permite la petición a una carpeta, un archivo o una dirección de Internet.</span></li>
+</ul>
+<h4><span style="font-size: 1em;"><span style="vertical-align: inherit;">Directiva </span></span><span style="font-size: 1em;"><span style="vertical-align: inherit;">&lt;Files&gt;</span></span></h4>
+<p><span style="font-size: 1em;"><span style="vertical-align: inherit;">La directiva Filas permite configurar permisos en los diferentes archivos de nuestro espacio web. Cabe decir que el parámetro Files debe estar incluido dentro del parámetro Directory.</span></span></p>
+<p><span style="font-size: 1em;"><span style="vertical-align: inherit;">Estos permisos serían los siguientes:</span></span></p>
+<ol>
+<li><span style="vertical-align: inherit;">require all denied, require not ip 192.168.1.50. Deniega la petición a un archivo o una dirección de Internet.</span></li>
+<li><span style="vertical-align: inherit;">require all granted, require ip 192.168.1.50. Permite la petición a un archivo o una dirección de Internet.</span></li>
+<li><span style="vertical-align: inherit;">A modo de ejemplo, podríamos encontrar lo siguiente: </span>
+<ol>
+<li><span style="vertical-align: inherit;">Queremos prohibir el acceso a archivos con formato JPG dentro de la carpeta </span><code>/var/www/serveisenxarxa/public_html</code><span style="vertical-align: inherit;">.</span></li>
+</ol>
+</li>
+</ol>
+<div class="highlighted-code language-sql">
+<div>
+<pre class="  language-sql"><code class="  language-sql"><span class="token operator">&lt;</span>directory <span class="token string">"/var/www/serveisenxarxa/public_html"</span><span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>files <span class="token operator">*</span><span class="token punctuation">.</span>jpg<span class="token operator">&gt;</span>
+     <span class="token keyword">require</span> <span class="token keyword">all</span> denied
+  <span class="token operator">&lt;</span><span class="token operator">/</span>files<span class="token operator">&gt;</span>
+  <span class="token keyword">require</span> <span class="token keyword">all</span> granted
+<span class="token operator">&lt;</span><span class="token operator">/</span>directory<span class="token operator">&gt;</span></code></pre>
+</div>
+</div>
+<p></p>
+<h4><span style="font-size: 1em;"><span style="vertical-align: inherit;">Directiva &lt;VirtualHost&gt;</span></span></h4>
+<p><span style="font-size: 1em;"><span style="vertical-align: inherit;">La directiva VirtualHost permite configurar más de un sitio web en un mismo servidor, es decir, una misma dirección de Internet para diferentes nombres de dominio. Cabe decir que, si queremos utilizar este parámetro, es necesario haber configurado el servidor de nombres de dominio (DNS) para que dirija los nombres de dominio hacia nuestro servidor web Apache.</span></span></p>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="prctica_1_transacciones_http.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="prctica_2_instalacin_de_apache2.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

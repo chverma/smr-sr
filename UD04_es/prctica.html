@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Práctica | 3. Servei FTP </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-48"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">3. Servei FTP</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">4. Servicio FTP</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1. Introducción</a></li>
+   <li><a href="2_funcionamiento.html" class="no-ch">2. Funcionamiento</a></li>
+   <li><a href="3_gestin_de_usuarios_y_permisos.html" class="no-ch">3. Gestión de usuarios y permisos</a></li>
+   <li><a href="4_comandos.html" class="no-ch">4. Comandos</a></li>
+   <li><a href="5_transferencia_de_texto_y_binario.html" class="no-ch">5. Transferencia de texto y binario.</a></li>
+   <li><a href="ejercicios.html" class="no-ch">Ejercicios</a></li>
+   <li id="active"><a href="prctica.html" class="active no-ch">Práctica</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="ejercicios.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Práctica</h1></div>
+<div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id9">
+<div class="iDevice emphasis_casopracticofpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Actividad 4.1: Instalación y Configuración FTP anónimo</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta9_148" class="block iDevice_content">
+<h2>Objetivos</h2>
+<ul>
+<li>Aprender a instalar y configurar un servicio FTP en GNU / Linux.</li>
+<li>Entender el concepto de usuario virtual.</li>
+<li>Trabajar con los permisos en el sistema de archivos.</li>
+</ul>
+<h2>Actividades</h2>
+<ol>
+<li>Instala y configura el servidor FTP (vsftpd) para que permita el acceso anónimo para sólo lectura a una carpeta llamada público.</li>
+<li>Configurar el DNS para que tenga nombre el servidor ftp. (<code>ftp.midominio.com</code>).</li>
+<li>Agregar algunos archivos a esa carpeta y comprueba el funcionamiento.</li>
+<li>Permite al usuario anónimo colgar archivos en una nueva carpeta llamada incoming.</li>
+<li><span style="vertical-align: inherit;">Asegúrate de que los archivos se pueden descargar tras colgarlos.</span></li>
+</ol>
+<h3>Recursos</h3>
+<ul>
+<li><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Instalación de un servidor FTP en Ubuntu Server Guide: </span></span><a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;pto=aue&amp;rurl=translate.google.es&amp;sl=auto&amp;sp=nmt4&amp;tl=es&amp;u=https://help.ubuntu.com/lts/serverguide/ftp-server.html&amp;usg=ALkJrhjEuIW5TR-ZQdex_iRMA0jKc96CNw"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">https://help.ubuntu.com/lts/serverguide/ftp-server.html</span></span></a></li>
+<li><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Información de las opciones de configuración: </span></span><a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;pto=aue&amp;rurl=translate.google.es&amp;sl=auto&amp;sp=nmt4&amp;tl=es&amp;u=https://security.appspot.com/vsftpd/vsftpd_conf.html&amp;usg=ALkJrhiwkO0-MZ0vUxsbTb3gNmF5AwUipw"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">https://security.appspot.com/vsftpd/vsftpd_conf.html</span></span></a> </li>
+<li><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Las opciones que afectan a los usuarios anónimos empiezan por anon_</span></span></li>
+<li><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Ten en cuenta que el usuario virtual necesita disponer de un usuario local, en este caso es ftp.</span></span></li>
+</ul>
+<h3>Entregable</h3>
+<ol>
+<li>Manual de pasos realizados para la instalación y para la configuración.</li>
+<li>Capturas de pantalla que muestran el funcionamiento. Sólo lectura, acceso al directorio, permisos, etc.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id8">
+<div class="iDevice emphasis_casopracticofpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Actividad 4.2: FTP en modo consola</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta8_148" class="block iDevice_content">
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta8_148" class="block iDevice_content">
+<p><span><span style="vertical-align: inherit;">Prueba los siguientes comandos del cliente FTP en modo consola:</span></span></p>
+<ul>
+<li>help</li>
+<li>ascii</li>
+<li>binary</li>
+<li>cd</li>
+<li>chmod</li>
+<li>close</li>
+<li>quit</li>
+<li>bye</li>
+<li>delete</li>
+<li>mkdir</li>
+<li>get</li>
+<li>dir</li>
+<li>ls</li>
+<li>put</li>
+<li>pwd</li>
+<li>prompt</li>
+<li>rename</li>
+<li>rmdir</li>
+<li>size</li>
+<li>passive</li>
+<li>open</li>
+</ul>
+<p><span><span style="vertical-align: inherit;">Hay también una serie de pedidos interesantes que empiezan por "m" (ej: mput, mget, ...) </span></span><br /><br /><span><span style="vertical-align: inherit;">Después de haber probado como funciona el cliente FTP en modo consola elabora una tabla resumen de los pedidos que has utilizado.</span></span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id10">
+<div class="iDevice emphasis_casopracticofpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Actividad 4.3: Configuración VSFTP para usuarios autenticados</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta10_148" class="block iDevice_content">
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta10_148" class="block iDevice_content">
+<p><a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;pto=aue&amp;rurl=translate.google.es&amp;sl=auto&amp;sp=nmt4&amp;tl=es&amp;u=https://security.appspot.com/vsftpd/vsftpd_conf.html&amp;usg=ALkJrhiwkO0-MZ0vUxsbTb3gNmF5AwUipw"><span style="vertical-align: inherit;">Manual de vsftpd.conf</span></a></p>
+<p><span style="vertical-align: inherit;">Recuerda: </span><a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;pto=aue&amp;rurl=translate.google.es&amp;sl=auto&amp;sp=nmt4&amp;tl=es&amp;u=http://www.ite.educacion.es/formacion/materiales/85/cd/linux/m1/permisos_de_archivos_y_carpetas.html&amp;usg=ALkJrhhODnE_KKYXKw41MXERnzPhqwmLMg"><span style="vertical-align: inherit;">Permisos en Linux</span></a></p>
+<p><span style="vertical-align: inherit;">Configurar el servidor FTP (vsftpd)</span></p>
+<ol>
+<li><span style="vertical-align: inherit;">Modifica la tasa de transferencia para los usuarios anónimos a 10 bytes por segundo. ( </span><code>anon_max_rate</code><span style="vertical-align: inherit;">)</span></li>
+<li><span style="vertical-align: inherit;">Gestionar conexiones máximas por IP (2) [ </span><code>max_per_ip</code><span style="vertical-align: inherit;">] y máximo número de clientes (5) [ </span><code>max_clients</code><span style="vertical-align: inherit;">].</span></li>
+<li><span style="vertical-align: inherit;">Ajusta los "timeouts" [ </span><code>timeout</code><span style="vertical-align: inherit;">...]</span></li>
+<li><span style="vertical-align: inherit;">Ajusta el servidor para permitir acceso a algunos de los usuarios del sistema (no a todos) [ </span><code>local_enable</code><span style="vertical-align: inherit;">, </span><code>userlist_file</code><span style="vertical-align: inherit;">,  </span><code>userlist_enable</code><span style="vertical-align: inherit;">]. Crear un nuevo usuario </span><code>ftp_user</code><span style="vertical-align: inherit;"> que será el único que tendrá acceso. [ </span><code>adduser</code><span style="vertical-align: inherit;">]</span></li>
+<li><span style="vertical-align: inherit;">Documento el proceso, explicando los cambios realizados.</span></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="ejercicios.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

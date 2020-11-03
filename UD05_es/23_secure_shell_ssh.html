@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.3. Secure SHell (SSH) </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="en" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-14"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Skip navigation</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Servicios de control y acceso remoto</a></li>
+   <li><a href="1_introduccin.html" class="daddy">1. Introducción</a>
+   <ul class="other-section">
+      <li><a href="11_usos_ms_frecuentes_del_acceso_remoto_a_ordenadores.html" class="no-ch">1.1. Usos más frecuentes del acceso remoto a ordenadores</a></li>
+      <li><a href="12_diferentes_tipos_de_acceso_remoto.html" class="no-ch">1.2. Diferentes tipos de acceso remoto</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_acceso_remoto_a_travs_del_terminal.html" class="current-page-parent daddy">2. Acceso remoto a través del terminal</a>
+   <ul>
+      <li><a href="21_telnet.html" class="no-ch">2.1. Telnet</a></li>
+      <li><a href="22_introduccin_a_la_criptografa.html" class="no-ch">2.2. Introducción a la criptografía</a></li>
+      <li id="active"><a href="23_secure_shell_ssh.html" class="active no-ch">2.3. Secure SHell (SSH)</a></li>
+      <li><a href="prctica_1_instalacin_del_servicio_telnet.html" class="no-ch">Práctica 1: Instalación del servicio Telnet</a></li>
+      <li><a href="prctica_2_instalacin_del_servicio_ssh.html" class="no-ch">Práctica 2: Instalación del servicio SSH</a></li>
+   </ul>
+   </li>
+   <li><a href="3_acceso_remoto_con_interfaz_grfica.html" class="daddy">3. Acceso remoto con interfaz gráfica</a>
+   <ul class="other-section">
+      <li><a href="prctica_3_acceso_remoto_con_terminal_grfico.html" class="no-ch">Práctica 3: Acceso remoto con terminal gráfico</a></li>
+   </ul>
+   </li>
+   <li><a href="actividades.html" class="no-ch">actividades</a></li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="22_introduccin_a_la_criptografa.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="prctica_1_instalacin_del_servicio_telnet.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">2.3. Secure SHell (SSH)</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id5">
+<div class="iDevice emphasis0">
+<div id="ta5_154" class="block iDevice_content">
+<p>SSH es un protocolo de red que permite el intercambio de información de manera segura. Utiliza encriptación y criptografía de clave pública para hacer la autenticación de la estación remota.</p> <p>Una de las funciones más empleadas es iniciar una sesión remota para ejecutar órdenes. Pero sus capacidades son más amplias, ya que también permite:</p> <ul>
+<li>Transmitir archivos de manera segura.</li><li>Hacer túneles para asegurar cualquier servicio que no se transmita encriptado (HTTP, SMTP, VNC, etc.) o para atravesar cortafuegos que estén bloqueando el protocolo.</li><li>Reenvío automático de sesiones X11.</li><li>Incluso, en utilizar SSHFS, actuar como sistema de ficheros en red.</li></ul> 
+ <p></p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id36">
+<div class="iDevice emphasis0">
+<div id="ta36_85" class="block iDevice_content">
+<h2><span style="vertical-align: inherit;">1. ¿Cómo funciona la encriptación en SSH</span></h2>
+<p><span style="vertical-align: inherit;">El protocolo SSH emplea un modelo cliente-servidor para autenticar las dos partes y cifrar los datos entre ellos.</span></p>
+<p><span style="vertical-align: inherit;">El servidor escucha en un puerto designado para las conexiones. Es responsable de la negociación de la conexión segura, la autenticación, y preparar el entorno si se aceptan las credenciales.</span></p>
+<p><span style="vertical-align: inherit;">El cliente es responsable de comenzar la conexión inicial de TCP con el servidor, de negociar de la conexión segura, de verificar que la identidad del servidor coincide con la información previamente grabada, y de proporcionar credenciales para autenticarse.</span></p>
+<p><span style="vertical-align: inherit;">Una sesión SSH se establece en dos etapas separadas. La primera es la de aprobar y establecer el cifrado para proteger las comunicaciones futuras. La segunda etapa es para autenticar al usuario.</span></p>
+<h3><span style="vertical-align: inherit;">La negociación del cifrado para la sesión SSH</span></h3>
+<p><span style="vertical-align: inherit;">Cuando un cliente se conecta, el servidor responde con las versiones de protocolo que soporta. Si el cliente acepta alguna de las versiones de protocolo soportadas, la conexión continúa. El servidor también proporciona su clave pública, que el cliente puede utilizar para comprobar si el servidor es realmente lo que dice ser. En este punto, las dos partes negocian una clave de sesión.</span></p>
+<p><span style="vertical-align: inherit;">La clave de sesión (simétrica) será utilizada para cifrar toda la sesión. Los pares de claves públicas y privadas que se utilizan en esta negociación son totalmente independientes de las claves SSH utilizadas para autenticar un cliente al servidor. Estas claves públicas usarán para compartir la clave de sesión creada y para cifrar todas las comunicaciones que se lleven a cabo durante la sesión.</span></p>
+<p></p>
+<div class="exe-figure exe-image position-center license-CC-BY" style="width: 599px;"><img alt="Esquema de negocació SSH" src="ssh-esquema.png" title="Negociació SSH" width="599" height="312" />
+<div class="figcaption"><span class="license"><span>licencia:</span><a></a></span></div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id20">
+<div class="iDevice emphasis0">
+<div id="ta20_85" class="block iDevice_content">
+<div class="iDevice emphasis0">
+<div id="ta20_85" class="block iDevice_content">
+<h2><span style="vertical-align: inherit;">2. Métodos de autenticación del servicio SSH</span></h2>
+<p><span style="vertical-align: inherit;">La autenticación es la acción de comprobar la identidad del remitente en una comunicación. El servidor SSH, al recibir una solicitud de conexión nueva, necesita autenticar el origen de esta conexión como paso previo para autorizar o denegar la conexión.</span></p>
+<p><span style="vertical-align: inherit;">El servidor SSH puede emplear varios mecanismos diferentes de autenticación. Entre estos mecanismos destacamos, por orden de preferencia:</span></p>
+<ol>
+<li><span style="vertical-align: inherit;">Autenticación basada en el anfitrión</span></li>
+<li><span style="vertical-align: inherit;">Autenticación de clave pública</span></li>
+<li><span style="vertical-align: inherit;">Autenticación desafío-respuesta</span></li>
+<li><span style="vertical-align: inherit;">Autenticación basada en la contraseña</span></li>
+</ol>
+<p><span style="vertical-align: inherit;">Es muy importante aclarar que antes de la autenticación, tanto a SSH1 como SSH2, se establecerá una comunicación encriptada entre el cliente y el servidor. Para establecer esta conexión encriptada se utilizan técnicas criptográficas de clave pública. Una vez acordada una clave común utilizará una encriptación simétrica para el resto de la sesión.</span></p>
+<h4><span style="vertical-align: inherit;">Autenticación basada en el anfitrión</span></h4>
+<p><span style="vertical-align: inherit;">Esta es la técnica más segura, impide los ataques basados ​​en la suplantación de direcciones IP, DNS y de la tabla de rutas.</span></p>
+<p><span style="vertical-align: inherit;">SSH genera una pareja de claves, pública y privada, durante su instalación en cada equipo. Estas claves identifican la estación en que se ejecuta SSH, no sus usuarios. Son las llamadas claves de anfitrión ( </span><em><span style="vertical-align: inherit;">host</span></em><span style="vertical-align: inherit;"> ) y, si la cuenta de superusuario ( </span><em><span style="vertical-align: inherit;">root</span></em><span style="vertical-align: inherit;"> ) no está comprometido (es decir, si nadie se ha convertido en superusuario de manera fraudulenta), no es necesario cambiarlas.</span></p>
+<p><span style="vertical-align: inherit;">SSH2 puede emplear los algoritmos RSA y DSA, mientras que SSH1 sólo puede utilizar RSA.</span></p>
+<p><span style="vertical-align: inherit;">Con el fin de que la autenticación basada en el anfitrión permita al usuario iniciar sesión mediante SSH, es necesario:</span></p>
+<ol>
+<li><span style="vertical-align: inherit;">Que el servidor pueda verificar la clave de host del cliente. Esta verificación se produce si el servidor registra en el fichero known_hosts la clave de host pública del cliente. (Este archivo se encuentra en </span><code>/etc/SSH/ SSH_known_hosts</code><span style="vertical-align: inherit;">para todo el sistema o bien a </span><code>/.SSH/known_hosts</code><span style="vertical-align: inherit;">para cada usuario).</span></li>
+<li><span style="vertical-align: inherit;">Que la máquina que inicia la conexión esté listada en el fichero </span><code>/etc/ SSH/shosts.equiv</code><span style="vertical-align: inherit;">(o su versión insegura </span><code>/etc/hosts.equiv</code><span style="vertical-align: inherit;">) y el nombre de usuario en la estación cliente y en el servidor sea el mismo. O bien que en servidor, en el directorio del usuario que intenta iniciar sesión, haya el archivo </span><code>.shosts</code><span style="vertical-align: inherit;">(o su versión insegura </span><code>.rhosts</code><span style="vertical-align: inherit;">), en la que aparezcan la máquina cliente y el nombre de usuario en esa estación.</span></li>
+</ol>
+<h4><span style="vertical-align: inherit;">Autenticación de clave pública</span></h4>
+<p><span style="vertical-align: inherit;">Este sistema se basa, como su nombre indica, en técnicas criptográficas de clave pública en que el que se encripta mediante la clave pública sólo se puede descifrar mediante la clave privada asociada, y en el que la clave privada se puede emplear para firmar mensajes para que el receptor pueda autenticar el emisor.</span></p>
+<p><span style="vertical-align: inherit;">Es necesario que el usuario que quiere iniciar una sesión remota en el servidor construya una pareja de claves, normalmente haciendo uso de la herramienta </span><code>SSH-keygen.</code><span style="vertical-align: inherit;">Estas claves se almacenarán en el directorio </span><code>/.SSH/</code><span style="vertical-align: inherit;">(en los archivos </span><code>id_rsa/id_rsa.pub</code><span style="vertical-align: inherit;">, </span><code>id_dsa/id_dsa.pub</code><span style="vertical-align: inherit;">para SSH2 o bien </span><code>identity/identity.pub</code><span style="vertical-align: inherit;">para SSH1).</span></p>
+<p><span style="vertical-align: inherit;">Al construir la pareja de claves, la herramienta </span><code>SSH-keygen</code><span style="vertical-align: inherit;">nos permitirá definir si queremos emplear una clave RSA o DSA. También será posible proteger las claves mediante una palabra de paso que será necesario escribir para desbloquear la clave y poder emplearla. De hecho, esta es una opción muy recomendable; sólo se dejarán claves sin proteger si se trata de las claves de host o bien si se quiere iniciar sesión de manera automatizada (mediante </span><em><span style="vertical-align: inherit;">scripts</span></em><span style="vertical-align: inherit;"> ) sin que sea necesaria la intervención del usuario para desbloquear las claves.</span></p>
+<p><span style="vertical-align: inherit;">Una vez se han generado las claves será necesario transportar la clave pública a la estación en que se quiere iniciar sesión y añadirla al archivo </span><code>/.SSH/</code><code>authorized_keys</code><span style="vertical-align: inherit;">del usuario correspondiente.</span></p>
+<p><span style="vertical-align: inherit;">A partir de este momento el usuario podrá iniciar una sesión SSH sin tener que especificar su contraseña. Pero si ha especificado una frase de paso para bloquear las llaves, aunque será necesario introducirla para poder utilizar las claves.</span></p>
+<div class="exe-block-warning">
+<p><strong><span style="vertical-align: inherit;">RSA y DSA</span></strong></p>
+<p><span style="vertical-align: inherit;">Son dos algoritmos que utilizan la encriptación de clave pública.RSA son las iniciales de los investigadores que desarrollaron el algoritmo: Ron Rivest, Adi Shamir y Leonard Adleman.DSA son las siglas de </span><em><span style="vertical-align: inherit;">digital signature algorithm</span></em><span style="vertical-align: inherit;"> , es decir, algoritmo de firma digital.</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DestacadofpdIdevice" id="id21">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta21_151" class="block iDevice_content">
+<div class="exe-block-info">
+<div class="iDevice emphasis0">
+<div class="iDevice_destacadofpd">
+<div id="ta21_151" class="block iDevice_content">
+<div class="exe-block-info">
+<p><strong><span style="vertical-align: inherit;">archivo </span><code>known_hosts</code></strong></p>
+<p><span style="vertical-align: inherit;">Cuando un cliente SSH establece una conexión por primera vez con un anfitrión, registra en archivo </span><code>known_hosts</code><span style="vertical-align: inherit;">la clave pública de la estación. La próxima vez que se establezca una conexión se comprobará esta clave pública.</span></p>
+</div>
+</div>
+</div>
+</div>
+<p><strong></strong></p>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="22_introduccin_a_la_criptografa.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="prctica_1_instalacin_del_servicio_telnet.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

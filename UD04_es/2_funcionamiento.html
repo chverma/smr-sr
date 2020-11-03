@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2. Funcionamiento | 3. Servei FTP </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-41"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">3. Servei FTP</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">4. Servicio FTP</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1. Introducción</a></li>
+   <li id="active"><a href="2_funcionamiento.html" class="active no-ch">2. Funcionamiento</a></li>
+   <li><a href="3_gestin_de_usuarios_y_permisos.html" class="no-ch">3. Gestión de usuarios y permisos</a></li>
+   <li><a href="4_comandos.html" class="no-ch">4. Comandos</a></li>
+   <li><a href="5_transferencia_de_texto_y_binario.html" class="no-ch">5. Transferencia de texto y binario.</a></li>
+   <li><a href="ejercicios.html" class="no-ch">Ejercicios</a></li>
+   <li><a href="prctica.html" class="no-ch">Práctica</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="1_introduccin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_gestin_de_usuarios_y_permisos.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">2. Funcionamiento</h1></div>
+<div class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id91">
+<div class="iDevice emphasis_debesconocerfpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Recuerda: puerto de red</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta91_129" class="block iDevice_content">
+<p>Un puerto de red es una interfaz utilizada para comunicarse con un programa a través de una red. Suelen estar numerados y una determinada implementación de protocolo de transmisión de red (por ejemplo, TCP o UDP) asigna alguno de estos números a la información que envía; por ejemplo, el software de correo electrónico utiliza el puerto 25.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id92">
+<div class="iDevice emphasis0">
+<div id="ta92_154" class="block iDevice_content">
+<p>A diferencia de la mayoría de los protocolos utilizados en Internet, el servicio de protocolo de transferencia de archivos (FTP, File Transfer Protocol) necesita utilizar múltiples puertos de red para establecer las comunicaciones y las diferentes transferencias de datos.</p> <p>Por defecto, los puertos que utiliza un servidor FTP son el 20 y el 21 donde, desde el punto de vista del servidor, el puerto 21 (también llamado puerto de órdenes) es el encargado de escuchar (o recibir) las órdenes provenientes del cliente así como de iniciar la conexión, mientras que el puerto 20 es el seleccionado para arrancar la conexión de datos con el cliente. Paralelamente, cualquier petición de datos desde el servidor hacia el cliente se realiza mediante el puerto 20, esto es el puerto de datos.</p> <div class="exe-figure exe-image position-center license-CC-BY-NC-SA" style="width: 600px;">
+<div class="figcaption header"><strong>Puertos del protocolo de transferencia de archivos</strong></div>
+<img alt="Ports del protocol de transferència de fitxers " height="451" src="smxm7uf1ud2_im16.png" width="600"/>
+<div class="figcaption"><span class="title"><em>Puertos del protocolo de transferencia de archivos</em></span> <span class="license"><span>(</span><a>CC BY-NC-SA</a><span></span></span></div>
+</div> 
+ <p>Llegados a este punto, cabe destacar que tanto el puerto elegido para la conexión de datos como la modalidad en que se inician las conexiones dependen de la opción de que el cliente seleccione para la transferencia de datos desde el servidor de archivos, esto es, una transferencia en modo activo o pasivo.</p> <p>Cuando establecemos una comunicación con el servidor de archivos en modo activo establecen dos conexiones diferentes donde el servidor establece la conexión desde el puerto 20 a un puerto aleatorio sin privilegios especificado por el ordenador que actúa como cliente.</p> <div class="block iDevice_content" id="ta3_85">
+<div class="exe-figure exe-image position-center license-CC-BY-SA" style="width: 639px;">
+<div class="figcaption header"><strong>modo activo</strong></div>
+<img alt="Diagrama de connexió en el mode actiu" height="388" src="1000px-Activo.svg.png" width="639"/>
+<div class="figcaption"><a></a><span class="license"><span>(</span><a>CC BY-SA</a><span>)</span></span></div>
+</div>
+<p></p><p>En el modo pasivo, es el ordenador cliente quien inicia la conexión dirigiéndose al servidor de archivos para solicitar el acceso a los datos y la apertura de los puertos correspondientes para el establecimiento de las conexiones de control y datos. En consecuencia, los cortafuegos presentes en los ordenadores cliente no detectan ningún tipo de conexión desde el exterior que pueda ser considerada peligrosa.</p><div class="exe-figure exe-image position-center license-CC-BY-SA" style="width: 640px;">
+<div class="figcaption header"><strong>modo pasivo</strong></div>
+<img alt="Mode passiu" height="392" src="640px-Pasivo.svg.png" width="640"/>
+<div class="figcaption"><a>De Gabiwxp - Trabajo propio, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=5512764.</a><span class="title"><em></em></span> <span class="license"><span>(</span><a>CC BY-SA</a><span>)</span></span></div>
+</div>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id2">
+<div class="iDevice emphasis_debesconocerfpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Cortafuegos</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta2_129" class="block iDevice_content">
+<p>Dispositivo configurado para controlar conexiones de datos según una política de seguridad. La tarea básica de un cortafuegos (firewalls) -en forma de hardware o software- es controlar el tráfico entre redes estableciendo diferentes niveles de confianza como, por ejemplo, entre la red de Internet y una red de área local.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="1_introduccin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_gestin_de_usuarios_y_permisos.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3. Acceso remoto con interfaz gráfica </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="en" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Skip navigation</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Servicios de control y acceso remoto</a></li>
+   <li><a href="1_introduccin.html" class="daddy">1. Introducción</a>
+   <ul class="other-section">
+      <li><a href="11_usos_ms_frecuentes_del_acceso_remoto_a_ordenadores.html" class="no-ch">1.1. Usos más frecuentes del acceso remoto a ordenadores</a></li>
+      <li><a href="12_diferentes_tipos_de_acceso_remoto.html" class="no-ch">1.2. Diferentes tipos de acceso remoto</a></li>
+   </ul>
+   </li>
+   <li><a href="2_acceso_remoto_a_travs_del_terminal.html" class="daddy">2. Acceso remoto a través del terminal</a>
+   <ul class="other-section">
+      <li><a href="21_telnet.html" class="no-ch">2.1. Telnet</a></li>
+      <li><a href="22_introduccin_a_la_criptografa.html" class="no-ch">2.2. Introducción a la criptografía</a></li>
+      <li><a href="23_secure_shell_ssh.html" class="no-ch">2.3. Secure SHell (SSH)</a></li>
+      <li><a href="prctica_1_instalacin_del_servicio_telnet.html" class="no-ch">Práctica 1: Instalación del servicio Telnet</a></li>
+      <li><a href="prctica_2_instalacin_del_servicio_ssh.html" class="no-ch">Práctica 2: Instalación del servicio SSH</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="3_acceso_remoto_con_interfaz_grfica.html" class="active daddy">3. Acceso remoto con interfaz gráfica</a>
+   <ul>
+      <li><a href="prctica_3_acceso_remoto_con_terminal_grfico.html" class="no-ch">Práctica 3: Acceso remoto con terminal gráfico</a></li>
+   </ul>
+   </li>
+   <li><a href="actividades.html" class="no-ch">actividades</a></li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="prctica_2_instalacin_del_servicio_ssh.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="prctica_3_acceso_remoto_con_terminal_grfico.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">3. Acceso remoto con interfaz gráfica</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id8">
+<div class="iDevice emphasis0">
+<div id="ta8_154" class="block iDevice_content">
+<p><span style="vertical-align: inherit;">Si la red de comunicaciones tiene un ancho de banda suficiente y un retraso razonable, se pueden utilizar herramientas que permiten trabajar con aplicaciones que se ejecutan en un equipo remoto pero muestran su interfaz gráfica en un terminal local.</span></p>
+<p><span style="vertical-align: inherit;">Es posible que todo el escritorio visualizado se corresponda con el escritorio de un equipo remoto o combinar en el mismo escritorio aplicaciones locales y remotas. En este último caso, incluso las aplicaciones remotas pueden estar ejecutando en diferentes equipos.</span></p>
+<p><span style="vertical-align: inherit;">Existen diferentes herramientas y protocolos para llevar a cabo la administración remota mediante una interfaz gráfica. En todos los casos la seguridad debe ser un punto fundamental a considerar, dado que para la misma función de la aplicación estaremos transportando por la red la entrada / salida con el equipo remoto.</span></p>
+<p><span style="vertical-align: inherit;">Algunas de las posibilidades para llevar a cabo la administración mediante una interfaz gráfica son:</span></p>
+<ul>
+<li><span style="vertical-align: inherit;">VNC</span></li>
+<li><span style="vertical-align: inherit;">FreeNX</span></li>
+<li><span style="vertical-align: inherit;">RDP</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id9">
+<div class="iDevice emphasis0">
+<div id="ta9_154" class="block iDevice_content">
+<div class="iDevice emphasis0">
+<div id="ta9_154" class="block iDevice_content">
+<h2><span style="vertical-align: inherit;">VNC (Virtual Network Computing)</span></h2>
+<p><span style="vertical-align: inherit;">VNC es un sistema para ver, y en su caso también controlar, un escritorio remoto. Originalmente fue desarrollado por Olivetti y hay implementaciones gratuitas de las herramientas que permiten trabajar con VNC en sistemas operativos diferentes.</span></p>
+<p><span style="vertical-align: inherit;">Esta aplicación permite acceder desde un ordenador llamado cliente a otra máquina llamada servidor, separados físicamente pero, sin embargo, conectados de forma. Una vez se ha establecido la comunicación, el equipo cliente puede utilizar el equipo servidor sin limitación, salvo las impuestas por el ancho de banda de la red. El resultado es una visualización en pantalla del equipo remoto, del escritorio y de todos sus programas. Para lograr esto, es necesario instalar dos programas: un servidor VNC en la máquina a la que queramos acceder y un visualizador VNC en la máquina cliente. Si utilizamos un visualizador en un sistema operativo dado y un servidor en otro distinto, ejecutaremos todo el sistema servidor en el cliente. De este modo, es posible ejecutar un sistema Windows completo desde un Macintosh o GNU / Linux,o hacer cualquier combinación que podamos imaginar. Como se puede ver en la figura 34, se puede ejecutar un sistema GNU / Linux desde un equipo con el sistema operativo MacOS o Windows.</span></p>
+<h3><span style="vertical-align: inherit;">Funcionamiento del protocolo VNC</span></h3>
+<p><span style="vertical-align: inherit;">El protocolo de red que se utiliza, RFB (r </span><em><span style="vertical-align: inherit;">emote framebuffer protocolo</span></em><span style="vertical-align: inherit;"> ), también es libre. Aunque las funciones iniciales del protocolo RFB se limitaban a transmitir los acontecimientos desencadenados por el usuario en el teclado y el ratón locales en la estación remota, ya enviar en dirección contraria el contenido gráfico de la pantalla, las últimas versiones han sido ampliadas para soportar más funcionalidades, como por ejemplo la transferencia de archivos.</span></p>
+<p><span style="vertical-align: inherit;">La memoria de imagen ( </span><em><span style="vertical-align: inherit;">framebuffer</span></em><span style="vertical-align: inherit;"> ) es el área de memoria que almacena los datos que definen la imagen gráfica que aparece en la pantalla. Normalmente todas las pantallas actuales están basadas en píxeles, es decir, muestran mapas de bits en vez de imágenes vectoriales.</span></p>
+<p><span style="vertical-align: inherit;">La memoria de imagen contiene la información necesaria para definir el estado de cada píxel de la pantalla. La cantidad de información necesaria dependerá de la resolución y la profundidad de color (la cantidad de bits necesarios para codificar el color, y quizás la transparencia, de cada píxel).</span></p>
+<p><span style="vertical-align: inherit;">Dado que VNC está basado en una memoria de imagen, puede trabajar con cualquier sistema de ventanas, ya sea X Window, Windows u otro. En este sistema siempre llama cliente la estación en que se encuentra el usuario (equipo local) y se denomina servidor del equipo que define el contenido de la pantalla (equipo remoto). Esta nomenclatura es inversa a la que utiliza el sistema X Window.</span></p>
+<p><span style="vertical-align: inherit;">Todo el sistema está pensado para trabajar con clientes ligeros de manera que el cliente pueda implementar sin muchos recursos. De hecho todo el protocolo y el funcionamiento del sistema intentan ser muy sencillos. El pilar fundamental son las actualizaciones gráficas que el servidor envía hacia el cliente, en forma de rectángulos, para modificar los datos de la memoria de imagen. Estos mensajes pueden emplear diferentes codificaciones, pero hay unas básicas que todos los clientes y servidores VNC deben conocer.</span></p>
+<p><span style="vertical-align: inherit;">Una característica fundamental del sistema VNC es que el cliente no conserva ningún estado. Así es posible cerrar un cliente y volverlo a abrir, incluso en otro equipo, como si se tratara de un monitor virtual.</span></p>
+<p><span style="vertical-align: inherit;">En los sistemas GNU / Linux es posible exportar mediante VNC el escritorio actual o incluso un terminal de texto, o bien crear un escritorio virtual nuevo. Los sistemas Windows no permiten la creación de escritorios virtuales nuevos, sólo permiten exportar en red el único escritorio disponible. En el momento de exportar un escritorio se pueden definir dos contraseñas diferentes, una para aquellos usuarios que podrán controlar de forma remota este escritorio y otra para aquellos usuarios que sólo lo podrán ver, pero no interactuar con el teclado y el ratón .</span></p>
+<p><span style="vertical-align: inherit;">El proceso para utilizar VNC es muy simple:</span></p>
+<ol>
+<li><span style="vertical-align: inherit;">En la estación remota hay que ejecutar un servidor VNC para exportar el escritorio de trabajo o uno nuevo.</span></li>
+<li><span style="vertical-align: inherit;">En la estación local se utilizará un cliente VNC para interactuar con el servidor remoto. Obsérvese que RFB no es un protocolo seguro. Al usar VNC en una red que no sea de confianza, habrá que combinar su uso con SSH u otra tecnología para crear una VPN.</span></li>
+</ol>
+<p><span style="vertical-align: inherit;">La mayor parte de servidores VNC incluye un pequeño servidor web que ofrece la descarga de un applet Java que se puede usar como cliente VNC. De este modo, en el ordenador local hace falta un navegador con soporte Java para poder acceder al escritorio remoto.</span></p>
+<p><span style="vertical-align: inherit;">GPL: La licencia pública general (GPL, del inglés general public license) es un tipo de licencia para software que permite la copia, distribución (comercial o no) y modificación del código, siempre que cualquier modificación se continúe distribuyendo con la misma licencia GPL. La licencia GPL no permite la distribución de programas ejecutables sin el código fuente correspondiente ni con una oferta de cómo obtenerlo gratuitamente.</span></p>
+<h3><span style="vertical-align: inherit;">VNC, muchas herramientas y diferentes implementaciones</span></h3>
+<p><span style="vertical-align: inherit;">Si el desarrollo original de VNC tiene algún heredero oficial, este es RealVNC. Un producto desarrollado por la compañía del mismo nombre que está formada por algunos de los desarrolladores originales. Las herramientas de RealVNC se ofrecen con licencias diferentes: la edición Free, bajo licencia GPL y el resto, con licencias privativas.</span></p>
+<p><span style="vertical-align: inherit;">Otra implementación bastante extendida es TightVNC, software libre con licencia GPL que, aunque es plenamente compatible con las herramientas originales, introduce algunas extensiones al protocolo RFB. Estas extensiones sólo se podrán emplear en utilizar TightVNC, tanto en cliente como en el servidor. Entre las extensiones introducidas por TightVNC hay codificaciones nuevas que reducen la carga de la red y la posibilidad de transmitir archivos.</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id10">
+<div class="iDevice emphasis0">
+<div id="ta10_154" class="block iDevice_content">
+<div class="iDevice emphasis0">
+<div id="ta10_154" class="block iDevice_content">
+<h2><span style="vertical-align: inherit;">RDP (Remote Desktop Protocol)</span></h2>
+<p><em><span style="vertical-align: inherit;">Remote Desktop protocolarias</span></em><span style="vertical-align: inherit;"> l (RDP) es un protocolo propietario desarrollado por Microsoft que permite la comunicación en la ejecución de una aplicación entre un terminal (mostrando la información procesada que recibe del servidor) y un servidor Windows (recibiendo la información dada por el usuario en el terminal mediante el ratón o el teclado).</span></p>
+<p><span style="vertical-align: inherit;">El modo de funcionamiento del protocolo es sencillo. La información gráfica que genera el servidor es convertida a un formato propio RDP y enviada a través de la red al terminal, que interpretará la información contenida en el paquete del protocolo para reconstruir la imagen a mostrar en la pantalla del terminal. En cuanto a la introducción de órdenes en el terminal por parte del usuario, las teclas que pulse el usuario en el teclado del terminal así como los movimientos y pulsaciones de ratón son redirigidos al servidor, permitiendo el protocolo un cifrado de los mismos por motivos de seguridad. El protocolo también permite que toda la información que intercambien cliente y servidor sea comprimida para un mejor rendimiento en las redes menos veloces.</span></p>
+<p><span style="vertical-align: inherit;">Este servicio utiliza por defecto el puerto TCP 3389 en el servidor para recibir las peticiones.1 Una vez iniciada la sesión desde un punto remoto del ordenador servidor mostrará la pantalla de bienvenida de Windows, no se verá lo que el usuario está realizando de forma remota.</span></p>
+<p><span style="vertical-align: inherit;">Este servicio tiene diferentes tipos de aplicaciones: se utiliza frecuentemente para el acceso remoto a la administración de equipos, pero también es cada vez más utilizado en la gestión de servicios de terminal o clientes ligeros ( </span><em><span style="vertical-align: inherit;">thin clients</span></em><span style="vertical-align: inherit;"> ).</span></p>
+<h2><span style="vertical-align: inherit;">características</span></h2>
+<ul>
+<li><span style="vertical-align: inherit;">Permite el uso de colores de 8, 16, 24 y 32 bits.</span></li>
+<li><span style="vertical-align: inherit;">Cifrado de 128 bits utilizando el algoritmo criptográfico RC4. Los clientes más antiguos pueden utilizar cifrados más débiles.</span></li>
+<li><span style="vertical-align: inherit;">Permite seguridad a nivel de transporte Transport Layer Security (TLS).</span></li>
+<li><span style="vertical-align: inherit;">El redireccionamiento del audio permite al usuario ejecutar un programa de audio en una ventana remota y escuchar el sonido en el ordenador local.</span></li>
+<li><span style="vertical-align: inherit;">El redireccionamiento del sistema de archivos permite a los usuarios utilizar sus archivos locales en una ventana remota.</span></li>
+<li><span style="vertical-align: inherit;">Permite al usuario utilizar la impresora local al estar conectado al sistema remoto.</span></li>
+<li><span style="vertical-align: inherit;">El redireccionamiento de puertos permite utilizar los puertos serie y paralelo directamente.</span></li>
+<li><span style="vertical-align: inherit;">El portapapeles puede compartirse entre los ordenadores local y remoto.</span></li>
+<li><span style="vertical-align: inherit;">Programas remotos: Aplicaciones con archivos del lado del cliente.</span></li>
+<li><span style="vertical-align: inherit;">Las aplicaciones ( </span><em><span style="vertical-align: inherit;">seamless windows</span></em><span style="vertical-align: inherit;"> ) remotas pueden funcionar en una máquina cliente servida por una conexión remota.</span></li>
+<li><span style="vertical-align: inherit;">Soporte de varios monitores. La sesión puede mostrarse en dos monitores.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id11">
+<div class="iDevice emphasis0">
+<div id="ta11_154" class="block iDevice_content">
+<div class="iDevice emphasis0">
+<div id="ta11_154" class="block iDevice_content">
+<h2><span style="vertical-align: inherit;">Team Viewer</span></h2>
+<p><span style="vertical-align: inherit;">TeamViewer es un software que su función es conectarse remotamente a otro equipo. Entre sus funciones están: compartir y controlar escritorios, reuniones en línea, videoconferencias y transferencias de archivos entre ordenadores.</span></p>
+<h3><span style="vertical-align: inherit;">características</span></h3>
+<p><span style="vertical-align: inherit;">TeamViewer está disponible para los sistemas operativos Microsoft Windows, Mac OS X, Linux, iOS, Android, Windows Phone 8, Windows 10 Mobile, BlackBerry y Windows RT. También es posible el acceso a un equipo remoto mediante un navegador web. Aunque el principal objetivo de la aplicación es el control remoto, también incluye funciones de trabajo en equipo y presentación.</span></p>
+<p><span style="vertical-align: inherit;">TeamViewer puede ser utilizado por los usuarios no comerciales sin ningún tipo de coste, sin embargo dispone de versiones Bussines, Premium y Corporate.</span></p>
+<h3><span style="vertical-align: inherit;">funcionamiento</span></h3>
+<p><span style="vertical-align: inherit;">El software se puede instalar con un procedimiento de instalación ordinario, aunque la versión "Quick Support" ejecutará sin necesidad de instalación. Para conectarse a otro equipo, hay que TeamViewer se ejecute en ambas máquinas.</span></p>
+<p><span style="vertical-align: inherit;">La instalación de TeamViewer, requiere acceso de administrador, pero una vez instalado puede ser ejecutado por cualquier usuario.</span></p>
+<p><span style="vertical-align: inherit;">Cuando el software se inicia a un ordenador, genera un ID y contraseña (el usuario puede definir una propia si lo desea). Para establecer una conexión entre un equipo local y uno remoto, el usuario del equipo local se pondrá en contacto con el otro e introducir el ID y contraseña de éste, mientras que el equipo remoto requiere el ID y contraseña del local, es decir, a la inversa.</span></p>
+<p><span style="vertical-align: inherit;">Para empezar una reunión en línea, el moderador proporciona el ID de la reunión los participantes, los cuales se añaden al encuentro a partir de la versión completa de TeamViewer o la versión para navegador mediante el ID mencionada. También es posible programar una reunión anticipadamente.</span></p>
+<h3><span style="vertical-align: inherit;">seguridad</span></h3>
+<p><span style="vertical-align: inherit;">Las sesiones de TeamViewer se codifican mediante el algoritmo RSA (1024 bits) de cifrado de clave pública, y AES (256 bits). </span></p>
+<p><span style="vertical-align: inherit;">En la configuración predeterminada, el software utiliza uno de los servidores de TeamViewer.com para conectar el equipo local y el remoto. No obstante, en el 70% de los casos después del de acceder al protocolo de enlace, se establece una conexión directa vía UDP o TCP. El resto de conexiones se enrutan a través del router de la red de TeamViewer GmbH (Tunnel TCP o HTTP).</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id35">
+<div class="iDevice emphasis0">
+<div id="ta35_85" class="block iDevice_content">
+<div class="iDevice emphasis0">
+<div id="ta35_85" class="block iDevice_content">
+<h2><span style="vertical-align: inherit;">Escritorio remoto de Chrome</span></h2>
+<p><span style="vertical-align: inherit;">Chrome Remote Desktop permite a los usuarios acceder de forma remota otro ordenador a través del navegador Chrome o Chromebook. Los ordenadores pueden estar disponibles sobre una base ad hoc a corto plazo para escenarios como el apoyo a distancia, o sobre una base más a largo plazo para el acceso remoto a las aplicaciones y archivos. Todas las conexiones están totalmente asegurados.</span></p>
+<p><span style="vertical-align: inherit;">Chrome Remote Desktop es totalmente multiplataforma. Proporcionar asistencia a los usuarios de Windows, Mac y Linux remotas, o acceder a su Windows (XP y superior) y Mac (OS 10.6 y 10 por encima de) los escritorios en cualquier momento, todo ello desde el navegador Chrome en prácticamente cualquier dispositivo, incluyendo los Chromebook.</span></p>
+<p><span style="vertical-align: inherit;">Fuente: </span><a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;pto=aue&amp;rurl=translate.google.es&amp;sl=ca&amp;sp=nmt4&amp;tl=es&amp;u=https://alternativeto.net/software/chrome-remote-desktop/&amp;usg=ALkJrhgaVzshJUv4ZvLUJbXApiBzFAsGrw"><span style="vertical-align: inherit;">https://alternativeto.net/software/chrome-remote-desktop/</span></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="prctica_2_instalacin_del_servicio_ssh.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="prctica_3_acceso_remoto_con_terminal_grfico.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Práctica 3: Acceso remoto con terminal gráfico </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="en" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-11"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Skip navigation</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Servicios de control y acceso remoto</a></li>
+   <li><a href="1_introduccin.html" class="daddy">1. Introducción</a>
+   <ul class="other-section">
+      <li><a href="11_usos_ms_frecuentes_del_acceso_remoto_a_ordenadores.html" class="no-ch">1.1. Usos más frecuentes del acceso remoto a ordenadores</a></li>
+      <li><a href="12_diferentes_tipos_de_acceso_remoto.html" class="no-ch">1.2. Diferentes tipos de acceso remoto</a></li>
+   </ul>
+   </li>
+   <li><a href="2_acceso_remoto_a_travs_del_terminal.html" class="daddy">2. Acceso remoto a través del terminal</a>
+   <ul class="other-section">
+      <li><a href="21_telnet.html" class="no-ch">2.1. Telnet</a></li>
+      <li><a href="22_introduccin_a_la_criptografa.html" class="no-ch">2.2. Introducción a la criptografía</a></li>
+      <li><a href="23_secure_shell_ssh.html" class="no-ch">2.3. Secure SHell (SSH)</a></li>
+      <li><a href="prctica_1_instalacin_del_servicio_telnet.html" class="no-ch">Práctica 1: Instalación del servicio Telnet</a></li>
+      <li><a href="prctica_2_instalacin_del_servicio_ssh.html" class="no-ch">Práctica 2: Instalación del servicio SSH</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_acceso_remoto_con_interfaz_grfica.html" class="current-page-parent daddy">3. Acceso remoto con interfaz gráfica</a>
+   <ul>
+      <li id="active"><a href="prctica_3_acceso_remoto_con_terminal_grfico.html" class="active no-ch">Práctica 3: Acceso remoto con terminal gráfico</a></li>
+   </ul>
+   </li>
+   <li><a href="actividades.html" class="no-ch">actividades</a></li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="3_acceso_remoto_con_interfaz_grfica.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="actividades.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Práctica 3: Acceso remoto con terminal gráfico</h1></div>
+<div class="iDevice_wrapper objectivesIdevice em_iDevice" id="id32">
+<div class="iDevice emphasis1" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">objetivos</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta32_44_2" class="block iDevice_content">
+<p></p> <ul>
+<li>Conocer los diferentes protocolos y aplicaciones de acceso remoto con terminal gráfico.</li><li>Trabajar con varios escenarios y elegir la mejor opción para cada uno de ellos.</li><li>Trabajar en equipo.</li></ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper preknowledgeIdevice em_iDevice" id="id34">
+<div class="iDevice emphasis1" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">requisitos</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta34_46_2" class="block iDevice_content">
+<p>Será necesario disponer de ordenadores con diferentes familias de sistemas operativos: Microsoft Windows, GNU / Linux. En su defecto se pueden utilizar máquinas virtuales.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper activityIdevice em_iDevice" id="id17">
+<div class="iDevice emphasis1" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">enunciado</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta17_46_2" class="block iDevice_content">
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta17_46_2" class="block iDevice_content">
+<h4><span style="vertical-align: inherit;">Acceso remoto a Ubuntu (VNC)</span></h4>
+<ul>
+<li><span style="vertical-align: inherit;">Guía de instalación: </span><a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;pto=aue&amp;rurl=translate.google.es&amp;sl=ca&amp;sp=nmt4&amp;tl=es&amp;u=http://somebooks.es/habilitar-escritorio-remoto-ubuntu-16-04-lts/&amp;usg=ALkJrhhQWPe7_Yiz6oUCWBrnnJMVd8Wq4Q"><span style="vertical-align: inherit;">http://somebooks.es/habilitar-escritorio-remoto-ubuntu-16-04-lts/</span></a></li>
+<li><span style="vertical-align: inherit;">Cliente VNC: https://pendriveapps.com/portable-vnc-viewer-tightvnc/</span></li>
+<li><span style="vertical-align: inherit;">Solución a un problema con VNC Server: http://www.bonusbits.com/wiki/KB:Fix_VNC_Desktop_Sharing_on_Ubuntu_Desktop_14.04#Solution_2</span></li>
+<li><span style="vertical-align: inherit;">Recurso: https://es.wikipedia.org/wiki/VNC</span></li>
+</ul>
+<h4><span style="vertical-align: inherit;">Acceso remoto a Windows (RDP)</span></h4>
+<ul>
+<li><span style="vertical-align: inherit;">Guía de instalación: http://somebooks.es/habilitar-el-escritorio-remoto-en-windows-8-1/</span></li>
+<li><span style="vertical-align: inherit;">Recurso:  </span><a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;pto=aue&amp;rurl=translate.google.es&amp;sl=ca&amp;sp=nmt4&amp;tl=es&amp;u=https://es.wikipedia.org/wiki/Remote_Desktop_Protocol&amp;usg=ALkJrhjiBoOfWR7HbMrF-BDXPyPn0cfrOg"><span style="vertical-align: inherit;">https://es.wikipedia.org/wiki/Remote_Desktop_Protocol</span></a></li>
+</ul>
+<h4><span style="vertical-align: inherit;">TeamViewer 13</span></h4>
+<p><span style="vertical-align: inherit;">TeamViewer es un software que su función es conectarse remotamente a otro equipo. Entre sus funciones están: compartir y controlar escritorios, reuniones en línea, videoconferencias y transferencias de archivos entre ordenadores. A diferencia del resto de sistemas la conexión no se hace punto a punto sino mediante un servidor que hace de intermediario, por ese motivo es más recomendable en entornos con NAT y cortafuegos.</span></p>
+<h3><span style="vertical-align: inherit;">actividad</span></h3>
+<ul>
+<li><span style="vertical-align: inherit;">Junto a un compañero prueba los diversos sistemas de control remoto en diversos escenarios:</span><br />
+<ul>
+<li><span style="vertical-align: inherit;">Controlar un equipo con Ubuntu desde Window con VNC.</span></li>
+<li><span style="vertical-align: inherit;">Controlar un equipo con Windows desde Ubuntu.</span></li>
+<li><span style="vertical-align: inherit;">...</span></li>
+</ul>
+</li>
+<li><span style="vertical-align: inherit;">Realiza una memoria de la práctica añadiendo capturas de las diferentes pruebas realizadas, explicando el motivo de cada elección y describiendo los problemas detectados y su solución.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="3_acceso_remoto_con_interfaz_grfica.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="actividades.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

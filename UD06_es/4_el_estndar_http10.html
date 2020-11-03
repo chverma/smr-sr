@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4. El estándar HTTP/1.0 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-5"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">6. Servei HTTP</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1. Introducción</a></li>
+   <li><a href="2_el_protocol_http.html" class="daddy">2. El protocol HTTP</a>
+   <ul class="other-section">
+      <li><a href="21_un_poco_de_historia.html" class="no-ch">2.1. Un poco de historia</a></li>
+      <li><a href="22_caractersitcas_de_http.html" class="no-ch">2.2. Caracterísitcas de HTTP</a></li>
+   </ul>
+   </li>
+   <li><a href="3_etapas_de_una_transaccin_http.html" class="no-ch">3. Etapas de una transacción HTTP</a></li>
+   <li id="active"><a href="4_el_estndar_http10.html" class="active daddy">4. El estándar HTTP/1.0</a>
+   <ul>
+      <li><a href="prctica_1_transacciones_http.html" class="no-ch">Práctica 1: Transacciones HTTP</a></li>
+   </ul>
+   </li>
+   <li><a href="5_instalacin_y_configuracin_de_apache2.html" class="daddy">5. Instalación y configuración de Apache2</a>
+   <ul class="other-section">
+      <li><a href="prctica_2_instalacin_de_apache2.html" class="no-ch">Práctica 2: Instalación de Apache2</a></li>
+   </ul>
+   </li>
+   <li><a href="6_servidores_virtuales.html" class="daddy">6. Servidores virtuales</a>
+   <ul class="other-section">
+      <li><a href="prctica_3_configuracin_bsica.html" class="no-ch">Práctica 3: Configuración básica</a></li>
+   </ul>
+   </li>
+   <li><a href="7_acceso_annimo_y_autenticado_formas_de_autenticacin.html" class="daddy">7. Acceso anónimo y autenticado. Formas de autenticación.</a>
+   <ul class="other-section">
+      <li><a href="prctica_4_control_de_acceso_autorizacin_y_autenticacin.html" class="no-ch">Práctica 4: Control de acceso, autorización y autenticación</a></li>
+   </ul>
+   </li>
+   <li><a href="8_ejecucin_de_cdigo_scripts_de_servidor_y_de_cliente.html" class="daddy">8. Ejecución de código. Scripts de servidor y de cliente.</a>
+   <ul class="other-section">
+      <li><a href="prctica_5_ejecucin_del_cdigo_en_el_cliente_y_en_el_servidor.html" class="no-ch">Práctica 5: Ejecución del código en el cliente y en el servidor</a></li>
+   </ul>
+   </li>
+   <li><a href="9_establecimiento_de_conexiones_seguras_.html" class="daddy">9. Establecimiento de conexiones seguras .</a>
+   <ul class="other-section">
+      <li><a href="prctica_6_assegurant_les_comunicacions.html" class="no-ch">Pràctica 6: Assegurant les comunicacions</a></li>
+   </ul>
+   </li>
+   <li><a href="mapa_conceptual.html" class="no-ch">Mapa conceptual</a></li>
+   <li><a href="actividades.html" class="no-ch">actividades</a></li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="3_etapas_de_una_transaccin_http.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="prctica_1_transacciones_http.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">4. El estándar HTTP/1.0</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id8">
+<div class="iDevice emphasis0">
+<div id="ta8_154" class="block iDevice_content">
+<p><span style="vertical-align: inherit;">El estándar HTTP / 1.0 recoge, únicamente, tres órdenes que representan las operaciones de recepción, envío de la información y revisión del estado.</span></p>
+<ul>
+<li><strong><span style="vertical-align: inherit;">Método de petición GET</span></strong><span style="vertical-align: inherit;"> . Se utiliza para solicitar un recurso del servidor. Siempre que pulsamos sobre un enlace o escribimos una dirección de Internet en la barra de navegación de un navegador web, estamos utilizando este método de petición. Como resultado, el servidor HTTP envía el documento correspondiente a la dirección de Internet seleccionada.</span></li>
+<li><strong><span style="vertical-align: inherit;">Método de petición HEAD</span></strong><span style="vertical-align: inherit;"> . Solicita información sobre un recurso como, por ejemplo, su tamaño, el tipo, la fecha de modificación, etc. Suele ser utilizado por los gestores de memorias caché de páginas o por los servidores intermediarios (proxy server) para conocer cuando es necesario actualizar la copia que se mantiene de un archivo determinado.</span></li>
+<li><strong><span style="vertical-align: inherit;">Método de petición POST</span></strong><span style="vertical-align: inherit;"> . Se utiliza para enviar información al servidor, como por ejemplo, los datos contenidos en un formulario. El servidor pasará esta información a un proceso encargado de su tratamiento (suele ser una aplicación del servidor). La operación que se llevará a cabo con la información proporcionada dependerá de la dirección de Internet (URL) utilizada, principalmente, en los formularios.</span></li>
+</ul>
+<p><span style="vertical-align: inherit;">Cabe decir que un cliente web selecciona automáticamente las órdenes HTTP necesarias para recoger la información para el usuario. Por tanto, ante la activación de un enlace, siempre se ejecuta una operación GET con el fin de recoger el documento correspondiente.</span></p>
+<p><span style="vertical-align: inherit;">Tal y como muestra la siguiente imagen, la comunicación entre el navegador y el servidor se lleva a cabo en dos etapas. Por un lado, el navegador hace una solicitud HTTP que, posteriormente, es procesada por el servidor que, en consecuencia, envía una respuesta HTTP.</span></p>
+<p></p>
+<p></p>
+<figure class="exe-figure exe-image position-center license-CC-BY-SA" style="width: 600px;">
+<figcaption class="figcaption header"><strong>Comunicación navegador - servidor</strong></figcaption>
+<img alt="Comunicació navegador - servidor" src="smx_m07u3-13_1.png" width="600" height="270" />
+<figcaption class="figcaption"><a></a><a class="title" href="Comunicació navegador - servidor" rel="noopener noreferrer" target="_blank"><em></em></a> <span class="license"><span>(</span><a>CC BY-SA</a><span>)</span></span></figcaption>
+</figure>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;" class="">Si evaluaremos con detenimiento la solicitud HTTP nos encontraríamos con un conjunto de líneas de texto que el navegador envía al servidor. Por un lado, encontraríamos una </span></span><strong><span style="vertical-align: inherit;"><span style="vertical-align: inherit;" class="">línea de solicitud</span></span></strong><span style="vertical-align: inherit;"><span style="vertical-align: inherit;" class=""> , es decir, una línea que especifica el tipo de documento solicitado, el </span></span><strong><span style="vertical-align: inherit;"><span style="vertical-align: inherit;" class="">método</span></span></strong><span style="vertical-align: inherit;"><span style="vertical-align: inherit;" class=""> que se aplicará y la </span></span><strong><span style="vertical-align: inherit;"><span style="vertical-align: inherit;" class="">versión del protocolo</span></span></strong><span style="vertical-align: inherit;"><span style="vertical-align: inherit;" class=""> utilizado. Esta línea estará integrada por tres elementos separados por un espacio, es decir, el método, la dirección web y el protocolo HTTP utilizado por el cliente.</span></span></p>
+<p><strong></strong><span style="vertical-align: inherit;">A continuación, encontraríamos los campos del encabezado de solicitud, es decir, un conjunto de líneas opcionales que permiten aportar información adicional sobre la solicitud y / o el cliente (navegador, sistema operativo, etc.). Cada una de estas líneas estará formada por un nombre que describe el tipo de encabezado, seguido por dos puntos (:) y por el valor del encabezado.</span></p>
+<p><span style="vertical-align: inherit;">Finalmente, el cuerpo de la solicitud es un conjunto de líneas opcionales separadas de las líneas anteriores con una línea en blanco. Su finalidad es permitir que se envíen datos al servidor utilizando un formulario durante la transmisión.</span></p>
+<p><span style="vertical-align: inherit;">Un ejemplo de solicitud HTTP sería el siguiente:</span></p>
+<div class="highlighted-code language-c">
+<div>
+<pre class="  language-c"><code class="  language-c">GET http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>pego<span class="token punctuation">.</span>org HTTP<span class="token operator">/</span><span class="token number">1.0</span>
+Accept <span class="token punctuation">:</span> Text<span class="token operator">/</span>html If<span class="token operator">-</span>Modified<span class="token operator">-</span>Since <span class="token punctuation">:</span> Saturday<span class="token punctuation">,</span> <span class="token number">19</span><span class="token operator">-</span>May<span class="token number">-2006</span> <span class="token number">17</span><span class="token punctuation">:</span><span class="token number">39</span><span class="token punctuation">:</span><span class="token number">13</span> GMT<span></span>
+User<span class="token operator">-</span>Agent <span class="token punctuation">:</span> Mozilla<span class="token operator">/</span><span class="token number">6</span><span class="token punctuation">.</span><span class="token function">0</span> <span class="token punctuation">(</span>compatible<span class="token punctuation">;</span> MSIE <span class="token number">5.0</span><span class="token punctuation">;</span> Windows XP<span class="token punctuation">)</span></code></pre>
+</div>
+</div>
+<p><span style="vertical-align: inherit;">En consecuencia, la solicitud HTTP recibiría una respuesta HTTP, es decir, un conjunto de líneas que el servidor enviará al navegador web. Como en el caso de la solicitud, la respuesta HTTP contiene algunos elementos definitorios como, por ejemplo, una línea de estado. Esta línea especifica la versión del protocolo utilizada y el estado de la solicitud en proceso mediante un texto explicativo y un código.</span></p>
+<p><span style="vertical-align: inherit;">En el caso de los campos de la cabecera de respuesta, este es un conjunto de líneas opcionales que permiten aportar información adicional sobre la respuesta y / o el servidor. Cada una de estas líneas se compone de un nombre que define el tipo de encabezado, seguido por dos puntos (:) y por el valor del encabezado.</span></p>
+<p><span style="vertical-align: inherit;">En el caso del cuerpo de la respuesta, este contiene el documento solicitado. A modo de ejemplo, a continuación se muestra un ejemplo de una respuesta HTTP:</span></p>
+<div class="highlighted-code language-c">
+<div>
+<pre class="  language-c"><code class="  language-c">HTTP<span class="token operator">/</span><span class="token number">1.0</span> <span class="token number">200</span> OK Date<span class="token punctuation">:</span> <span class="token number">19</span> May <span class="token number">2006</span> <span class="token number">17</span><span class="token punctuation">:</span><span class="token number">40</span><span class="token punctuation">:</span><span class="token number">12</span> GMT Server <span class="token punctuation">:</span> Microsoft<span class="token operator">-</span>IIS<span class="token operator">/</span><span class="token number">2.0</span>
+Content<span class="token operator">-</span>Type <span class="token punctuation">:</span> text<span class="token operator">/</span>HTML Content<span class="token operator">-</span>Length <span class="token punctuation">:</span> <span class="token number">1245</span> Last<span class="token operator">-</span>Modified <span class="token punctuation">:</span> <span class="token number">11</span> May <span class="token number">2006</span> <span class="token number">08</span><span class="token punctuation">:</span><span class="token number">29</span><span class="token punctuation">:</span><span class="token number">13</span> GMT</code></pre>
+</div>
+</div>
+<p><span style="vertical-align: inherit;">En cuanto a los </span><strong><span style="vertical-align: inherit;">códigos de respuesta</span></strong><span style="vertical-align: inherit;"> , estos son los códigos que se ven cuando el navegador no puede mostrar la página web solicitada. La sintaxis de una respuesta HTTP es una línea de estado y tiene una estructura fija donde se indica la versión, el código del error y un texto explicativo.</span></p>
+<p><span style="vertical-align: inherit;">Los posibles códigos de estado se identifican con números de tres cifras y se clasifican en cinco grupos según sean informativos (1xx), de éxito en la solicitud (2xx), para volver a dirigir la solicitud (3xx ), por un error generado en el cliente (4xx) o bien por errores generados en el servidor (5xx).</span></p>
+<p><span style="vertical-align: inherit;">Las respuestas más típicas son los códigos 200 para indicar la confirmación de la petición y el 404 para indicar que el objeto solicitado no se encuentra disponible.</span></p>
+<p></p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id41">
+<div class="iDevice emphasis0">
+<div id="ta41_85" class="block iDevice_content">
+<div class="iDevice emphasis0">
+<div id="ta41_85" class="block iDevice_content">
+<p><span style="vertical-align: inherit;">Algunos de los códigos de estado más habituales son los siguientes:</span></p>
+<h3><span style="vertical-align: inherit;">successful 2xx</span></h3>
+<p><span style="vertical-align: inherit;">This class of status code indicados that the cliente? S request was successfully received, understood, and accepted.</span></p>
+<p><span style="vertical-align: inherit;">200 OK</span></p>
+<p><span style="vertical-align: inherit;">The request has succeeded. The information returned with the response is dependiente on the method used in the request, as follows:</span></p>
+<p><span style="vertical-align: inherit;">GET: an entity corresponding to the requested resource is siendo in the response;</span></p>
+<p><span style="vertical-align: inherit;">HEAD: the response must only contas the header information and no Entity-Body;</span></p>
+<p><span style="vertical-align: inherit;">POST: an entity describing oro containing the result of the action.</span></p>
+<h3><span style="vertical-align: inherit;">redirection 3xx</span></h3>
+<p><span style="vertical-align: inherit;">301 Moved Permanently</span></p>
+<p><span style="vertical-align: inherit;">302 Moved Temporarily</span></p>
+<p><span style="vertical-align: inherit;">304 Not Modified</span></p>
+<h3><span style="vertical-align: inherit;">Cliente Error 4xx</span></h3>
+<p><span style="vertical-align: inherit;">400 Bad Request</span></p>
+<p><span style="vertical-align: inherit;">401 Unauthorized. The request requires user authentication.</span></p>
+<p><span style="vertical-align: inherit;">403 Forbidden. The server understood the request, but is refusing to fulfill it. </span><br /><span style="vertical-align: inherit;">404 Not Found. The server has not found anything matching the Request-URI.</span></p>
+<h3><span style="vertical-align: inherit;">Server Error 5xx</span></h3>
+<p><span style="vertical-align: inherit;">500 Internal Server Error. The server encountered an unexpected condition which prevented it from fulfilling the request.</span></p>
+<p><span style="vertical-align: inherit;">502 Bad Gateway. The server, while acting as a gateway oro proxy, received an invalid response from the upstream server it accessed in attempting to fulfill the request.</span></p>
+<p><span style="vertical-align: inherit;">503 Service Unavailable. The server is currently Unable to handle the request due to a temporary overloading oro maintenance of the server.</span></p>
+<div class="exe-block-info">
+<p><span style="vertical-align: inherit;">Para más información visite: </span><a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;pto=aue&amp;rurl=translate.google.es&amp;sl=ca&amp;sp=nmt4&amp;tl=es&amp;u=https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html&amp;usg=ALkJrhgSe4TDAoum71c8rNTEu1h8GuEXZg#sec10"><span style="vertical-align: inherit;">https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10</span></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DestacadofpdIdevice" id="id10">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta10_152" class="block iDevice_content">
+<div class="iDevice emphasis0">
+<div class="iDevice_destacadofpd">
+<div id="ta10_152" class="block iDevice_content">
+<div class="exe-block-info">
+<p><strong><span style="vertical-align: inherit;">Línea de encabezado HTTP</span></strong></p>
+<p><span style="vertical-align: inherit;">Campo fundamental que define gran parte de la información que se intercambia entre los clientes y los servidores. Estas líneas permiten el envío de información descriptiva en la transacción y facilitan, por ejemplo, la autenticación o identificación de los usuarios.</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="3_etapas_de_una_transaccin_http.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="prctica_1_transacciones_http.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

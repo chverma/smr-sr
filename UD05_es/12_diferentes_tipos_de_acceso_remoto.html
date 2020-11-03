@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.2. Diferentes tipos de acceso remoto </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="en" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-8"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Skip navigation</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Servicios de control y acceso remoto</a></li>
+   <li class="current-page-parent"><a href="1_introduccin.html" class="current-page-parent daddy">1. Introducción</a>
+   <ul>
+      <li><a href="11_usos_ms_frecuentes_del_acceso_remoto_a_ordenadores.html" class="no-ch">1.1. Usos más frecuentes del acceso remoto a ordenadores</a></li>
+      <li id="active"><a href="12_diferentes_tipos_de_acceso_remoto.html" class="active no-ch">1.2. Diferentes tipos de acceso remoto</a></li>
+   </ul>
+   </li>
+   <li><a href="2_acceso_remoto_a_travs_del_terminal.html" class="daddy">2. Acceso remoto a través del terminal</a>
+   <ul class="other-section">
+      <li><a href="21_telnet.html" class="no-ch">2.1. Telnet</a></li>
+      <li><a href="22_introduccin_a_la_criptografa.html" class="no-ch">2.2. Introducción a la criptografía</a></li>
+      <li><a href="23_secure_shell_ssh.html" class="no-ch">2.3. Secure SHell (SSH)</a></li>
+      <li><a href="prctica_1_instalacin_del_servicio_telnet.html" class="no-ch">Práctica 1: Instalación del servicio Telnet</a></li>
+      <li><a href="prctica_2_instalacin_del_servicio_ssh.html" class="no-ch">Práctica 2: Instalación del servicio SSH</a></li>
+   </ul>
+   </li>
+   <li><a href="3_acceso_remoto_con_interfaz_grfica.html" class="daddy">3. Acceso remoto con interfaz gráfica</a>
+   <ul class="other-section">
+      <li><a href="prctica_3_acceso_remoto_con_terminal_grfico.html" class="no-ch">Práctica 3: Acceso remoto con terminal gráfico</a></li>
+   </ul>
+   </li>
+   <li><a href="actividades.html" class="no-ch">actividades</a></li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="11_usos_ms_frecuentes_del_acceso_remoto_a_ordenadores.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="2_acceso_remoto_a_travs_del_terminal.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">1.2. Diferentes tipos de acceso remoto</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id2">
+<div class="iDevice emphasis0">
+<div id="ta2_85" class="block iDevice_content">
+<div class="iDevice_wrapper FreeTextIdevice" id="id2">
+<div class="iDevice emphasis0">
+<div id="ta2_85" class="block iDevice_content">
+<p><span style="vertical-align: inherit;">Las tareas de acceso y administración remotos se pueden llevar a cabo con medios diferentes, pero siempre estarán condicionados por la red que conecta el equipo que hay que administrar con la estación donde el administrador.</span></p>
+<p><span style="vertical-align: inherit;">La red impondrá condiciones de:</span></p>
+<ul>
+<li><strong><span style="vertical-align: inherit;">Capacidad</span></strong><span style="vertical-align: inherit;"> : si la conexión no tiene un ancho de banda suficiente no será práctico trabajar con una interfaz gráfica remota. Cuanto más aumente el retraso en la red más frustrante será el trabajo interactivo.</span></li>
+<li><strong><span style="vertical-align: inherit;">Seguridad</span></strong><span style="vertical-align: inherit;"> : es obvio que la comunicación entre el administrador y el equipo remoto no debe ser interceptada por otros usuarios de la red.</span></li>
+</ul>
+<p><span style="vertical-align: inherit;">Los diferentes medios de administración remota se pueden clasificar en tres categorías básicas:</span></p>
+<ul>
+<li><span style="vertical-align: inherit;">Sesión de trabajo en la consola</span></li>
+<li><span style="vertical-align: inherit;">Sesión de trabajo con interfaz gráfica</span></li>
+<li><span style="vertical-align: inherit;">Cliente o herramienta de administración local</span></li>
+</ul>
+<p><span style="vertical-align: inherit;">Cada categoría tiene sus puntos fuertes y débiles. Una </span><strong><span style="vertical-align: inherit;">sesión de trabajo en la consola mediante SSH</span></strong><span style="vertical-align: inherit;"> , o el obsoleto e inseguro Telnet, no exige grandes capacidades en la red. Es el método más ligero e incluso se puede utilizar con comodidad para administrar máquinas muy distantes o con redes de capacidad escasa. Además, es relativamente sencillo automatizar tareas mediante guiones de programación para repetir las mismas operaciones en un conjunto de máquinas.</span></p>
+<p><span style="vertical-align: inherit;">La </span><strong><span style="vertical-align: inherit;">administración remota con interfaz gráfica</span></strong><span style="vertical-align: inherit;"> permite abrir a la estación local ventanas de aplicaciones que se ejecutan en el servidor remoto. Incluso permite ver el escritorio completo de la estación remota. Aunque puede ser un método de trabajo cómodo, requiere capacidades de la red que normalmente sólo se encuentran disponibles dentro de una LAN. </span><br /><br /><span style="vertical-align: inherit;">Emplear una </span><strong><span style="vertical-align: inherit;">herramienta de administración local</span></strong><span style="vertical-align: inherit;">hecha a medida, como un asistente para configurar una impresora remota, o genérica, como un navegador web, intenta conjugar puntos fuertes de las dos técnicas anteriores. En este caso el administrador dialoga con una aplicación local o una página web y no necesita recordar órdenes. Además, dado que la representación gráfica se produce localmente no se exige gran capacidad en la red. El problema de las herramientas específicas es que se trata de un software a instalar en cada estación que el administrador quiera emplear. A menudo esta herramienta sólo está disponible para un sistema operativo o para una versión determinada de este. Este problema se obvia con las interfaces web, ya que un navegador web es un software común que se encuentra en todos los equipos. En la taula.1 puede ver un resumen de las principales ventajas e inconvenientes.</span></p>
+<table class="exe-table">
+<tbody>
+<tr>
+<td><strong><span style="vertical-align: inherit;">Método de administración</span></strong></td>
+<td><strong class=" exe-table-minimalist"><span style="vertical-align: inherit;">ventajas</span></strong></td>
+<td><strong><span style="vertical-align: inherit;">inconvenientes</span></strong></td>
+</tr>
+<tr>
+<td><span style="vertical-align: inherit;">Trabajo en la línea de comandos</span></td>
+<td>
+<p><span style="vertical-align: inherit;">Requisitos mínimos para la red. Es flexible y se puede automatizar.</span></p>
+</td>
+<td><span style="vertical-align: inherit;">Hay que conocer la sintaxis y recordar las órdenes</span></td>
+</tr>
+<tr>
+<td><span style="vertical-align: inherit;">interfaz gráfica</span></td>
+<td><span style="vertical-align: inherit;">Visual y flexible. No es necesario recordar órdenes.</span></td>
+<td><span style="vertical-align: inherit;">Impone requisitos de capacidad en la red</span></td>
+</tr>
+<tr>
+<td><span style="vertical-align: inherit;">cliente local</span></td>
+<td><span style="vertical-align: inherit;">Visual y flexible. No es necesario recordar órdenes. No consume muchos recursos en la red. Si no se trata de una interfaz web, es necesario instalar software.</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p><span style="vertical-align: inherit;">En la actualidad algunas de las herramientas de administración remota más utilizadas son:</span></p>
+<ul>
+<li><span style="vertical-align: inherit;">En modo texto (línea de comandos): telnet, Secure Shell (SSH).</span></li>
+<li><span style="vertical-align: inherit;">En modo gráfico (GUI): VNC, Terminal Server.</span></li>
+<li><span style="vertical-align: inherit;">Cliente local (interfaces web): La mayoría de dispositivos disponen de un servidor web ligero que permite su configuración. También hay aplicaciones como Webmin para servidor basados ​​en Linux.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="11_usos_ms_frecuentes_del_acceso_remoto_a_ordenadores.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="2_acceso_remoto_a_travs_del_terminal.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>
